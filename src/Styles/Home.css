@@ -1,0 +1,26 @@
+
+.home {
+    display: flex;
+    flex-direction: row;
+    background: #F1F4F8;
+    width: 1512px;
+    height: 965px;
+    margin: 16px 0 0 16px;
+  }
+  
+  .rightCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 66px 0 66px;
+  }
+  
+  .insight {
+    margin-top: 40px;
+  }
+  
+  .titleIntern {
+    margin: 24px 32px 0 0;
+  }
+  

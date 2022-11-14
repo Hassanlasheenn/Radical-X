@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+.internshipDetailCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 1135px;
+    height: 536px;
+}
+
+/*  first column  */
+
+.internshipTitleCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 385px;
+    height: 536px;
+}
+
+.titleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+    gap: 56px;
+    width: 385px;
+    height: 56px;
+    background: #F6F5F9;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.titleText {
+    width: 102px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: "liga" off;
+    color: #2F3031;
+}
+
+.arrowDown {
+    background: url('/src/images/arrow-square-down.png');
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.productRows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 56px;
+    width: 385px;
+    height: 96px;
+    background-color: #FFFFFF;
+}
+
+.DescriptionCont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 195px;
+    height: 64px;
+}
+
+.titleProduct {
+    width: 195px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: "liga" off;
+    color: #2F3031;
+}
+
+.descProduct {
+    width: 195px;
+    height: 32px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: "liga" off;
+    color: #2F3031;
+}
+
+.productLastRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 56px;
+    width: 385px;
+    height: 96px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 0px 20px;
+}
+
+/* second column */
+
+.completionCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 200px;
+    height: 536px;
+}
+
+.completionRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: 30px; */
+    padding-left: 12px;
+    gap: 56px;
+    width: 240px;
+    height: 68px;
+    background: #F6F5F9;
+}
+
+.completionText {
+    width: 124px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: "liga" off;
+    color: #2F3031;
+}
+
+.completionRows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 56px;
+    width: 380px;
+    height: 110px;
+    /* margin-left: 30px; */
+    background: #FFFFFF;
+}
+
+.completionDescRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    width: 137px;
+    height: 40px;
+}
+
+.daysCompletion {
+    width: 136px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    font-feature-settings: "liga" off;
+    color: #333333;
+}
+
+.dateCompletion {
+    width: 137px;
+    height: 16px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: "liga" off;
+    color: #828282;
+}
+
+/* third column */
+
+.enrollCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 160px;
+    height: 536px;
+}
+
+.enrolRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    padding-left: 12px;
+    width: 140px;
+    height: 56px;
+}
+
+.enrolText {
+    width: 92px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: "liga" off;
+    color: #2F3031;
+}
+
+.enrolRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    gap: 56px;
+    width: 160px;
+    height: 96px;
+    background: #FFFFFF;
+}
+
+.enrolCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 94px;
+    height: 40px;
+    background: #F0EFFD;
+    border-radius: 8px;
+}
+
+.enrolNum {
+    width: 62px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    color: #793EF5;
+}
+
+/* fourth column */
+
+.qualifiedCandiatesCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 250px;
+    height: 536px;
+}
+
+.qualifiedRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    padding-left: 12px;
+    width: 240px;
+    height: 56px;
+    background: #F6F5F9;
+}
+
+.qualifiedText {
+    width: 140px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off;
+    color: #2F3031;
+}
+
+.chartQualifiedRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    margin-left: 40px;
+    width: 250px;
+    height: 96px;
+    background: #FFFFFF;
+}
+
+.qualified {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 190px;
+    height: 60px;
+}
+
+.qualifiedNumCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 8px;
+    width: 40px;
+    height: 24px;
+    background: #793EF5;
+    border-radius: 4px;
+}
+
+.qualifiedNum {
+    width: 32px;
+    height: 16px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #FFFFFF;
+}
+
+.qualifiedDetailRect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 4px;
+    width: 190px;
+    height: 32px;
+}
+
+.rectangle1 {
+    width: 6px;
+    height: 14px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle2 {
+    width: 6px;
+    height: 17.6px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle3 {
+    width: 6px;
+    height: 20px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle4 {
+    width: 6px;
+    height: 17.6px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle5 {
+    width: 6px;
+    height: 17.6px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle6 {
+    width: 6px;
+    height: 14px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle7 {
+    width: 6px;
+    height: 18.8px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle8 {
+    width: 6px;
+    height: 22.4px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle9 {
+    width: 6px;
+    height: 24px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle10 {
+    width: 6px;
+    height: 27.6px;
+    background: #793EF5;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle11 {
+    width: 6px;
+    height: 24px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle12 {
+    width: 6px;
+    height: 22.4px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle13 {
+    width: 6px;
+    height: 32px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle14 {
+    width: 6px;
+    height: 27.6px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle15 {
+    width: 6px;
+    height: 22.4px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle16 {
+    width: 6px;
+    height: 17.6px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle17 {
+    width: 6px;
+    height: 20px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle18 {
+    width: 6px;
+    height: 14px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle19 {
+    width: 6px;
+    height: 10.8px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+.rectangle20 {
+    width: 6px;
+    height: 6.8px;
+    background: #C4C4C4;
+    border-radius: 40px 40px 0px 0px;
+}
+
+/* fifth column */
+
+.emptyCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 140px;
+    height: 536px;
+}
+
+.emptyRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+    width: 140px;
+    height: 56px;
+    margin-left: 40px;
+    background: #F6F5F9;
+    border-radius: 0px 20px 0px 0px;
+}
+
+.buttonsRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    width: 140px;
+    height: 96px;
+    margin-left: 40px;
+    background: #FFFFFF;
+}
+
+.groupCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    width: 108px;
+    height: 28px;
+}
+
+.chart {
+    background: url('/src/images/chart.png');
+    width: 28px;
+    height: 28px;
+}
+.profile {
+    background: url('/src/images/profile-2user.png');
+    width: 28px;
+    height: 28px;
+}
+.more {
+    background: url('/src/images/more-2.png');
+    width: 28px;
+    height: 28px;
+}
+
+.lastButtonsRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    width: 140px;
+    height: 96px;
+    margin-left: 40px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 20px 0px;
+}

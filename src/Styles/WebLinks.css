@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+
+.webLinkCont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 192px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.titleRecommended {
+    width: 242px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.searchFieldWeb {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 741px;
+    height: 102px;
+}
+
+.textFieldWeb {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 8px;
+    width: 741px;
+    height: 48px;
+    background: #F1F4F8;
+    border: 1px solid #CECECE;
+    border-radius: 16px;
+}
+
+.WebLinkLogo {
+    background: url('../images/link\ 2.png');
+    width: 20px;
+    height: 20px;
+}
+
+.placeholderUrl {
+    width: 681px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: rgba(47, 48, 49, 0.54);
+}
+
+.addUrlCont {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 6px;
+    width: 121px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px dashed #793EF5;
+    border-radius: 12px;
+}
+
+.squareAddLink {
+    background: url('../images/add-square\ 2.png');
+    width: 22px;
+    height: 22px;
+    opacity: 0.5;
+}
+
+.AddUrlText {
+    width: 71px;
+    height: 22px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #793EF5;
+}

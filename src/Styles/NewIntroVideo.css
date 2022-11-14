@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+
+.introVideoCont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 222px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.introVideoTitle {
+    width: 127px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.videoUploadCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 20px;
+    gap: 8px;
+    width: 741px;
+    height: 68px;
+    border: 1px dashed #B2B6BC;
+    border-radius: 8px;
+}
+
+.dragDropText {
+    width: 240px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-feature-settings: 'liga' off;
+    color: #778188;
+}
+
+.uploadLogo {
+    background: url('../images/document-upload.png');
+    width: 20px;
+    height: 20px;
+}
+
+.videoCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 24px;
+    width: 203px;
+    height: 40px;
+    background: #EDEAFF;
+    border-radius: 12px;
+}
+
+.categoryIntroText {
+    width: 127px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #793EF5;
+}
+
+.closeIntroBtn {
+    background: url('../images/close.png');
+    width: 20px;
+    height: 20px;
+}

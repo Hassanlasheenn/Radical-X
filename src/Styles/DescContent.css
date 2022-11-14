@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+.descContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 287px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.descriptionTitle {
+    width: 134px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.descField {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+    width: 741px;
+    height: 197px;
+    background: #F1F4F8;
+    border: 1px solid #CECECE;
+    border-radius: 16px;
+}
+
+.descriptionTextField {
+    width: 709px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: rgba(47, 48, 49, 0.54);
+}

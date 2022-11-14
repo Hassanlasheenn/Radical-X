@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+.insightContInsights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+    width: 1170px;
+    height: 270px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.internshipInsightInsights {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 10px;
+    width: 280px;
+    height: 238px;
+    background: #F6F5F9;
+    border-radius: 16px;
+}
+
+.insightTextContInsights {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    /* gap: 12px; */
+    width: 248px;
+    height: 156px;
+}
+
+.titleInsights {
+    width: 248px;
+    height: 24px;
+    font-style: normal;
+    font-size: 20px;
+    /* line-height: 20px; */
+    font-feature-settings: 'liga' off;
+    color: #333333;
+    text-align: left;
+}
+
+.textInsights {
+    width: 229px;
+    height: 120px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    /* line-height: 20px; */
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+    text-align: left;
+}
+
+.rightContainerInsights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 813px;
+    height: 238px;
+}
+
+.filterBarInsights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 10px;
+    width: 813px;
+    height: 48px;
+    background: #F2F2F2;
+    border-radius: 12px;
+}
+
+.datesContInsights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 448px;
+    width: 797px;
+    height: 32px;
+}
+
+.weekMonthBtnsInsights {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 203px;
+    height: 32px;
+}
+
+.weekBtnInsights {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px 12px;
+    gap: 8px;
+    width: 91px;
+    height: 32px;
+    background: #793EF5;
+    border-radius: 8px;
+    border: 0;
+}
+
+.weekTextInsights {
+    width: 67px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #FFFFFF;
+}
+
+.monthBtnInsights {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px 12px;
+    gap: 8px;
+    width: 100px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 0;
+}
+
+.monthTextInsights {
+    width: 76px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+}
+
+.dateBtnInsights {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    width: 137px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 0;
+}
+
+.scheduleBtnInsights {
+    width: 20px;
+    height: 20px;
+    background: url('/src/images/calendar-2.png');
+}
+
+.textDateInsights {
+    width: 85px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+}
+
+
+.graphContainerInsights {
+    width: 789px;
+    height: 150px;
+    flex: none;
+}
+
+
+
+.line1Insights {
+    border: 1px solid #EFEFEF;
+    transform: rotate(90deg);
+    width: 140px;
+    height: 0px;
+    margin-left: 124.04px;
+    margin-top: -60px;
+}
+
+.line2Insights {
+    border: 1px solid #EFEFEF;
+    transform: rotate(90deg);
+    width: 140px;
+    height: 0px;
+    margin-left: 450px;
+    margin-top: -5px;
+}
+
+.line3Insights {
+    border: 1px solid #EFEFEF;
+    transform: rotate(90deg);
+    width: 140px;
+    height: 0px;
+    margin-left: 610px;;
+    margin-top: -5px;
+}
+
+.greyContainerInsights {
+    width: 120.04px;
+    height: 174px;
+    margin-left: 300px;
+    margin-top: -82px;
+    background: #F2F2F2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.vectorInsights {
+    background: url('/src//images/Vector 5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 115.01px;
+    margin-top: 24.23px;
+}
+
+.numberContInsights {
+    width: 39px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 auto;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+}
+
+.textContInsights {
+    width: 130.41px;
+    height: 16px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+    text-align: center;
+}
+
+.firstNumInsights, .fourNumInsights, .fiveNumInsights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -25px;
+    margin-left: 15px;
+}
+
+.secondNumInsights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.thirdNumInsights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
+    margin-left: 95px;
+    text-align: center;
+}
+
+.labelsContInsights {
+    width: 789px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numberCont1Insights {
+    width: 82px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 auto;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+}
+.numberCont2Insights {
+    width: 72px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 auto;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+}
+.numberCont3Insights {
+    width: 38px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 auto;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+}
+.numberCont4Insights {
+    width: 40px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 auto;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+}
+.numberCont5Insights {
+    width: 36px;
+    height: 28px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0 auto;
+    font-feature-settings: 'liga' off;
+    color: #5C5C5C;
+}

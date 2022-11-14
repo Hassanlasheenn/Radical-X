@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+.mentorContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    isolation: isolate;
+    position: absolute;
+    width: 789px;
+    height: 314px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.mentorDetailsTitle {
+    width: 170px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.rectanglePhoto {
+    width: 80px;
+    height: 80px;
+    background: #E2E6EB;
+    border-radius: 20px;
+}
+
+.formInfos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 741px;
+    height: 48px;
+}
+
+.nameField, .emailField {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 12px 12px 16px;
+    gap: 10px;
+    width: 358.5px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    border-radius: 12px;
+}
+
+.profileLogo {
+    background: url('../images/profile.png');
+    width: 24px;
+    height: 24px;
+}
+
+.namePlaceholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 11px;
+    width: 296.5px;
+    height: 24px;
+}
+
+.nameFieldText {
+    width: 44px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+    opacity: 0.5;
+}
+
+.smsLogo {
+    background: url('../images/sms.png');
+    width: 24px;
+    height: 24px;
+}
+
+.emailPlaceholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 11px;
+    width: 296.5px;
+    height: 24px;
+}
+
+.emailFieldText {
+    width: 120px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+    opacity: 0.5;
+}
+
+.linkedinUrlForm {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 12px 12px 16px;
+    gap: 10px;
+    width: 741px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    border-radius: 12px;
+}
+
+.linkLogo {
+    background: url('../images/link.png');
+    width: 24px;
+    height: 24px;
+}
+
+.formText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 11px;
+    width: 679px;
+    height: 24px;
+}
+
+.linkedinText {
+    width: 185px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+    opacity: 0.5;
+}
+
+.pictureLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px;
+    gap: 10px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 82px;
+    top: 125px;
+    background: #2153FF;
+    border-radius: 10px;
+}
+
+.imageLogo {
+    background: url('../images/image.png');
+    width: 16px;
+    height: 16px;
+}
+
+
+
