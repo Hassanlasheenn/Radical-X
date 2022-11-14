@@ -2,26 +2,10 @@ import React, {useState } from 'react';
 import '../Styles/CategoryContent.css';
 
 
-
 const CategoryContent = () => {
 
-    const fields = [
-        {
-            id: 0,
-            field: 'Technology'
-        },
-        {
-            id: 1,
-            field: 'Development'
-        },
-        {
-            id: 2,
-            field: 'Production'
-        }
-    ];
-
     const [searchInput, setSearchInput] = useState('');
-    const [categories, setCategories] = useState(fields);
+    const [categories, setCategories] = useState([]);
 
     
     const handleRemove = (id) => {
