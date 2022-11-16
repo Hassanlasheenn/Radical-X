@@ -12,7 +12,7 @@
     left: 700px;
     top: 212px;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
 }
 
 .locationTitle {
@@ -47,7 +47,7 @@
     height: 20px;
 }
 
-.locFieldText {
+/* .locFieldText {
     width: 653px;
     height: 28px;
     font-family: 'Space Grotesk';
@@ -60,11 +60,47 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
+    border: 0;
+    background: #F1F4F8;
+} */
+
+.locFieldText {
+    width: 740px;
+    height: 45px;
+    display: grid;
+    align-items: center;
+    margin-left: 30px;
+    border: 0;
+    background: #F1F4F8;
+    font-family: 'Space Grotesk';
+    font-size: 16px;
+}
+.locationArrowDown {
+    /* background: url('../images/arrow-down.png'); */
+    width: 450px;
+    height: 30px;
+    opacity: 0.5;
+    border: 0;
+    cursor: pointer;
 }
 
-.locationArrowDown {
-    background: url('../images/arrow-down.png');
-    width: 20px;
-    height: 20px;
-    opacity: 0.5;
+.countryField {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 138px;
+    left: 700px;
+    top: 350px;
+    background: #FFFFFF;
+    border-radius: 0 0 20px 20px;
+}
+
+.countryList {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
 }

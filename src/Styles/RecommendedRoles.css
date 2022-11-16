@@ -65,12 +65,17 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
+    border: 0;
+    background: #F1F4F8;
+    padding: 0 10px;
 }
 
 .searchIconRoles {
     background: url('../images/search-normal.png');
     width: 20px;
     height: 20px;
+    border: 0;
+    cursor: pointer;
 }
 
 .searchResultContRoles {
@@ -99,7 +104,7 @@
 }
 
 .resultTextRoles {
-    width: 162px;
+    width: 220px;
     height: 22px;
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -141,4 +146,6 @@
     width: 22px;
     height: 22px;
     opacity: 0.5;
+    border: 0;
+    cursor: pointer;
 }

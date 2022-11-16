@@ -54,4 +54,7 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
+    border: 0;
+    background: #F1F4F8;
+    padding: 0 10px;
 }

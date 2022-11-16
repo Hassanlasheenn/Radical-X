@@ -77,7 +77,7 @@
 }
 
 .nameFieldText {
-    width: 44px;
+    width: 280px;
     height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -90,6 +90,9 @@
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
     opacity: 0.5;
+    border: 0;
+    background: #FFFFFF;
+    padding: 0 5px;
 }
 
 .smsLogo {
@@ -110,7 +113,7 @@
 }
 
 .emailFieldText {
-    width: 120px;
+    width: 280px;
     height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -123,6 +126,9 @@
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
     opacity: 0.5;
+    border: 0;
+    background: #FFFFFF;
+    padding: 0 5px;
 }
 
 .linkedinUrlForm {
@@ -157,7 +163,7 @@
 }
 
 .linkedinText {
-    width: 185px;
+    width: 650px;
     height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -170,6 +176,9 @@
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
     opacity: 0.5;
+    border: 0;
+    background: #FFFFFF;
+    padding: 0 5px;
 }
 
 .pictureLogo {

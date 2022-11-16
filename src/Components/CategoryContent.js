@@ -1,4 +1,5 @@
-import React, {useState } from 'react';
+import React, {useContext, useState } from 'react';
+import { TickContext } from '../Context/useTickCircle';
 import '../Styles/CategoryContent.css';
 
 
@@ -6,19 +7,15 @@ const CategoryContent = () => {
 
     const [searchInput, setSearchInput] = useState('');
     const [categories, setCategories] = useState([]);
+    const { setActiveCateg } = useContext(TickContext);
 
     
-    const handleRemove = (id) => {
-        const newCateg = categories.filter((item) => item.id !== id);
 
-        setCategories(newCateg);
-    }
-
-    const handleAdd = (id) => {
+    const handleAdd = () => {
         const newCategory = categories.concat({
-            id: id,
             field: searchInput,
         });
+        setActiveCateg(true);
         console.log(newCategory);
         setCategories(newCategory);
         setSearchInput('');
@@ -27,6 +24,21 @@ const CategoryContent = () => {
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value)
+    }
+
+    const handleKeyPress = (e) => {
+        if(e.key === 'Enter') {
+            setActiveCateg(true);
+            handleAdd();
+        }
+    }
+
+    const handleRemove = (field) => {
+        const newCateg = categories.filter((item) => item.field !== field);
+
+        setCategories(newCateg);
+        setActiveCateg(false);
+        console.log(newCateg);
     }
 
 
@@ -38,11 +50,12 @@ const CategoryContent = () => {
                 <input
                     type='text'
                     placeholder='Search Category'
+                    onKeyDown={handleKeyPress}
                     onChange={handleChange}
                     value={searchInput}
                     className='placeholderCateg'
                 />
-                <button type='button' onClick={handleAdd} className='searchIconCateg' />
+                <button type='button' className='searchIconCateg' />
             </div>
             <div className='searchResultContCateg'>
             {categories.map((category) => {
@@ -50,7 +63,7 @@ const CategoryContent = () => {
                     <>
                         <div className='resultContCateg' key={category.id}> 
                             <span className='resultTextCateg'>{category.field}</span>
-                            <button type='button' onClick={() => handleRemove(category.id)} className='closeBtnCateg' />
+                            <button type='button' onClick={() => handleRemove(category.field)} className='closeBtnCateg' />
                         </div>
                     </>
                 )

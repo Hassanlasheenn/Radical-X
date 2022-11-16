@@ -8,7 +8,11 @@ const NewWebLinks = () => {
         <div className='searchFieldWeb'>
             <div className='textFieldWeb'>
                 <div className='WebLinkLogo' />
-                <span className='placeholderUrl'>Add URL</span>
+                <input 
+                  className='placeholderUrl'
+                  placeholder='Add URL'
+                  type="text"
+                />
             </div>
             <div className='addUrlCont'>
                 <div className='squareAddLink' />

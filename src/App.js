@@ -11,11 +11,14 @@ import MentorDetails from './Components/NewMentorDetails';
 import RecommendedRoles from './Components/RecommendedRoles';
 import Links from './Components/NewWebLinks';
 import NotFound from './Pages/NotFound';
+import { TickProvider } from './Context/useTickCircle';
 
 
 const App = () => {
+  
   return (
     <div className="App">
+    <TickProvider>
       <Routes>
         <Route exact path='/' element={<Home />}/>
         <Route exact path='internships' element={<NewInternship />}>
@@ -30,6 +33,7 @@ const App = () => {
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
+    </TickProvider>
 
     </div>
   );

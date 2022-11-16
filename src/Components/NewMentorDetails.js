@@ -10,20 +10,33 @@ const NewMentorDetails = () => {
             <div className='nameField'>
                 <div className='profileLogo' />
                 <div className='namePlaceholder'>
-                    <span className='nameFieldText'>Name</span>
+                    <input 
+                        className='nameFieldText'
+                        placeholder='Name'
+                        type="text"
+
+                    />
                 </div>
             </div>
             <div className='emailField'>
                 <div className='smsLogo' />
                 <div className='emailPlaceholder'>
-                    <span className='emailFieldText'>Email Address</span>
+                    <input 
+                        className='emailFieldText'
+                        placeholder='Email Adress'
+                        type="text"
+                    />
                 </div>
             </div>
         </div>
         <div className='linkedinUrlForm'>
             <div className='linkLogo' />
             <div className='formText'>
-                <span className='linkedinText'>LinkedIn URL (optional)</span>
+                <input 
+                    className='linkedinText'
+                    placeholder='LinkedIn URL (optional)'
+                    type="text"
+                />
             </div>
         </div>
         <div className='pictureLogo'>
