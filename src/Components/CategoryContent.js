@@ -12,18 +12,18 @@ const CategoryContent = () => {
     
 
     const handleAdd = () => {
+        if(searchInput.length === 0) return 'disabled' && setActiveCateg(false);
         const newCategory = categories.concat({
             field: searchInput,
         });
         setActiveCateg(true);
-        console.log(newCategory);
         setCategories(newCategory);
         setSearchInput('');
     }
 
     const handleChange = (e) => {
         e.preventDefault();
-        setSearchInput(e.target.value)
+        setSearchInput(e.target.value);
     }
 
     const handleKeyPress = (e) => {
@@ -34,11 +34,10 @@ const CategoryContent = () => {
     }
 
     const handleRemove = (field) => {
-        const newCateg = categories.filter((item) => item.field !== field);
+        const categRemove = categories.filter((item) => item.field !== field);
 
-        setCategories(newCateg);
+        setCategories(categRemove);
         setActiveCateg(false);
-        console.log(newCateg);
     }
 
 

@@ -9,6 +9,9 @@ const Categories = () => {
   const { activeLoc, setActiveLoc } = useContext(TickContext);
   const { activeDesc, setActiveDesc } = useContext(TickContext);
   const { activeBenefits, setActiveBenefits } = useContext(TickContext);
+  const { activeMentor, setActiveMentor } = useContext(TickContext);
+  const { activeRoles, setActiveRoles } = useContext(TickContext);
+  const { activeLinks, setActiveLinks } = useContext(TickContext);
 
 
   return (
@@ -16,8 +19,7 @@ const Categories = () => {
       <div className='categoryContCategory'>
     <div className='categoryBarCategory'>
         <div className='menuIconCategory' />
-        <Link to={'category'}
-          className='categoryBarContCategory'>
+        <Link to={'category'} className='categoryBarContCategory'>
           <div className='textContCategory'>
             <span className='categoryTextCategory'>Category</span>
             <div  className='tickCircle' 
@@ -77,6 +79,9 @@ const Categories = () => {
         <Link to={'mentor-details'} className='categoryBarContCategory'>
           <div className='textContCategory'>
             <span className='mentorTextCategory'>Mentor Details</span>
+            <div  className='tickCircle' 
+                  style={{  background: !activeMentor ? 'url(../images/tick-circle.png)' : setActiveMentor(true) }} 
+            />
           </div>
           <div className='btnIconCategory' /> 
         </Link>
@@ -86,6 +91,9 @@ const Categories = () => {
         <Link to={'recommended-roles'}   className='categoryBarContCategory'>
           <div className='textContCategory'>
             <span className='rolesTextCategory'>Recommended Roles</span>
+            <div  className='tickCircle' 
+                  style={{  background: !activeRoles ? 'url(../images/tick-circle.png)' : setActiveRoles(true) }} 
+            />
           </div>
           <div className='btnIconCategory' /> 
         </Link>
@@ -95,6 +103,9 @@ const Categories = () => {
         <Link to={'links'}   className='categoryBarContCategory'>
           <div className='textContCategory'>
             <span className='linksTextCategory'>Web Links & Resources</span>
+            <div  className='tickCircle' 
+                  style={{  background: !activeLinks ? 'url(../images/tick-circle.png)' : setActiveLinks(true) }} 
+            />
           </div>
           <div className='btnIconCategory' /> 
         </Link>

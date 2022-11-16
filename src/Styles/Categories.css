@@ -66,13 +66,8 @@
 }
 
 .categoryTextCategory, .descTextCategory, .locationTextCategory, .benefitsTextCategory, .introTextCategory, .mentorTextCategory, .rolesTextCategory, .linksTextCategory {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 12px;
-    width: 514px;
-    height: 24px;
+    width: 214px;
+    height: 18px;
     font-size: 18px;
     font-family: 'Space Grotesk';
     font-weight: 500;
@@ -80,6 +75,7 @@
     line-height: 18px;
     font-feature-settings: 'liga' off;
     color: #333333;
+    text-align: start;
 }
 
 .tickCircle {
