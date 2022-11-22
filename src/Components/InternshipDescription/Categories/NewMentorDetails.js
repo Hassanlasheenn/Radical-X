@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { TickContext } from '../Context/useTickCircle';
-import '../Styles/NewMentorDetails.css';
+import React, { useContext, useRef, useState } from 'react';
+import { TickContext } from '../../../Context/useTickCircle';
+import '../../../Styles/NewMentorDetails.css';
 
 const NewMentorDetails = () => {
 
@@ -8,6 +8,22 @@ const NewMentorDetails = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [optional, setOptional] = useState('');
+
+    const [file, setFile] = useState(null);
+    const inputRef = useRef(null);
+
+
+    const handleClick = () => {
+        inputRef.current.click();
+    }
+
+    const handleFileChange = e => {
+        const fileObj = setFile(URL.createObjectURL(e.target.files[0]));
+        if(!fileObj) {
+            return null;
+        }
+    }
+
 
     const handleName = (e) => {
         e.preventDefault();
@@ -25,10 +41,12 @@ const NewMentorDetails = () => {
         setOptional(e.target.value)
     }
 
+
+
   return (
     <div className='mentorContent'>
         <span className='mentorDetailsTitle'>Mentor Details</span>
-        <div className='rectanglePhoto' />
+        <img className='rectanglePhoto' src={file} alt='' style={{ width: '80px', height: '80px', borderRadius: '10px'}} />
         <div className='formInfos'>
             <div className='nameField'>
                 <div className='profileLogo' />
@@ -69,7 +87,8 @@ const NewMentorDetails = () => {
             </div>
         </div>
         <div className='pictureLogo'>
-            <div className='imageLogo' />
+            <input style={{ display: 'none' }} ref={inputRef} type='file' onChange={handleFileChange} />
+            <button onClick={handleClick} className='imageLogo' />
         </div>
     </div>
   )

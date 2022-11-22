@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { TickContext } from '../Context/useTickCircle';
-import '../Styles/Categories.css';
+import { TickContext } from '../../Context/useTickCircle';
+import '../../Styles/Categories.css';
+
 
 const Categories = () => {
 
@@ -12,6 +13,7 @@ const Categories = () => {
   const { activeMentor, setActiveMentor } = useContext(TickContext);
   const { activeRoles, setActiveRoles } = useContext(TickContext);
   const { activeLinks, setActiveLinks } = useContext(TickContext);
+  const { activeVideo, setActiveVideo } = useContext(TickContext);
 
 
   return (
@@ -70,6 +72,9 @@ const Categories = () => {
         <Link to={'intro-video'}  className='categoryBarContCategory'>
           <div className='textContCategory'>
             <span className='introTextCategory'>Intro Video</span>
+            <div  className='tickCircle' 
+                  style={{  background: !activeVideo ? 'url(../images/tick-circle.png)' : setActiveVideo(true) }} 
+            />
           </div>
           <div className='btnIconCategory' /> 
         </Link>

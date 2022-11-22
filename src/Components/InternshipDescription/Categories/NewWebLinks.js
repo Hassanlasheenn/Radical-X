@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { TickContext } from '../Context/useTickCircle';
-import '../Styles/WebLinks.css';
-import '../Styles/CategoryContent.css';
+import { TickContext } from '../../../Context/useTickCircle';
+import '../../../Styles/WebLinks.css';
+import '../../../Styles/CategoryContent.css';
 
 const NewWebLinks = () => {
 
   const [url, setUrl] = useState('');
   const [links, setLinks] = useState([]);
-  const { setActiveLinks } = useContext(TickContext);
+  const { setActiveLinks, setActivePage, setActiveColor } = useContext(TickContext);
 
   const handleAdd = () => {
     if(url.length === 0) return 'disabled' && setActiveLinks(false);
@@ -27,6 +27,8 @@ const NewWebLinks = () => {
   const handlePress = (e) => {
     if(e.key === 'Enter') {
       setActiveLinks(true);
+      setActivePage(true);
+      setActiveColor(true);
       handleAdd();
     }
   }
@@ -36,6 +38,8 @@ const NewWebLinks = () => {
 
     setLinks(linkRemove);
     setActiveLinks(false);
+    setActivePage(false);
+    setActiveColor(false);
   }
 
   return (

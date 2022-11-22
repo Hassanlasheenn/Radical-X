@@ -1,9 +1,9 @@
 import React, { useContext, useMemo, useState } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
-import '../Styles/LocationContent.css';
-import '../Styles/CategoryContent.css';
-import { TickContext } from '../Context/useTickCircle';
+import '../../../Styles/LocationContent.css';
+import '../../../Styles/CategoryContent.css';
+import { TickContext } from '../../../Context/useTickCircle';
 
 
 const LocationContent = () => {

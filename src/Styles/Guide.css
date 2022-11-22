@@ -1,0 +1,593 @@
+.guideOverview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 24px;
+    isolation: isolate;
+    position: absolute;
+    width: 654px;
+    height: 632px;
+    left: 23px;
+    top: 212px;
+}
+
+/* .overviewCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 654px;
+    height: 72px;
+} */
+/* height: 360px; */
+
+/* .overviewLogoCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 0px;
+    gap: 10px;
+    width: 24px;
+    height: 44px;
+} */
+
+.menuOverview {
+    background: url('../images/menu.png');
+    width: 24px;
+    height: 24px;
+}
+
+.overviewDetail {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 28px;
+    width: 606px;
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 34px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    transition: all .4s;
+    text-decoration: none;
+}
+
+.overviewDetail:hover {
+    border: 1px solid #793EF5;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+.overviewTextCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 6px;
+    width: 558px;
+    height: 24px;
+    text-decoration: none;
+}
+
+.overviewFrameText {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 528px;
+    height: 18px;
+}
+
+.headingCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 79px;
+    height: 18px;
+}
+
+.overviewText {
+    width: 79px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.overviewArrow {
+    background: url('../images/arrow-right\ 2.png');
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+}
+
+.detailFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 558px;
+    height: 260px;
+
+}
+
+.box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 24px;
+    width: 558px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+}
+
+.boxComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    width: 69px;
+    height: 24px;
+}
+
+.menuBox {
+    background: url('../images/menu.png');
+    width: 20px;
+    height: 20px;
+}
+
+.boxText {
+    width: 37px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+
+.addMoreBox {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 4px;
+    width: 558px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px dashed #793EF5;
+    border-radius: 12px;
+}
+
+.addMoreComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    width: 106px;
+    height: 24px;
+    margin: 0 auto;
+}
+
+.squareBox {
+    background: url('../images/add-square\ 2.png');
+    width: 20px;
+    height: 20px;
+}
+
+.addMoreText {
+    width: 74px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #793EF5;
+}
+
+
+/* schedule bar */
+
+.scheduleBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    width: 654px;
+    height: 72px;
+}
+
+.scheduleLogoCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 0px;
+    gap: 10px;
+    width: 24px;
+    height: 44px;
+}
+
+.menuSchedule {
+    background: url('../images/menu.png');
+    width: 24px;
+    height: 24px;
+}
+
+
+.scheduleDetail {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 28px;
+    width: 606px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 1px solid #E2E6EB;
+    border-radius: 16px;
+}
+
+.scheduleCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+    width: 558px;
+    height: 24px;
+}
+
+.scheduleContRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 528px;
+    height: 18px;
+}
+
+.scheduleContText {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 81px;
+    height: 18px;
+}
+
+.scheduleText {
+    width: 81px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.scheduleArrow {
+    background: url('../images/arrow-right\ 2.png');
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+}
+
+.chapterContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 4px;
+    width: 606px;
+    height: 56px;
+    background: rgba(102, 95, 239, 0.2);
+    border: 1px solid #793EF5;
+    border-radius: 12px;
+}
+
+.addChapterCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    width: 139px;
+    height: 24px;
+    margin: 0 auto;
+}
+
+.addChapterLogo {
+    background: url('../images/additem.png');
+    width: 24px;
+    height: 24px;
+}
+
+.chapterText {
+    width: 97px;
+    height: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #793EF5;
+}
+
+
+/* content details */
+
+.contentDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 762px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.briefContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 741px;
+    height: 222px;
+}
+
+.briefText {
+    width: 47px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+
+.briefField {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+    width: 741px;
+    height: 48px;
+    background: #F1F4F8;
+    border: 1px solid #CECECE;
+    border-radius: 16px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: rgba(47, 48, 49, 0.54);
+}
+
+.briefVideoCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 20px;
+    gap: 8px;
+    width: 741px;
+    height: 68px;
+    border: 1px dashed #B2B6BC;
+    border-radius: 12px;
+}
+
+.briefDropText {
+    width: 240px;
+    height: 20px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-feature-settings: 'liga' off;
+    color: #778188;
+}
+
+.searchObjects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 24px;
+    width: 190px;
+    height: 40px;
+    background: #EDEAFF;
+    border-radius: 12px;
+}
+
+/* requirements */
+
+.requirementsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 741px;
+    height: 222px;
+}
+
+/* curated Resources */
+
+.curatedText {
+    /* width: 47px; */
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+
+/* survey 1 & 2 */
+
+.surveyContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 564px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.surveyFieldContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 741px;
+    height: 136px;
+}
+
+.surveyOneText {
+    width: 81px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.surveyTwoText {
+    width: 85px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.surveyInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 741px;
+    height: 102px;
+}
+
+.questionContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 8px;
+    width: 741px;
+    height: 48px;
+    background: #F1F4F8;
+    border: 1px solid #CECECE;
+    border-radius: 16px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: rgba(47, 48, 49, 0.54);
+}
+
+.questionAddCont {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 6px;
+    width: 158px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px dashed #793EF5;
+    border-radius: 12px;
+}
+
+.addSquareLogo {
+    background: url('../images/add-square\ 2.png');
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.questionText {
+    width: 98px;
+    height: 22px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #793EF5;
+}

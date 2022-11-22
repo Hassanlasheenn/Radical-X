@@ -1,0 +1,269 @@
+.settingsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 24px;
+    isolation: isolate;
+    position: absolute;
+    width: 654px;
+    height: 168px;
+    left: 23px;
+    top: 212px;
+}
+
+.basicSettingsCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    width: 654px;
+    height: 72px;
+}
+
+.menuLogoCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 0px;
+    gap: 10px;
+    width: 24px;
+    height: 44px;
+}
+
+.basicSettingBar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 28px;
+    width: 606px;
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 34px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+.basicSettingBar:hover {
+    transform: scale(1.03);
+    border: 1px solid #793EF5;
+    cursor: pointer;
+}
+
+.basicTextContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+    width: 558px;
+    height: 24px;
+}
+
+.basicTextCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 528px;
+    height: 18px;
+}
+
+.basicCont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 124px;
+    height: 18px;
+}
+
+.basicText {
+    width: 124px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.heroText {
+    width: 97px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.basicArrowRight {
+    background: url('../images/arrow-right\ 2.png');
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+}
+
+
+/* settings bar content */
+
+.internshipUrlContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    position: absolute;
+    width: 789px;
+    height: 564px;
+    left: 700px;
+    top: 212px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.urlInternField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 741px;
+    height: 82px;
+}
+
+.urlTitle {
+    width: 141px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.textFieldUrl {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 8px;
+    width: 741px;
+    height: 48px;
+    background: #F1F4F8;
+    border: 1px solid #CECECE;
+    border-radius: 16px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+/* access container */
+
+.accessContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 741px;
+    height: 98px;
+}
+
+.accessText {
+    width: 70px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.chechboxContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 741px;
+    height: 60px;
+}
+
+.privateContainer, .hiddenContainer, .disableContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 741px;
+    height: 24px;
+}
+
+.privateText, .hiddenText, .disableText {
+    width: 705px;
+    height: 23px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}
+
+.privateCheckbox, .hiddenCheckbox, .disableCheckbox {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* security checkbox */
+
+
+.securityContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 741px;
+    height: 62px;
+}
+
+.securityText {
+    width: 83px;
+    height: 18px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    font-feature-settings: 'liga' off;
+    color: #333333;
+}

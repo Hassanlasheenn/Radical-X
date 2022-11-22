@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { TickContext } from '../Context/useTickCircle';
-import '../Styles/DescContent.css';
+import { TickContext } from '../../../Context/useTickCircle';
+import '../../../Styles/DescContent.css';
 
 const DescContent = () => {
 

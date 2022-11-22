@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/InternshipInsights.css';
+import '../../Styles/InternshipInsights.css';
 import {
   AreaChart,
   Area,
@@ -91,7 +91,7 @@ function InternshipInsights() {
 
               <div className='greyContainerInsights'>
               {/* i need a feedback here how to highlight the className vector on the chart */}
-                <div className='vectorInsights' />
+                {/* <div className='vectorInsights' /> */}
                 <span className='numberContInsights'>850</span>
                 <span className='textContInsights'>Qualified Candiates</span>
               </div>

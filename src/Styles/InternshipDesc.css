@@ -27,8 +27,20 @@
     height: 24px;
 }
 
+.circleIcon {
+    background: url('../images/untick-circle.png');
+    width: 24px;
+    height: 24px;
+}
+
 .circleIconDesc {
     background: url('../images/untick-circle.png');
+    width: 24px;
+    height: 24px;
+}
+
+.circleDoneDesc {
+    background: url('../images/tick-circle\ \(1\).png');
     width: 24px;
     height: 24px;
 }
@@ -83,6 +95,7 @@
     width: 96px;
     height: 24px;
     opacity: 0.3;
+    text-decoration: none;
 }
 
 .surveysText{
@@ -109,6 +122,7 @@
     width: 99px;
     height: 24px;
     opacity: 0.3;
+    text-decoration: none;
 }
 
 

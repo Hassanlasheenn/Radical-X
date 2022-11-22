@@ -200,6 +200,8 @@
     background: url('../images/image.png');
     width: 16px;
     height: 16px;
+    border: 0;
+    cursor: pointer;
 }
 
 
