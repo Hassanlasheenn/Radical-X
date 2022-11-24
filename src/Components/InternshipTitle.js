@@ -1,5 +1,11 @@
 import React from 'react';
+
+// css & icons imports 
 import '../Styles/InternshipTitle.css';
+import profileIcon from '../images/profile-2user.svg';
+import chartIcon from '../images/chart.svg';
+import moreIcon from '../images/more-2.svg';
+import arrowSqrIcon from '../images/arrow-square-down.svg';
 
 function InternshipTitle() {
   return (
@@ -7,7 +13,7 @@ function InternshipTitle() {
         <div className='internshipTitleCol'>
             <div className='titleRow'>
                 <span className='titleText'>Internship Title</span>
-                <div className='arrowDown' />
+                <img src={arrowSqrIcon} alt='' className='arrowDown' />
             </div>
 
             <div className='productRows'>
@@ -45,7 +51,7 @@ function InternshipTitle() {
         <div className='completionCol'>
             <div className='completionRow'>
                 <span className='completionText'>Completion Period</span>
-                <div className='arrowDown' />
+                <img src={arrowSqrIcon} alt='' className='arrowDown' />
             </div>
 
             <div className='completionRows'>
@@ -83,7 +89,7 @@ function InternshipTitle() {
         <div className='enrollCol'>
             <div className='enrolRow'>
                 <span className='enrolText'>Total Enrolled</span>
-                <div className='arrowDown' />
+                <img src={arrowSqrIcon} alt='' className='arrowDown' />
             </div>
 
             <div className='enrolRows'>
@@ -116,7 +122,7 @@ function InternshipTitle() {
         <div className='qualifiedCandiatesCol'>
             <div className='qualifiedRow'>
                 <span className='qualifiedText'>Qualified Candidates</span>
-                <div className='arrowDown' />
+                <img src={arrowSqrIcon} alt='' className='arrowDown' />
             </div>
 
             <div className='chartQualifiedRows'>
@@ -276,37 +282,37 @@ function InternshipTitle() {
 
             <div className='buttonsRows'>
                 <div className='groupCont'>
-                    <div className='chart'/>
-                    <div className='profile'/>
-                    <div className='more'/>
+                    <img src={chartIcon} alt='' className='chart'/>
+                    <img src={profileIcon} alt='' className='profile'/>
+                    <img src={moreIcon} alt='' className='more'/>
                 </div>
             </div>
             <div className='buttonsRows'>
                 <div className='groupCont'>
-                    <div className='chart'/>
-                    <div className='profile'/>
-                    <div className='more'/>
+                    <img alt='' src={chartIcon} className='chart'/>
+                    <img alt='' src={profileIcon} className='profile'/>
+                    <img alt='' src={moreIcon} className='more'/>
                 </div>
             </div>
             <div className='buttonsRows'>
                 <div className='groupCont'>
-                    <div className='chart'/>
-                    <div className='profile'/>
-                    <div className='more'/>
+                    <img alt='' src={chartIcon} className='chart'/>
+                    <img alt='' src={profileIcon} className='profile'/>
+                    <img alt='' src={moreIcon} className='more'/>
                 </div>
             </div>
             <div className='buttonsRows'>
                 <div className='groupCont'>
-                    <div className='chart'/>
-                    <div className='profile'/>
-                    <div className='more'/>
+                    <img alt='' src={chartIcon} className='chart'/>
+                    <img alt='' src={profileIcon} className='profile'/>
+                    <img alt='' src={moreIcon} className='more'/>
                 </div>
             </div>
             <div className='lastButtonsRows'>
                 <div className='groupCont'>
-                    <div className='chart'/>
-                    <div className='profile'/>
-                    <div className='more'/>
+                    <img alt='' src={chartIcon} className='chart'/>
+                    <img alt='' src={profileIcon} className='profile'/>
+                    <img alt='' src={moreIcon} className='more'/>
                 </div>
             </div>
         </div>

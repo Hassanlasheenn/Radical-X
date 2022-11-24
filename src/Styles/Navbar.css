@@ -15,47 +15,6 @@
     text-align: center;
 }
 
-.backBtnContNavbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 24px;
-    width: 300px;
-    height: 80px;
-    background: #FFFFFF;
-    border-radius: 30px 0px 0px 30px;
-}
-
-.backBtnNavbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 8px;
-    width: 80px;
-    height: 28px;
-    text-decoration: none;
-}
-
-.backArrowNavbar {
-    background: url('../images/arrow-left.png');
-    width: 28px;
-    height: 28px;
-}
-
-.backTextNavbar {
-    width: 44px;
-    height: 24px;
-    font-family: 'Space Grotesk';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.3px;
-    font-feature-settings: 'liga' off;
-    color: #1E1E1E;
-}
 
 .titleContNavbar {
     display: flex;
@@ -82,51 +41,5 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
-}
-
-.continueBtnContNavbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 24px;
-    width: 300px;
-    height: 80px;
-    background: #FFFFFF;
-    border-radius: 0px 30px 30px 0px;
-    cursor: pointer;
-}
-
-.continueBtnNavbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 8px;
-    width: 219px;
-    height: 44px;
-    background: #E2E6EB;
-    border-radius: 12px;
-}
-
-.continueTextNavbar {
-    width: 169px;
-    height: 20px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.4px;
-    font-feature-settings: 'liga' off;
-    color: #828282;
-}
-
-.forwardBtnNavbar {
-    width: 20px;
-    height: 20px;
-    background: url('../images/arrow-right.png');
 }
 

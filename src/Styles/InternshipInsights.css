@@ -40,7 +40,7 @@
     height: 24px;
     font-style: normal;
     font-size: 20px;
-    /* line-height: 20px; */
+    line-height: 20px;
     font-feature-settings: 'liga' off;
     color: #333333;
     text-align: left;
@@ -53,11 +53,12 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    /* line-height: 20px; */
+    line-height: 20px;
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
     text-align: left;
+    margin-top: 12px;
 }
 
 .rightContainerInsights {
@@ -173,7 +174,6 @@
 .scheduleBtnInsights {
     width: 20px;
     height: 20px;
-    background: url('/src/images/calendar-2.png');
 }
 
 .textDateInsights {

@@ -1,17 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Button from './Buttons/Button_1';
+import { useNavigate } from 'react-router-dom';
+
+// css & icons imports 
 import '../Styles/CreateInternship.css';
+import addIcon from '../images/add-square.svg';
 
 function CreateIntership() {
+  const navigate = useNavigate();
+  
   return (
     <div className='createContCreate'>
       <h4 className='internshipTitleCreate'>Internships</h4>
-      <button className='createInternshipContCreate'>
-        <div className='plusLogoCreate'/>
-
-        <Link to={'/internships'} className='btnTextCreate'>Create New Internship</Link>
-        
-      </button>
+      
+      <Button icon={addIcon} onClick={() => navigate("/internships")}>
+          Create New Internship
+      </Button>
     </div>
   )
 }

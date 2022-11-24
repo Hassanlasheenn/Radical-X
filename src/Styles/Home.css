@@ -1,5 +1,5 @@
 
-.home {
+.home-container {
     display: flex;
     flex-direction: row;
     background: #F1F4F8;
@@ -8,19 +8,10 @@
     margin: 16px 0 0 16px;
   }
   
-  .rightCont {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .right--cont {
+    display: grid;
+    grid-template-rows: 10% 30% 60%;
+    margin: .5rem 0 0 6.6rem;
     align-items: center;
-    margin: 20px 66px 0 66px;
-  }
-  
-  .insight {
-    margin-top: 40px;
-  }
-  
-  .titleIntern {
-    margin: 24px 32px 0 0;
   }
   

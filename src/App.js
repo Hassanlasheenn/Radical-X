@@ -22,6 +22,7 @@ import Survey2 from './Components/Surveys/SurveyQuestions/Survey2';
 import Settings from './Pages/Settings';
 import BasicSet from './Components/Settings/SettingsForm/BasicSet';
 import HeroImage from './Components/Settings/SettingsForm/HeroImage';
+import Done from './Pages/Done';
 
 
 const App = () => {
@@ -58,6 +59,8 @@ const App = () => {
           <Route exact path='hero-image' element={<HeroImage />} />
         </Route>
 
+        <Route exact path='done' element={<Done />} /> 
+        {/* 404 page */}
         <Route path='*' element={<NotFound />} />
       </Routes>
     </TickProvider>

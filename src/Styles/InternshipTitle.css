@@ -47,7 +47,6 @@
 }
 
 .arrowDown {
-    background: url('/src/images/arrow-square-down.png');
     width: 20px;
     height: 20px;
     opacity: 0.5;
@@ -524,17 +523,14 @@
 }
 
 .chart {
-    background: url('/src/images/chart.png');
     width: 28px;
     height: 28px;
 }
 .profile {
-    background: url('/src/images/profile-2user.png');
     width: 28px;
     height: 28px;
 }
 .more {
-    background: url('/src/images/more-2.png');
     width: 28px;
     height: 28px;
 }

@@ -1,128 +1,37 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { TickContext } from '../../Context/useTickCircle';
+
+// css & icon imports 
 import '../../Styles/Categories.css';
+import menuIcon from '../../images/menu.svg';
+// import arrowRightBtn from '../../images/arrow-right-internships.svg';
+// import searchIcon from '../../images/search-normal.svg';
+// import closeIcon from '../../images/close.svg';
 
-
-const Categories = () => {
+const Categories = ({ name, onClick, icon }) => {
 
   const { activeCateg, setActiveCateg } = useContext(TickContext);
-  const { activeLoc, setActiveLoc } = useContext(TickContext);
-  const { activeDesc, setActiveDesc } = useContext(TickContext);
-  const { activeBenefits, setActiveBenefits } = useContext(TickContext);
-  const { activeMentor, setActiveMentor } = useContext(TickContext);
-  const { activeRoles, setActiveRoles } = useContext(TickContext);
-  const { activeLinks, setActiveLinks } = useContext(TickContext);
-  const { activeVideo, setActiveVideo } = useContext(TickContext);
 
-
+  const handleCategories = () => {
+      if (onClick) {
+        onClick();
+      }
+  }
+  
   return (
     <>
-      <div className='categoryContCategory'>
     <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'category'} className='categoryBarContCategory'>
+        <img src={menuIcon} alt='' />
+        <div onClick={handleCategories} className='categoryBarContCategory'>
           <div className='textContCategory'>
-            <span className='categoryTextCategory'>Category</span>
+            <span className='categoryTextCategory'>{name}</span>
             <div  className='tickCircle' 
                   style={{  background: !activeCateg ? 'url(../images/tick-circle.png)' : setActiveCateg(true) }} 
             />
           </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'description'} className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='descTextCategory'>Description</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeDesc ? 'url(../images/tick-circle.png)' : setActiveDesc(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'location'} className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='locationTextCategory'>Location</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeLoc ? 'url(../images/tick-circle.png)' : setActiveLoc(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'benefits'}   className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='benefitsTextCategory'>Benefits</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeBenefits ? 'url(../images/tick-circle.png)' : setActiveBenefits(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'intro-video'}  className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='introTextCategory'>Intro Video</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeVideo ? 'url(../images/tick-circle.png)' : setActiveVideo(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'mentor-details'} className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='mentorTextCategory'>Mentor Details</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeMentor ? 'url(../images/tick-circle.png)' : setActiveMentor(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'recommended-roles'}   className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='rolesTextCategory'>Recommended Roles</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeRoles ? 'url(../images/tick-circle.png)' : setActiveRoles(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-      <div className='categoryBarCategory'>
-        <div className='menuIconCategory' />
-        <Link to={'links'}   className='categoryBarContCategory'>
-          <div className='textContCategory'>
-            <span className='linksTextCategory'>Web Links & Resources</span>
-            <div  className='tickCircle' 
-                  style={{  background: !activeLinks ? 'url(../images/tick-circle.png)' : setActiveLinks(true) }} 
-            />
-          </div>
-          <div className='btnIconCategory' /> 
-        </Link>
-      </div>
-
-      <div className='assessmentBarCategory'>
-        <div className='assessmentBarContCategory'>
-          <div className='squareIconCategory' />
-          <span className='addTextCategory'>Add More</span> 
+          {icon && <img src={icon} alt='' />}
         </div>
       </div>
-    </div>
     </>
     
   )

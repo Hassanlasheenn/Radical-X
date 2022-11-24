@@ -7,19 +7,13 @@ import '../Styles/Home.css';
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div className='home-container'>
         <Sidebar />
-        <div className='rightCont'>
-          <div className='create'>
+        <div className='right--cont'>
             <CreateIntership />
-          </div>
-          <div className='insight'>
             <InternshipInsights />
-          </div>
-          <div className='titleIntern'>
             <InternshipTitle />
-          </div>
-      </div>
+        </div>
     </div>
   )
 }

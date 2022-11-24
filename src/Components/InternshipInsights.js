@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/InternshipInsights.css';
+// rechart library import
 import {
   AreaChart,
   Area,
@@ -9,6 +9,9 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
+// css & icons imports
+import '../Styles/InternshipInsights.css';
+import calendarIcon from '../images/calendar.svg';
 
 
 function InternshipInsights() {
@@ -61,7 +64,7 @@ function InternshipInsights() {
               </button>
             </div>
             <div className='dateBtnInsights'>
-                <div className='scheduleBtnInsights'/>
+                <img src={calendarIcon} alt='' className='scheduleBtnInsights'/>
                 <span className='textDateInsights'>Select dates</span>
             </div>
           </div>

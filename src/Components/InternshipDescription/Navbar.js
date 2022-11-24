@@ -1,16 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../../Styles/Navbar.css';
 
-const Navbar = () => {
+// button imports 
+import BtnSec from '../Buttons/Button_2';
+import BackBtn from '../Buttons/Back-Button';
+
+// css & icons import 
+import arrowRightIcon from '../../images/arrow-right.svg';
+import arrowLeftIcon from '../../images/arrow-left.svg';
+
+const Navbar = ({ title, link, back }) => {
+    const navigate = useNavigate();
+    
 
   return (
     <div className='containerNavbar'>
         <div className='backBtnContNavbar'>
-            <Link to={'/'} className='backBtnNavbar'>
-                <div className='backArrowNavbar'/>
-                <span className='backTextNavbar'>Back</span>
-            </Link>
+                <BackBtn icon={arrowLeftIcon} onClick={() => navigate(`/${back}`)}>
+                    Back
+                </BackBtn>
         </div>
 
         <div className='titleContNavbar'>
@@ -18,15 +27,12 @@ const Navbar = () => {
         </div>
         
         <div className='continueBtnContNavbar'>
-            <Link to={'/internship-guide'} style={{ textDecoration: 'none' }}>
-                <div className='continueBtnNavbar'>
-                    <span   className='continueTextNavbar'>
-                        Continue to Next Step
-                    </span>
-                    <div className='forwardBtnNavbar' />
-                </div>
-            </Link>
+            <BtnSec icon={arrowRightIcon} onClick={() => navigate(`/${link}`)}>
+                {title}
+            </BtnSec>
         </div>
+
+        
     </div>
   )
 }
