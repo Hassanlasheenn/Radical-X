@@ -1,4 +1,5 @@
 import React from 'react';
+
 // css import
 import '../../Styles/Sidebar.css';
 // icons imports
@@ -8,7 +9,7 @@ import apprenticeIcon from '../../images/medal-star.svg';
 import internIcon from '../../images/book.svg';
 import jobIcon from '../../images/briefcase.svg';
 import settingIcon from '../../images/setting-2.svg';
-import avatar from '../../images/Rectangle 18895.svg'
+import avatar from '../../images/Rectangle 18895.svg';
 
 
 const Sidebar = () => {

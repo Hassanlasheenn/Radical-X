@@ -59,11 +59,6 @@
     border-radius: 12px;
 }
 
-.profileLogo {
-    background: url('../images/profile.png');
-    width: 24px;
-    height: 24px;
-}
 
 .namePlaceholder {
     display: flex;
@@ -95,11 +90,7 @@
     padding: 0 5px;
 }
 
-.smsLogo {
-    background: url('../images/sms.png');
-    width: 24px;
-    height: 24px;
-}
+
 
 .emailPlaceholder {
     display: flex;
@@ -145,11 +136,7 @@
     border-radius: 12px;
 }
 
-.linkLogo {
-    background: url('../images/link.png');
-    width: 24px;
-    height: 24px;
-}
+
 
 .formText {
     display: flex;
@@ -196,13 +183,6 @@
     border-radius: 10px;
 }
 
-.imageLogo {
-    background: url('../images/image.png');
-    width: 16px;
-    height: 16px;
-    border: 0;
-    cursor: pointer;
-}
 
 
 

@@ -70,14 +70,6 @@
     padding: 0 10px;
 }
 
-.searchIconRoles {
-    background: url('../images/search-normal.png');
-    width: 20px;
-    height: 20px;
-    border: 0;
-    cursor: pointer;
-}
-
 .searchResultContRoles {
     display: flex;
     flex-direction: row;
@@ -140,12 +132,3 @@
     color: #793EF5;
 }
  
-
-.closeBtnRoles {
-    background: url('../images/close.png');
-    width: 22px;
-    height: 22px;
-    opacity: 0.5;
-    border: 0;
-    cursor: pointer;
-}

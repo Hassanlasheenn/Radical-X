@@ -7,6 +7,7 @@ const NotFound = () => {
       <div className='errorCont'>
         <h1 className='errorText'>404</h1>
         <h2 className='pageNotFound'>Page Not Found</h2>
+        <p style={{ fontSize: '80px'}}>🤦🏽‍♂️</p>
       </div>
     </>
   )

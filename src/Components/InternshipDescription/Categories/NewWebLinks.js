@@ -1,7 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { TickContext } from '../../../Context/useTickCircle';
+
+// css & icons imports 
 import '../../../Styles/WebLinks.css';
 import '../../../Styles/CategoryContent.css';
+import closeIcon from '../../../images/close.svg';
+import addLinkIcon from '../../../images/add-square-newInternship.svg';
+import linkWeb from '../../../images/link-internship.svg';
 
 const NewWebLinks = () => {
 
@@ -45,7 +50,7 @@ const NewWebLinks = () => {
         <span className='titleRecommended'>Recommended Roles</span>
         <div className='searchFieldWeb'>
             <div className='textFieldWeb'>
-                <div className='WebLinkLogo' />
+                <img src={linkWeb} alt='' />
                 <input 
                   className='placeholderUrl'
                   placeholder='Add URL'
@@ -57,7 +62,7 @@ const NewWebLinks = () => {
             </div>
             <div className='linksPaste'>
               <div className='addUrlCont'>
-                  <div className='squareAddLink' />
+                  <img src={addLinkIcon} alt='' />
                   <button type='button' onClick={handleAdd} className='AddUrlText'>Add URL </button>
               </div>
 
@@ -67,7 +72,7 @@ const NewWebLinks = () => {
                         <>
                           <div className='linkContWeb' key={link.id}>
                             <span className='linkText'>{link.name}</span>
-                            <button type='button' onClick={() => handleRemove(link.name)} className='closeBtnCateg' />
+                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(link.name)} />
                           </div>
                         </>
                       )

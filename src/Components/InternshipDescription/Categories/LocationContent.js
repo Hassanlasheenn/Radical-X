@@ -1,16 +1,16 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
+
+// css & icons imports
 import '../../../Styles/LocationContent.css';
 import '../../../Styles/CategoryContent.css';
-import { TickContext } from '../../../Context/useTickCircle';
-
+import pinIcon from '../../../images/location.svg';
 
 const LocationContent = () => {
   
   const [countries, setCountries] = useState('');
   const [cntry, setCntry] = useState([]);
-  const { setActiveLoc } = useContext(TickContext);
   const options = useMemo(() => countryList().getData(), []);
 
   const handleChange = (e) => {
@@ -22,7 +22,6 @@ const LocationContent = () => {
         value:value,
         label: e.label,
       });
-      setActiveLoc(true);
       console.log(newCuntry);
       setCntry(newCuntry);
     }
@@ -34,7 +33,7 @@ const LocationContent = () => {
     <div className='locationCont'>
         <span className='locationTitle'>Location</span>
         <div className='locationField'>
-            <div className='locationLogo' />
+            <img src={pinIcon} alt='' />
 
               <Select 
                 options={options}

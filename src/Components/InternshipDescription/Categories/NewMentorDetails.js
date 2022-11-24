@@ -1,10 +1,15 @@
-import React, { useContext, useRef, useState } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useRef, useState } from 'react';
+
+// css & icon imports 
 import '../../../Styles/NewMentorDetails.css';
+import picLogo from '../../../images/image.svg';
+import userIcon from '../../../images/profile.svg';
+import smsIcon from '../../../images/sms.svg';
+import linkFieldIcon from '../../../images/link.svg';
+// import linkIcon from '../../../images/link-internship.svg';
 
 const NewMentorDetails = () => {
 
-    const { setActiveMentor } = useContext(TickContext);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [optional, setOptional] = useState('');
@@ -33,7 +38,6 @@ const NewMentorDetails = () => {
     const handleEmail = (e) => {
         e.preventDefault();
         setEmail(e.target.value);
-        setActiveMentor(true);
     }
 
     const handleOptional = (e) => {
@@ -49,7 +53,7 @@ const NewMentorDetails = () => {
         <img className='rectanglePhoto' src={file} alt='' style={{ width: '80px', height: '80px', borderRadius: '10px'}} />
         <div className='formInfos'>
             <div className='nameField'>
-                <div className='profileLogo' />
+                <img src={userIcon} alt='' />
                 <div className='namePlaceholder'>
                     <input 
                         className='nameFieldText'
@@ -62,7 +66,7 @@ const NewMentorDetails = () => {
                 </div>
             </div>
             <div className='emailField'>
-                <div className='smsLogo' />
+                <img src={smsIcon} alt='' />
                 <div className='emailPlaceholder'>
                     <input 
                         className='emailFieldText'
@@ -75,7 +79,7 @@ const NewMentorDetails = () => {
             </div>
         </div>
         <div className='linkedinUrlForm'>
-            <div className='linkLogo' />
+            <img src={linkFieldIcon} alt='' />
             <div className='formText'>
                 <input 
                     className='linkedinText'
@@ -88,7 +92,7 @@ const NewMentorDetails = () => {
         </div>
         <div className='pictureLogo'>
             <input style={{ display: 'none' }} ref={inputRef} type='file' onChange={handleFileChange} />
-            <button onClick={handleClick} className='imageLogo' />
+            <img src={picLogo} alt='' onClick={handleClick} />
         </div>
     </div>
   )

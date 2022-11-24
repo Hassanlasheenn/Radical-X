@@ -32,11 +32,11 @@
     height: 44px;
 }
 
-.menuLogo {
+/* .menuLogo {
     background: url('../images/menu.png');
     width: 24px;
     height: 24px;
-}
+} */
 
 .barContainer {
     box-sizing: border-box;
@@ -123,12 +123,12 @@
     color: #333333;
 }
 
-.surveyArrowLogo {
+/* .surveyArrowLogo {
     background: url('../images/arrow-right\ 2.png');
     width: 24px;
     height: 24px;
     opacity: 0.5;
-}
+} */
 
 
 /* assessment bar */
@@ -158,11 +158,11 @@
     margin: 0 auto;
 }
 
-.addItemAssess {
+/* .addItemAssess {
     background: url('../images/additem.png');
     width: 24px;
     height: 24px;
-}
+} */
 
 .addSurveyText {
     width: 89px;

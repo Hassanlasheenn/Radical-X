@@ -52,11 +52,6 @@
     border-radius: 16px;
 }
 
-.WebLinkLogo {
-    background: url('../images/link\ 2.png');
-    width: 20px;
-    height: 20px;
-}
 
 .placeholderUrl {
     width: 681px;
@@ -101,12 +96,6 @@
     border-radius: 12px;
 }
 
-.squareAddLink {
-    background: url('../images/add-square\ 2.png');
-    width: 20px;
-    height: 20px;
-    opacity: 0.5;
-}
 
 .AddUrlText {
     width: 71px;

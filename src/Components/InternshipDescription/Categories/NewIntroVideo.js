@@ -1,15 +1,15 @@
-import React, { useContext, useRef } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useRef } from 'react';
+
+// css & icons import 
 import '../../../Styles/NewIntroVideo.css';
+import uploadIcon from '../../../images/document-upload.svg';
 
 const NewIntroVideo = () => {
   
   const inputRef = useRef(null);
-  const { setActiveVideo } = useContext(TickContext);
 
   const handleLogoClick = () => {
     inputRef.current.click();
-    setActiveVideo(true)
   }
 
   const handleVideoFile = e => {
@@ -25,7 +25,7 @@ const NewIntroVideo = () => {
         <div className='form-group files'>
             <label className='dragDropText'>Drag n drop to upload your video</label>
             <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-            <button onClick={handleLogoClick} className='uploadLogo' />
+            <img src={uploadIcon} alt='' onClick={handleLogoClick} />
         </div>
     </div>
   )

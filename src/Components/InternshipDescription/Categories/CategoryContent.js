@@ -1,22 +1,23 @@
-import React, {useContext, useState } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useState } from 'react';
+
+// css & icons import 
 import '../../../Styles/CategoryContent.css';
+import searchIcon from '../../../images/search-normal.svg';
+import closeIcon from '../../../images/close.svg';
 
 
 const CategoryContent = () => {
 
     const [searchInput, setSearchInput] = useState('');
     const [categories, setCategories] = useState([]);
-    const { setActiveCateg } = useContext(TickContext);
 
     
 
     const handleAdd = () => {
-        if(searchInput.length === 0) return 'disabled' && setActiveCateg(false);
+        if(searchInput.length === 0) return 'disabled';
         const newCategory = categories.concat({
             field: searchInput,
         });
-        setActiveCateg(true);
         setCategories(newCategory);
         setSearchInput('');
     }
@@ -28,7 +29,6 @@ const CategoryContent = () => {
 
     const handleKeyPress = (e) => {
         if(e.key === 'Enter') {
-            setActiveCateg(true);
             handleAdd();
         }
     }
@@ -37,7 +37,6 @@ const CategoryContent = () => {
         const categRemove = categories.filter((item) => item.field !== field);
 
         setCategories(categRemove);
-        setActiveCateg(false);
     }
 
 
@@ -54,7 +53,7 @@ const CategoryContent = () => {
                     value={searchInput}
                     className='placeholderCateg'
                 />
-                <button type='button' className='searchIconCateg' />
+                <img src={searchIcon} alt='' type='button' />
             </div>
             <div className='searchResultContCateg'>
             {categories.map((category) => {
@@ -62,7 +61,7 @@ const CategoryContent = () => {
                     <>
                         <div className='resultContCateg' key={category.id}> 
                             <span className='resultTextCateg'>{category.field}</span>
-                            <button type='button' onClick={() => handleRemove(category.field)} className='closeBtnCateg' />
+                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(category.field)} style={{ cursor: 'pointer' }} />
                         </div>
                     </>
                 )

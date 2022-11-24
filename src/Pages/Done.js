@@ -23,7 +23,7 @@ const Done = () => {
       <p style={{ marginBottom: '30px'}}>Internship Published! 🚀</p>
 
         <BackBtn onClick={() => navigate('/')}>
-            <p style={{ transform: 'translate(-15px, 0)'}}>Back</p>
+            <p style={{ transform: 'translate(-15px, 0)'}}>Back to Home</p>
         </BackBtn>
     </div>
   )

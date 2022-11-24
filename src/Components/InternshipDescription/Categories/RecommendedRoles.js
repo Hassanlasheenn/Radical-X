@@ -1,12 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useState } from 'react';
+
+// css & icon imports
 import '../../../Styles/RecommendedRoles.css';
+import closeIcon from '../../../images/close.svg';
+import searchIcon from '../../../images/search-normal.svg';
 
 const RecommendedRoles = () => {
 
     const [searchRoles, setSearchRoles] = useState('');
     const [roles, setRoles] = useState([]);
-    const { setActiveRoles } = useContext(TickContext);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -17,21 +19,18 @@ const RecommendedRoles = () => {
         const newRole = roles.concat({
             name: searchRoles,
         });
-        setActiveRoles(true);
         setRoles(newRole);
         setSearchRoles('');
     }
 
     const handlePress = (e) => {
         if(e.key === 'Enter') {
-            setActiveRoles(true);
             handleAdd();
         }
     }
 
     const handleRemove = (name) => {
         const rolDelete = roles.filter((item) => item.name !== name);
-        setActiveRoles(false);
         setRoles(rolDelete);
     }
   return (
@@ -46,7 +45,7 @@ const RecommendedRoles = () => {
                     value={searchRoles}
                     onKeyDown={handlePress}
                 />
-                <button type='button' onClick={handleAdd} className='searchIconRoles' />
+                <img src={searchIcon} alt='' type='button' onClick={handleAdd} className='searchIconRoles' />
             </div>
             <div className='searchResultContRoles'>
             {roles.map((role) => {
@@ -54,7 +53,7 @@ const RecommendedRoles = () => {
                     <>
                         <div className='resultContRoles' key={role.id}> 
                             <span className='resultTextRoles'>{role.name}</span>
-                            <button type='button' onClick={() => handleRemove(role.name)} className='closeBtnRoles' />
+                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(role.name)} />
                         </div>  
                     </>
                 )

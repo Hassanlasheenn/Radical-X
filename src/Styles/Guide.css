@@ -32,11 +32,11 @@
     height: 44px;
 }
 
-.menuOverview {
+/* .menuOverview {
     background: url('../images/menu.png');
     width: 24px;
     height: 24px;
-}
+} */
 
 .overviewDetail {
     box-sizing: border-box;
@@ -107,12 +107,12 @@
     color: #333333;
 }
 
-.overviewArrow {
+/* .overviewArrow {
     background: url('../images/arrow-right\ 2.png');
     width: 24px;
     height: 24px;
     opacity: 0.5;
-}
+} */
 
 /* overview content */
 
@@ -150,11 +150,11 @@
     height: 24px;
 }
 
-.menuBox {
+/* .menuBox {
     background: url('../images/menu.png');
     width: 20px;
     height: 20px;
-}
+} */
 
 .boxText {
     width: 37px;
@@ -196,11 +196,11 @@
     margin: 0 auto;
 }
 
-.squareBox {
+/* .squareBox {
     background: url('../images/add-square\ 2.png');
     width: 20px;
     height: 20px;
-}
+} */
 
 .addMoreText {
     width: 74px;
@@ -238,11 +238,11 @@
     height: 44px;
 }
 
-.menuSchedule {
+/* .menuSchedule {
     background: url('../images/menu.png');
     width: 24px;
     height: 24px;
-}
+} */
 
 
 .scheduleDetail {
@@ -312,12 +312,12 @@
     color: #333333;
 }
 
-.scheduleArrow {
+/* .scheduleArrow {
     background: url('../images/arrow-right\ 2.png');
     width: 24px;
     height: 24px;
     opacity: 0.5;
-}
+} */
 
 .chapterContainer {
     display: flex;
@@ -344,11 +344,11 @@
     margin: 0 auto;
 }
 
-.addChapterLogo {
+/* .addChapterLogo {
     background: url('../images/additem.png');
     width: 24px;
     height: 24px;
-}
+} */
 
 .chapterText {
     width: 97px;
@@ -591,12 +591,12 @@
     border-radius: 12px;
 }
 
-.addSquareLogo {
+/* .addSquareLogo {
     background: url('../images/add-square\ 2.png');
     width: 20px;
     height: 20px;
     opacity: 0.5;
-}
+} */
 
 .questionText {
     width: 98px;

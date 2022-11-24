@@ -70,14 +70,6 @@
     padding: 0 10px;
 }
 
-.searchIconCateg {
-    background: url('../images/search-normal.png');
-    width: 20px;
-    height: 20px;
-    border: 0;
-    cursor: pointer;
-}
-
 .searchResultContCateg {
     display: flex;
     flex-direction: row;
@@ -113,13 +105,4 @@
     font-size: 15px;
     line-height: 22px;
     color: #793EF5;
-}
-
-.closeBtnCateg {
-    background: url('../images/close.png');
-    width: 22px;
-    height: 22px;
-    opacity: 0.5;
-    border: 0;
-    cursor: pointer;
 }
