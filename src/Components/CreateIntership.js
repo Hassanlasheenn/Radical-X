@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/CreateInternship.css';
+import '../Styles/CreateInternship.css';
 
 function CreateIntership() {
   return (

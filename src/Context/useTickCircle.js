@@ -13,9 +13,6 @@ export const TickProvider = props => {
     const [activeRoles, setActiveRoles] = useState(false);
     const [activeLinks, setActiveLinks] = useState(false);
 
-    const [activeColor, setActiveColor] = useState(false);
-    const [activePage, setActivePage] =  useState(false);
-
   return (
     <TickContext.Provider 
         value={
@@ -27,8 +24,6 @@ export const TickProvider = props => {
                 activeMentor, setActiveMentor,
                 activeRoles, setActiveRoles,
                 activeLinks, setActiveLinks,
-                activeColor, setActiveColor,
-                activePage, setActivePage
             }}>
         {props.children}
     </TickContext.Provider>

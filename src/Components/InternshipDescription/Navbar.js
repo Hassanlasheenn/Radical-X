@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { TickContext } from '../../Context/useTickCircle';
 import '../../Styles/Navbar.css';
 
 const Navbar = () => {
-
-    const { activeColor, setActiveColor  } = useContext(TickContext);
 
   return (
     <div className='containerNavbar'>
@@ -22,13 +19,11 @@ const Navbar = () => {
         
         <div className='continueBtnContNavbar'>
             <Link to={'/internship-guide'} style={{ textDecoration: 'none' }}>
-                <div className='continueBtnNavbar' style={{ background: activeColor ? '#793EF5' : setActiveColor(false)}}>
-                    <span   className='continueTextNavbar'
-                            style={{ color: activeColor ? '#FFFFFF' : setActiveColor(false) }}
-                    >
+                <div className='continueBtnNavbar'>
+                    <span   className='continueTextNavbar'>
                         Continue to Next Step
                     </span>
-                    <div className='forwardBtnNavbar' style={{ background: activeColor ? 'url(../images/arrow-right 4.png)' : setActiveColor(false) }} />
+                    <div className='forwardBtnNavbar' />
                 </div>
             </Link>
         </div>

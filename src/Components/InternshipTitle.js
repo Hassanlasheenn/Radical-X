@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../Styles/InternshipTitle.css';
+import '../Styles/InternshipTitle.css';
 
 function InternshipTitle() {
   return (

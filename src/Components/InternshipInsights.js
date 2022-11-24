@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../Styles/InternshipInsights.css';
+import '../Styles/InternshipInsights.css';
 import {
   AreaChart,
   Area,

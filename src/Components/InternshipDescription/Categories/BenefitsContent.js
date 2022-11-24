@@ -12,6 +12,7 @@ const BenefitsContent = () => {
     e.preventDefault();
     setBenefits(e.target.value);
     setActiveBenefits(true);
+    e.target.value === '' ? setActiveBenefits(false) : setActiveBenefits(true)
   }
 
   return (

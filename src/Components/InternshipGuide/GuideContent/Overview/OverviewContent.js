@@ -32,7 +32,7 @@ const OverviewContent = () => {
                   </div>
                 </div>
 
-              </div>
+        </div>
     </>
   )
 }

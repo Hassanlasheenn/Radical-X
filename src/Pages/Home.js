@@ -1,8 +1,8 @@
 import React from 'react';
-import CreateIntership from '../Components/Home/CreateIntership';
-import InternshipInsights from '../Components/Home/InternshipInsights';
-import InternshipTitle from '../Components/Home/InternshipTitle';
-import Sidebar from '../Components/Home/Sidebar';
+import CreateIntership from '../Components/CreateIntership';
+import InternshipInsights from '../Components/InternshipInsights';
+import InternshipTitle from '../Components/InternshipTitle';
+import Sidebar from '../Components/Sidebar/Sidebar';
 import '../Styles/Home.css';
 
 const Home = () => {

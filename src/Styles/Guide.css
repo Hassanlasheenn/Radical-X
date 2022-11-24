@@ -12,7 +12,7 @@
     top: 212px;
 }
 
-/* .overviewCont {
+.overviewCont {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -20,10 +20,9 @@
     gap: 24px;
     width: 654px;
     height: 72px;
-} */
-/* height: 360px; */
+} 
 
-/* .overviewLogoCont {
+.overviewLogoCont {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -31,7 +30,7 @@
     gap: 10px;
     width: 24px;
     height: 44px;
-} */
+}
 
 .menuOverview {
     background: url('../images/menu.png');
@@ -55,6 +54,7 @@
     text-decoration: none;
 }
 
+
 .overviewDetail:hover {
     border: 1px solid #793EF5;
     transform: scale(1.03);
@@ -71,6 +71,9 @@
     width: 558px;
     height: 24px;
     text-decoration: none;
+    border: 0;
+    background: #FFFFFF;
+    cursor: pointer;
 }
 
 .overviewFrameText {
@@ -110,6 +113,8 @@
     height: 24px;
     opacity: 0.5;
 }
+
+/* overview content */
 
 .detailFrame {
     display: flex;
@@ -216,7 +221,7 @@
 .scheduleBar {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     padding: 0px;
     gap: 24px;
     width: 654px;
@@ -251,7 +256,16 @@
     height: 72px;
     background: #FFFFFF;
     border: 1px solid #E2E6EB;
+    box-shadow: 0px 24px 34px rgba(0, 0, 0, 0.12);
     border-radius: 16px;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.scheduleDetail:hover {
+    border: 1px solid #793EF5;
+    transform: scale(1.03);
+    cursor: pointer;
 }
 
 .scheduleCont {
@@ -262,6 +276,9 @@
     gap: 6px;
     width: 558px;
     height: 24px;
+    border: 0;
+    background: #FFFFFF;
+    cursor: pointer;
 }
 
 .scheduleContRow {

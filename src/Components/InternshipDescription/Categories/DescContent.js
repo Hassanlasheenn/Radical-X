@@ -12,6 +12,7 @@ const DescContent = () => {
     e.preventDefault();
     setDesc(e.target.value);
     setActiveDesc(true)
+    e.target.value === '' ? setActiveDesc(false) : setActiveDesc(true)
   }
 
   return (

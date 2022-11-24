@@ -27,8 +27,6 @@ const NewWebLinks = () => {
   const handlePress = (e) => {
     if(e.key === 'Enter') {
       setActiveLinks(true);
-      setActivePage(true);
-      setActiveColor(true);
       handleAdd();
     }
   }
@@ -51,7 +49,7 @@ const NewWebLinks = () => {
                 <input 
                   className='placeholderUrl'
                   placeholder='Add URL'
-                  type="text"
+                  type="email"
                   onKeyDown={handlePress}
                   onChange={handleChange}
                   value={url}
