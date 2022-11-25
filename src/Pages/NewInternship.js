@@ -10,6 +10,8 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import arrowRightBtn from '../images/arrow-right-internships.svg';
 import addMoreSq from '../images/add-square-newInternship.svg';
 import unTickCircle from '../images/untick-circle-newInternship.svg';
+import tickCatIcon from '../images/tick-circle.svg';
+
 
 
 
@@ -31,7 +33,7 @@ const NewInternship = () => {
         </div>
 
         <div className='categoryContCategory'>
-          <Categories name='Category' icon={arrowRightBtn} onClick={() => navigate('category')} />
+          <Categories name='Category' icon={arrowRightBtn} onClick={() => navigate('category')} tick={tickCatIcon} />
           <Categories name='Description' icon={arrowRightBtn} onClick={() => navigate('description')} />
           <Categories name='Location' icon={arrowRightBtn} onClick={() => navigate('location')} />
           <Categories name='Benefits' icon={arrowRightBtn} onClick={() => navigate('benefits')} />

@@ -11,6 +11,8 @@ const LocationContent = () => {
   
   const [countries, setCountries] = useState('');
   const [cntry, setCntry] = useState([]);
+
+
   const options = useMemo(() => countryList().getData(), []);
 
   const handleChange = (e) => {

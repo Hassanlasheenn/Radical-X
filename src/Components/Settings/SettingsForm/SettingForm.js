@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeroImage = () => {
+const SettingForm = () => {
   return (
     <>
       <div className='internshipUrlContainer'>
@@ -48,4 +48,4 @@ const HeroImage = () => {
   )
 }
 
-export default HeroImage;
+export default SettingForm;

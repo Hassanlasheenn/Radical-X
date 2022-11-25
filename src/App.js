@@ -17,12 +17,10 @@ import BriefContent from './Components/InternshipGuide/GuideContent/Overview/Bri
 import ScheduleContent from './Components/InternshipGuide/GuideContent/Schedule/ScheduleContent';
 import ResourcesContent from './Components/InternshipGuide/GuideContent/Resources/ResourcesContent';
 import Surveys from './Pages/Surveys';
-import Survey1 from './Components/Surveys/SurveyQuestions/Survey1';
-import Survey2 from './Components/Surveys/SurveyQuestions/Survey2';
 import Settings from './Pages/Settings';
-import BasicSet from './Components/Settings/SettingsForm/BasicSet';
-import HeroImage from './Components/Settings/SettingsForm/HeroImage';
 import Done from './Pages/Done';
+import SettingForm from './Components/Settings/SettingsForm/SettingForm';
+import SurveyContent from './Components/Surveys/SurveyQuestions/SurveyContent';
 
 
 const App = () => {
@@ -50,13 +48,13 @@ const App = () => {
         </Route>
 
         <Route exact path='surveys' element={<Surveys />}>
-          <Route exact path='1' element={<Survey1 />} />
-          <Route exact path='2' element={<Survey2 />} />
+          <Route exact path='1' element={<SurveyContent title='Survey 1' />} />
+          <Route exact path='2' element={<SurveyContent title='Survey 2' />} />
         </Route>
 
         <Route exact path='settings' element={<Settings />}>
-          <Route exact path='basic-settings' element={<BasicSet />} />
-          <Route exact path='hero-image' element={<HeroImage />} />
+          <Route exact path='basic-settings' element={<SettingForm />} />
+          <Route exact path='hero-image' element={<SettingForm />} />
         </Route>
 
         {/* submitted internship page */}

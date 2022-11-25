@@ -52,7 +52,7 @@
 .textContCategory {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 0px;
     gap: 8px;
@@ -60,7 +60,8 @@
     height: 24px;
 }
 
-.categoryTextCategory, .descTextCategory, .locationTextCategory, .benefitsTextCategory, .introTextCategory, .mentorTextCategory, .rolesTextCategory, .linksTextCategory {
+.categoryTextCategory {
+    position: absolute;
     width: 214px;
     height: 18px;
     font-size: 18px;
@@ -70,7 +71,7 @@
     line-height: 18px;
     font-feature-settings: 'liga' off;
     color: #333333;
-    text-align: start;
+    text-align: left;
 }
 
 /* .tickCircle {

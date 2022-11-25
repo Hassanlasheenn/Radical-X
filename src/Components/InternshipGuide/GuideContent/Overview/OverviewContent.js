@@ -1,40 +1,13 @@
 import React from 'react';
 
-const OverviewContent = () => {
+export const Content = ({ name, icon }) => {
   return (
-    <>
-        <div className='detailFrame'>
-                <div className='box'>
-                  <div className='boxComponent'>
-                    <div className='menuBox' />
-                    <span className='boxText'>Brief</span>
-                  </div>
-                </div>
-
-                <div className='box'>
-                  <div className='boxComponent'>
-                    <div className='menuBox' />
-                    <span className='boxText'>Requirements</span>
-                  </div>
-                </div>
-
-                <div className='box'>
-                  <div className='boxComponent'>
-                    <div className='menuBox' />
-                    <span className='boxText'>Milestones</span>
-                  </div>
-                </div>
-
-                <div className='addMoreBox'>
-                  <div className='addMoreComponent'>
-                    <div className='squareBox' />
-                    <span className='addMoreText'>Add More</span>
-                  </div>
-                </div>
-
+        <div className='box'>
+          <div className='boxComponent'>
+            { icon && <img src={icon} alt='' /> }
+            <span className='boxText'>{name}</span>
+          </div>
         </div>
-    </>
   )
 }
 
-export default OverviewContent;

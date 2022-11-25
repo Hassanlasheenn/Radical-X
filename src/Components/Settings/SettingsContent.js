@@ -1,51 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+// css & icons imports 
 import '../../Styles/Settings.css';
+import menuIcon from '../../images/menu.svg';
+import arrowIcon from '../../images/arrow-right-internships.svg';
 
-const SettingsContent = () => {
+const SettingsContent = ({ title, onClick }) => {
+
+    const handleSettings = () => {
+        if(onClick) {
+            onClick();
+        }
+    }
   return (
-    <>
-      <div className='settingsContainer'>
-
         <div className='basicSettingsCont'>
             <div className='menuLogoCont'>
-                <div className='menuLogo'/>
+                <img src={menuIcon} alt='' />
             </div>
 
-            <Link to={'basic-settings'} className='basicSettingBar'>
+            <div onClick={handleSettings} className='basicSettingBar'>
                 <div className='basicTextContainer'>
                     <div className='basicTextCont'>
                         <div className='basicCont'>
-                            <span className='basicText'>Basic Settings</span>
+                            <span className='basicText'>{title}</span>
                         </div>
                     </div>
 
-                    <div className='basicArrowRight'/>
+                    <img src={arrowIcon} alt='' />
                 </div>
-            </Link>
-        </div>
-
-        <div className='basicSettingsCont'>
-            <div className='menuLogoCont'>
-                <div className='menuLogo'/>
             </div>
-
-            <Link to={'hero-image'} className='basicSettingBar'>
-                <div className='basicTextContainer'>
-                    <div className='basicTextCont'>
-                        <div className='basicCont'>
-                            <span className='heroText'>Hero Image</span>
-                        </div>
-                    </div>
-
-                    <div className='basicArrowRight'/>
-                </div>
-            </Link>
         </div>
-
-
-      </div>
-    </>
   )
 }
 

@@ -1,12 +1,16 @@
 import React from 'react';
 
+// css & icon imports
 
-const Survey1 = () => {
+import addLogo from '../../../images/add-square copy.svg';
+
+
+const SurveyContent = ({ title }) => {
   return (
     <>
       <div className='surveyContentContainer'>
         <div className='surveyFieldContainer'>
-          <span className='surveyOneText'>Survey 1</span>
+          <span className='surveyOneText' style={{ fontSize: '19px'}}>{title}</span>
           <div className='surveyInputContainer'>
             <input 
               className='questionContainer'
@@ -14,7 +18,7 @@ const Survey1 = () => {
               type='text'
             />
             <div className='questionAddCont'>
-              <div className='addSquareLogo'/>
+              <img src={addLogo} alt='' />
               <span className='questionText'>Add Question</span>
             </div>
           </div>
@@ -24,4 +28,4 @@ const Survey1 = () => {
   )
 }
 
-export default Survey1;
+export default SurveyContent;

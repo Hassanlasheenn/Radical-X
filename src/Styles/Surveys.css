@@ -32,11 +32,6 @@
     height: 44px;
 }
 
-/* .menuLogo {
-    background: url('../images/menu.png');
-    width: 24px;
-    height: 24px;
-} */
 
 .barContainer {
     box-sizing: border-box;
@@ -100,35 +95,16 @@
 }
 
 .surveyText {
-    width: 73px;
+    width: 83px;
     height: 18px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 18px;
     font-feature-settings: 'liga' off;
     color: #333333;
 }
-
-.surveyText2{
-    width: 76px;
-    height: 18px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    font-feature-settings: 'liga' off;
-    color: #333333;
-}
-
-/* .surveyArrowLogo {
-    background: url('../images/arrow-right\ 2.png');
-    width: 24px;
-    height: 24px;
-    opacity: 0.5;
-} */
 
 
 /* assessment bar */
@@ -157,12 +133,6 @@
     height: 24px;
     margin: 0 auto;
 }
-
-/* .addItemAssess {
-    background: url('../images/additem.png');
-    width: 24px;
-    height: 24px;
-} */
 
 .addSurveyText {
     width: 89px;

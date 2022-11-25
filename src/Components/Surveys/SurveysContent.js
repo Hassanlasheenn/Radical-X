@@ -1,55 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+// css & icons imports 
 import '../../Styles/Surveys.css';
+import menuIcon from '../../images/menu.svg';
+import arrowIcon from '../../images/arrow-right-internships.svg';
 
-const SurveysContent = () => {
+const SurveysContent = ({ title, onClick }) => {
+
+    const handleSurveys = () => {
+        if(onClick) {
+            onClick();
+        }
+    }
   return (
-    <>
-        <div className='surveysContainer'>
-           <div className='surveyContainer'>
+        <div className='surveyContainer'>
             <div className='menuLogoCont'>
-                <div className='menuLogo' />
-           </div> 
-                <Link to={'1'} className='barContainer'>
-                    <div className='textContainer'>
-                        <div className='textContSurvey'>
-                            <div className='textCont'>
-                                <span className='surveyText'>Survey 1</span>
-                            </div>
+                <img src={menuIcon} alt='' />
+            </div> 
+            <div onClick={handleSurveys} className='barContainer'>
+                <div className='textContainer'>
+                    <div className='textContSurvey'>
+                        <div className='textCont'>
+                            <span className='surveyText'>{title}</span>
                         </div>
-                        <div className='surveyArrowLogo'/>
                     </div>
-                </Link>
-            </div>
-
-           <div className='surveyContainer'>
-                <div className='menuLogoCont'>
-                    <div className='menuLogo' />
-                </div> 
-                <Link to={'2'} className='barContainer'>
-                    <div className='textContainer'>
-                        <div className='textContSurvey'>
-                            <div className='textCont2'>
-                                <span className='surveyText2'>Survey 2</span>
-                            </div>
-                        </div>
-                        <div className='surveyArrowLogo'/>
-                    </div>
-                </Link>
-            </div>
-
-            <div className='assessmentContainer'>
-                <div className='textContainerAssess'>
-                    <div className='addItemAssess'/>
-                    <span className='addSurveyText'>Add Survey</span>
+                    <img src={arrowIcon} alt='' />
                 </div>
             </div>
-
-
-
-
         </div>
-    </>
   )
 }
 

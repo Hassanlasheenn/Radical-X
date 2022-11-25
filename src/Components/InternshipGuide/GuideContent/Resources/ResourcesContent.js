@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 
+
+import uploadLogo from '../../../../images/document-upload.svg';
+
 const ResourcesContent = () => {
 
     const inputRef = useRef(null);
@@ -26,7 +29,7 @@ const ResourcesContent = () => {
         <div className='briefVideoCont'>
                 <label className='briefDropText'>Drag n drop to upload your video</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <button onClick={handleLogoClick} className='uploadLogo' />
+                <img src={uploadLogo} alt='' onClick={handleLogoClick}/>
         </div>
 
         <div className='searchObjects'>
@@ -44,7 +47,7 @@ const ResourcesContent = () => {
         <div className='briefVideoCont'>
                 <label className='briefDropText'>Drag n drop to upload your video</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <button onClick={handleLogoClick} className='uploadLogo' />
+                <img src={uploadLogo} alt='' onClick={handleLogoClick}/>
         </div>
 
         <div className='searchObjects'>

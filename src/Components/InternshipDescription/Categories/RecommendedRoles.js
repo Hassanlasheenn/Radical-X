@@ -10,17 +10,22 @@ const RecommendedRoles = () => {
     const [searchRoles, setSearchRoles] = useState('');
     const [roles, setRoles] = useState([]);
 
+
     const handleChange = (e) => {
         e.preventDefault();
         setSearchRoles(e.target.value);
     }
 
     const handleAdd = () => {
-        const newRole = roles.concat({
-            name: searchRoles,
-        });
-        setRoles(newRole);
-        setSearchRoles('');
+        if (searchRoles.length === 0) {return 'disabled'}
+        else{
+            const newRole = roles.concat({
+                name: searchRoles,
+            });
+            setRoles(newRole);
+            setSearchRoles('');
+        }
+
     }
 
     const handlePress = (e) => {

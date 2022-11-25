@@ -12,19 +12,18 @@ const CategoryContent = () => {
     const [searchInput, setSearchInput] = useState('');
     const [categories, setCategories] = useState([]);
 
-    const { setActive } =  useContext(TickContext);
-
-
-    
+    const { setActive } = useContext(TickContext);
 
     const handleAdd = () => {
-        if(searchInput.length === 0) return 'disabled';
-        const newCategory = categories.concat({
-            field: searchInput,
-        });
-        setCategories(newCategory);
-        setSearchInput('');
-        setActive(true);
+        if(searchInput.length === 0) {return 'disabled'}
+        else {
+            const newCategory = categories.concat({
+                field: searchInput,
+            });
+            setCategories(newCategory);
+            setSearchInput('');
+            setActive(true);
+        }
     }
 
     const handleChange = (e) => {
@@ -35,7 +34,6 @@ const CategoryContent = () => {
     const handleKeyPress = (e) => {
         if(e.key === 'Enter') {
             handleAdd();
-            setActive(true);
         }
     }
 
@@ -43,6 +41,7 @@ const CategoryContent = () => {
         const categRemove = categories.filter((item) => item.field !== field);
 
         setCategories(categRemove);
+        setActive(false);
     }
 
 

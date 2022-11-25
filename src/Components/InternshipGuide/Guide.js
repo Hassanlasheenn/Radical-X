@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../Styles/Guide.css';
-import OverviewContent from './GuideContent/Overview/OverviewContent';
-import ResourcesDetail from './GuideContent/Resources/ResourcesDetail';
-import ScheduleDetails from './GuideContent/Schedule/ScheduleDetails';
+import { Content } from './GuideContent/Overview/OverviewContent';
 
-const Guide = () => {
+// css & icons imports
+import '../../Styles/Guide.css';
+import menuIcon from '../../images/menu.svg';
+import squareIcon from '../../images/add-square-newInternship.svg';
+
+
+const Guide = ({ title, icon, onClick }) => {
 
   const [show, setShow] = useState(false);
   const [Height, setHeight] = useState('72px');
@@ -22,75 +24,46 @@ const Guide = () => {
     }
   }
 
+  const handleGuides = () => {
+    if(onClick) {
+      onClick();
+    } 
+  }
+
   return (
-    <>
-      <div className='guideOverview'>
 
         <div className='overviewCont' style={{ height: Height }}>
           <div className='overviewLogoCont'>
-            <div className='menuOverview' />
+            <img src={menuIcon} alt='' />
           </div>
 
-          <Link to={'overview'} className='overviewDetail' style={{ height: Height }}>
+          <div onClick={handleGuides} className='overviewDetail' style={{ height: Height }}>
               <button onClick={handleClickMenu} className='overviewTextCont'>
                 <div className='overviewFrameText'>
                   <div className='headingCont'>
-                    <span className='overviewText'>Overview</span>
+                    <span className='overviewText'>{title}</span>
                   </div>
                 </div>
-                <div className='overviewArrow' />
+               {icon &&  <img src={icon} alt='' /> }
               </button>
-          { show && <OverviewContent /> }
-          </Link>
-        </div>
 
+              <div className='detailFrame'>
 
-        <div className='scheduleBar' style={{ height: Height }}>
-          <div className='scheduleLogoCont'>
-            <div className='menuSchedule'/>
-          </div>
-
-          <Link to={'schedule'} className='scheduleDetail' style={{ height: Height }}>
-            <button onClick={handleClickMenu} className='scheduleCont'>
-              <div className='scheduleContRow'>
-                <div className='scheduleContText'>
-                  <span className='scheduleText'>Schedule</span>
-                </div>
+                { show && <Content name='Brief' icon={menuIcon} /> }
+                { show && <Content name='Requirements' icon={menuIcon} /> }
+                { show && <Content name='Milestones' icon={menuIcon} /> }
+                { show && 
+                  <div className='addMoreBox'>
+                    <div className='addMoreComponent'>
+                      <img src={squareIcon} alt='' />
+                      <span className='addMoreText'>Add More</span>
+                    </div>
+                  </div> 
+                }
+                
               </div>
-              <div className='scheduleArrow'/>
-            </button>
-            { show && <ScheduleDetails /> }
-          </Link>
-        </div>
-
-        <div className='scheduleBar' style={{ height: Height }}>
-          <div className='scheduleLogoCont'>
-            <div className='menuSchedule'/>
-          </div>
-
-          <Link to={'resources'} className='scheduleDetail' style={{ height: Height }}>
-            <button onClick={handleClickMenu} className='scheduleCont'>
-              <div className='scheduleContRow'>
-                <div className='scheduleContText'>
-                  <span className='scheduleText'>Resources</span>
-                </div>
-              </div>
-              <div className='scheduleArrow'/>
-            </button>
-            { show && <ResourcesDetail /> }
-          </Link>
-
-        </div>
-
-        <div className='chapterContainer'>
-          <div className='addChapterCont'>
-            <div className='addChapterLogo'/>
-            <span className='chapterText'>Add Chapter</span>
           </div>
         </div>
-
-      </div>
-    </>
   )
 }
 

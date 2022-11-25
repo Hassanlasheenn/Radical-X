@@ -591,20 +591,14 @@
     border-radius: 12px;
 }
 
-/* .addSquareLogo {
-    background: url('../images/add-square\ 2.png');
-    width: 20px;
-    height: 20px;
-    opacity: 0.5;
-} */
 
 .questionText {
     width: 98px;
-    height: 22px;
+    height: 20px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
     color: #793EF5;
 }
