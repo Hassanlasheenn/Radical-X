@@ -1,18 +1,13 @@
-import React, { useContext, useState } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useState } from 'react';
 import '../../../Styles/DescContent.css';
 
 const DescContent = () => {
-
-  const { setActiveDesc } = useContext(TickContext);
 
   const [desc, setDesc] = useState('');
 
   const handleChange = (e) => {
     e.preventDefault();
     setDesc(e.target.value);
-    setActiveDesc(true)
-    e.target.value === '' ? setActiveDesc(false) : setActiveDesc(true)
   }
 
   return (

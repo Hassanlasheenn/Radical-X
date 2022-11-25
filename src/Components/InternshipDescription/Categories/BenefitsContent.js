@@ -1,18 +1,13 @@
-import React, { useContext, useState } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useState } from 'react';
 import '../../../Styles/BenefitsContent.css';
 
 const BenefitsContent = () => {
 
   const [benefits, setBenefits] = useState('');
 
-  const { setActiveBenefits } = useContext(TickContext);
-
   const handleChange = (e) => {
     e.preventDefault();
     setBenefits(e.target.value);
-    setActiveBenefits(true);
-    e.target.value === '' ? setActiveBenefits(false) : setActiveBenefits(true)
   }
 
   return (

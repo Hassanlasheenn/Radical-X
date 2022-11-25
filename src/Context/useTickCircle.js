@@ -4,13 +4,12 @@ import React, { createContext, useState } from 'react';
 export const TickContext = createContext(null);
 
 export const TickProvider = props => {
-    const [activeCateg, setActiveCateg] = useState(false);
+    const [active, setActive] = useState(false);
 
   return (
     <TickContext.Provider 
-        value={
-            {   activeCateg, setActiveCateg
-            }}>
+        value={ { active, setActive }}
+    >
         {props.children}
     </TickContext.Provider>
   )

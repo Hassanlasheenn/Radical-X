@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { TickContext } from '../../../Context/useTickCircle';
+import React, { useState } from 'react';
 
 // css & icons imports 
 import '../../../Styles/WebLinks.css';
@@ -12,14 +11,12 @@ const NewWebLinks = () => {
 
   const [url, setUrl] = useState('');
   const [links, setLinks] = useState([]);
-  const { setActiveLinks, setActivePage, setActiveColor } = useContext(TickContext);
 
   const handleAdd = () => {
-    if(url.length === 0) return 'disabled' && setActiveLinks(false);
+    if(url.length === 0) return 'disabled'
     const newLink = links.concat({
       name: url,
     });
-    setActiveLinks(true);
     setLinks(newLink);
     setUrl('');
   }
@@ -31,7 +28,6 @@ const NewWebLinks = () => {
 
   const handlePress = (e) => {
     if(e.key === 'Enter') {
-      setActiveLinks(true);
       handleAdd();
     }
   }
@@ -40,9 +36,6 @@ const NewWebLinks = () => {
     const linkRemove = links.filter((i) => i.name !== name);
 
     setLinks(linkRemove);
-    setActiveLinks(false);
-    setActivePage(false);
-    setActiveColor(false);
   }
 
   return (
@@ -72,7 +65,7 @@ const NewWebLinks = () => {
                         <>
                           <div className='linkContWeb' key={link.id}>
                             <span className='linkText'>{link.name}</span>
-                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(link.name)} />
+                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(link.name)} style={{ cursor: 'pointer' }} />
                           </div>
                         </>
                       )

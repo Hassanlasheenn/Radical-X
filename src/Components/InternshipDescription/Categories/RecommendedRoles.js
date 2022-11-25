@@ -53,7 +53,7 @@ const RecommendedRoles = () => {
                     <>
                         <div className='resultContRoles' key={role.id}> 
                             <span className='resultTextRoles'>{role.name}</span>
-                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(role.name)} />
+                            <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(role.name)} style={{ cursor: 'pointer' }} />
                         </div>  
                     </>
                 )

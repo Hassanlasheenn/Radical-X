@@ -12,6 +12,7 @@ import addMoreSq from '../images/add-square-newInternship.svg';
 import unTickCircle from '../images/untick-circle-newInternship.svg';
 
 
+
 const NewInternship = () => {
 
   const navigate = useNavigate();

@@ -11,7 +11,7 @@ import MentorDetails from './Components/InternshipDescription/Categories/NewMent
 import RecommendedRoles from './Components/InternshipDescription/Categories/RecommendedRoles';
 import Links from './Components/InternshipDescription/Categories/NewWebLinks';
 import NotFound from './Pages/NotFound';
-// import { TickProvider } from './Context/useTickCircle';
+import { TickProvider } from './Context/useTickCircle';
 import InternshipGuide from './Pages/InternshipGuide';
 import BriefContent from './Components/InternshipGuide/GuideContent/Overview/BriefContent';
 import ScheduleContent from './Components/InternshipGuide/GuideContent/Schedule/ScheduleContent';
@@ -29,6 +29,7 @@ const App = () => {
   
   return (
     <div className="App">
+    <TickProvider>
       <Routes>
         <Route exact path='/' element={<Home />}/>
         <Route exact path='internships' element={<NewInternship />}>
@@ -58,10 +59,12 @@ const App = () => {
           <Route exact path='hero-image' element={<HeroImage />} />
         </Route>
 
+        {/* submitted internship page */}
         <Route exact path='done' element={<Done />} /> 
-        {/* 404 page */}
+        {/* 404 error page */}
         <Route path='*' element={<NotFound />} />
       </Routes>
+    </TickProvider>
 
     </div>
   );

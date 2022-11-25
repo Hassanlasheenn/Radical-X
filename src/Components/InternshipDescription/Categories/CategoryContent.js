@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 // css & icons import 
 import '../../../Styles/CategoryContent.css';
 import searchIcon from '../../../images/search-normal.svg';
 import closeIcon from '../../../images/close.svg';
+import { TickContext } from '../../../Context/useTickCircle';
 
 
 const CategoryContent = () => {
 
     const [searchInput, setSearchInput] = useState('');
     const [categories, setCategories] = useState([]);
+
+    const { setActive } =  useContext(TickContext);
+
 
     
 
@@ -20,6 +24,7 @@ const CategoryContent = () => {
         });
         setCategories(newCategory);
         setSearchInput('');
+        setActive(true);
     }
 
     const handleChange = (e) => {
@@ -30,6 +35,7 @@ const CategoryContent = () => {
     const handleKeyPress = (e) => {
         if(e.key === 'Enter') {
             handleAdd();
+            setActive(true);
         }
     }
 
@@ -53,7 +59,7 @@ const CategoryContent = () => {
                     value={searchInput}
                     className='placeholderCateg'
                 />
-                <img src={searchIcon} alt='' type='button' />
+                <img src={searchIcon} alt='' type='button' onClick={handleAdd} />
             </div>
             <div className='searchResultContCateg'>
             {categories.map((category) => {
