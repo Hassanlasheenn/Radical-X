@@ -7,7 +7,7 @@ import menuIcon from '../../images/menu.svg';
 
 
 
-const BoxContainer = ({ title, icon, onClick }) => {
+const BoxContainer = ({ title, icon, onClick, name1, name2, name3 }) => {
 
   const [show, setShow] = useState(false);
   const [Height, setHeight] = useState('72px');
@@ -50,7 +50,7 @@ const BoxContainer = ({ title, icon, onClick }) => {
               <div className='detailFrame'>
 
                 { show && 
-                  <Content name1='Brief' name2='Requirements' name3='Milestones' icon={menuIcon} />
+                  <Content name1={name1} name2={name2} name3={name3} icon={menuIcon} />
                 }
                 
               </div>
