@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Content } from './GuideContent/Overview/OverviewContent';
+import { Content } from './GuideContent/Overview/Content';
 
 // css & icons imports
 import '../../Styles/Guide.css';
@@ -49,16 +49,16 @@ const Guide = ({ title, icon, onClick }) => {
 
               <div className='detailFrame'>
 
-                { show && <Content name='Brief' icon={menuIcon} /> }
-                { show && <Content name='Requirements' icon={menuIcon} /> }
-                { show && <Content name='Milestones' icon={menuIcon} /> }
                 { show && 
+                <>
+                  <Content name1='Brief' name2='Requirements' name3='Milestones' icon={menuIcon} />
                   <div className='addMoreBox'>
                     <div className='addMoreComponent'>
                       <img src={squareIcon} alt='' />
                       <span className='addMoreText'>Add More</span>
                     </div>
                   </div> 
+                </>
                 }
                 
               </div>

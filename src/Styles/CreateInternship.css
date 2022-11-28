@@ -40,12 +40,6 @@
     border: 0;
 }
 
-.plusLogoCreate {
-    background: url('/src/images/add-square.png');
-    width: 20px;
-    height: 20px;
-}
-
 .btnTextCreate {
     width: 157px;
     height: 20px;

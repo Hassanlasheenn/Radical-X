@@ -28,20 +28,6 @@
     color: #333333;
 }
 
-/* .videoUploadCont {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 20px;
-    gap: 8px;
-    width: 741px;
-    height: 68px;
-    border: 1px dashed #B2B6BC;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #FFFFFF;
-} */
 
 .files {
     display: flex;
@@ -49,7 +35,6 @@
     justify-content: center;
     align-items: center;
     padding: 24px 20px;
-    gap: 8px;
     width: 741px;
     height: 68px;
     border: 1px dashed #B2B6BC;
@@ -69,38 +54,3 @@
     font-feature-settings: 'liga' off;
     color: #778188;
 }
-
-
-
-/* .videoCont {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 16px;
-    gap: 24px;
-    width: 203px;
-    height: 40px;
-    background: #EDEAFF;
-    border-radius: 12px;
-}
-
-.categoryIntroText {
-    width: 127px;
-    height: 20px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.3px;
-    font-feature-settings: 'liga' off;
-    color: #793EF5;
-}
-
-.closeIntroBtn {
-    background: url('../images/close.png');
-    width: 20px;
-    height: 20px;
-} */

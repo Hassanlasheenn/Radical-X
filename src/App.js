@@ -13,15 +13,16 @@ import Links from './Components/InternshipDescription/Categories/NewWebLinks';
 import NotFound from './Pages/NotFound';
 import { TickProvider } from './Context/useTickCircle';
 import InternshipGuide from './Pages/InternshipGuide';
-import BriefContent from './Components/InternshipGuide/GuideContent/Overview/BriefContent';
-import ScheduleContent from './Components/InternshipGuide/GuideContent/Schedule/ScheduleContent';
 import ResourcesContent from './Components/InternshipGuide/GuideContent/Resources/ResourcesContent';
 import Surveys from './Pages/Surveys';
 import Settings from './Pages/Settings';
 import Done from './Pages/Done';
 import SettingForm from './Components/Settings/SettingsForm/SettingForm';
 import SurveyContent from './Components/Surveys/SurveyQuestions/SurveyContent';
+import GuideContent from './Components/InternshipGuide/GuideContent/Overview/GuideContent';
 
+// icon imports 
+import uploadLogo from './images/document-upload.svg';
 
 const App = () => {
   
@@ -42,9 +43,9 @@ const App = () => {
         </Route>
 
         <Route exact path='internship-guide' element={<InternshipGuide />}>
-          <Route exact path='overview' element={<BriefContent /> } />
-          <Route exact path='schedule' element={<ScheduleContent /> } />
-          <Route exact path='resources' element={<ResourcesContent /> } />
+          <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
+          <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
+          <Route exact path='resources' element={<ResourcesContent title1='Curated Resources' title2='Events' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
         </Route>
 
         <Route exact path='surveys' element={<Surveys />}>

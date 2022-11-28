@@ -1,9 +1,7 @@
 import React, { useRef } from 'react';
 
 
-import uploadLogo from '../../../../images/document-upload.svg';
-
-const ResourcesContent = () => {
+const ResourcesContent = ({ title1, title2, fieldText, icon }) => {
 
     const inputRef = useRef(null);
     const handleLogoClick = () => {
@@ -20,16 +18,16 @@ const ResourcesContent = () => {
     <>
     <div className='contentDetails'>
         <div className='briefContainer'>
-        <span className='curatedText'>Curated Resources</span>
+        <span className='curatedText'>{title1}</span>
         <input
             className='briefField'
             placeholder='Description'
             type='text'
         />
         <div className='briefVideoCont'>
-                <label className='briefDropText'>Drag n drop to upload your video</label>
+                <label className='briefDropText'>{fieldText}</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <img src={uploadLogo} alt='' onClick={handleLogoClick}/>
+                {icon && <img src={icon} alt='' onClick={handleLogoClick}/>}
         </div>
 
         <div className='searchObjects'>
@@ -38,16 +36,16 @@ const ResourcesContent = () => {
         </div>
 
         <div className='briefContainer'>
-        <span className='briefText'>Events</span>
+        <span className='briefText'>{title2}</span>
         <input
             className='briefField'
             placeholder='Description'
             type='text'
         />
         <div className='briefVideoCont'>
-                <label className='briefDropText'>Drag n drop to upload your video</label>
+                <label className='briefDropText'>{fieldText}</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <img src={uploadLogo} alt='' onClick={handleLogoClick}/>
+                {icon && <img src={icon} alt='' onClick={handleLogoClick}/>}
         </div>
 
         <div className='searchObjects'>

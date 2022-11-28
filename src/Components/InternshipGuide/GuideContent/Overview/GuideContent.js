@@ -1,9 +1,7 @@
 import React, { useRef } from 'react';
 
-// css & icons imports
-import uploadLogo from '../../../../images/document-upload.svg';
 
-const BriefContent = () => {
+const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
 
     const inputRef = useRef(null);
     const handleLogoClick = () => {
@@ -20,16 +18,16 @@ const BriefContent = () => {
     <>
               <div className='contentDetails'>
         <div className='briefContainer'>
-          <span className='briefText'>Brief</span>
+          <span className='briefText'>{title1}</span>
           <input
             className='briefField'
             placeholder='Description'
             type='text'
           />
           <div className='briefVideoCont'>
-                <label className='briefDropText'>Drag n drop to upload your video</label>
+                <label className='briefDropText'>{fieldText}</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <img src={uploadLogo} alt='' onClick={handleLogoClick}/>
+                {icon && <img src={icon} alt='' onClick={handleLogoClick}/>}
           </div>
 
           <div className='searchObjects'>
@@ -38,16 +36,16 @@ const BriefContent = () => {
         </div>
 
         <div className='briefContainer'>
-          <span className='briefText'>Requirements</span>
+          <span className='briefText'>{title2}</span>
           <input
             className='briefField'
             placeholder='Description'
             type='text'
           />
           <div className='briefVideoCont'>
-                <label className='briefDropText'>Drag n drop to upload your video</label>
+                <label className='briefDropText'>{fieldText}</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <img src={uploadLogo} alt='' onClick={handleLogoClick} />
+                {icon && <img src={icon} alt='' onClick={handleLogoClick} />}
           </div>
 
           <div className='searchObjects'>
@@ -56,16 +54,16 @@ const BriefContent = () => {
         </div>
 
         <div className='briefContainer'>
-          <span className='briefText'>Milestones</span>
+          <span className='briefText'>{title3}</span>
           <input
             className='briefField'
             placeholder='Description'
             type='text'
           />
           <div className='briefVideoCont'>
-                <label className='briefDropText'>Drag n drop to upload your video</label>
+                <label className='briefDropText'>{fieldText}</label>
                 <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-                <img src={uploadLogo} alt='' onClick={handleLogoClick} />
+                {icon && <img src={icon} alt='' onClick={handleLogoClick} />}
           </div>
 
           <div className='searchObjects'>
@@ -78,4 +76,4 @@ const BriefContent = () => {
   )
 }
 
-export default BriefContent;
+export default GuideContent;
