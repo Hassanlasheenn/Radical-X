@@ -19,7 +19,7 @@ import Settings from './Pages/Settings';
 import Done from './Pages/Done';
 import SettingForm from './Components/Settings/SettingsForm/SettingForm';
 import SurveyContent from './Components/Surveys/SurveyQuestions/SurveyContent';
-import GuideContent from './Components/InternshipGuide/GuideContent/Overview/GuideContent';
+import GuideContent from './Components/InternshipGuide/GuideContent/GuideContent';
 
 // icon imports 
 import uploadLogo from './images/document-upload.svg';

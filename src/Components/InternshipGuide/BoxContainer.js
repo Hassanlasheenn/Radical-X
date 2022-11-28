@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Content } from './GuideContent/Overview/Content';
+import { Content } from './GuideContent/Content';
 
 // css & icons imports
 import '../../Styles/Guide.css';
 import menuIcon from '../../images/menu.svg';
-import squareIcon from '../../images/add-square-newInternship.svg';
 
 
-const Guide = ({ title, icon, onClick }) => {
+
+const BoxContainer = ({ title, icon, onClick }) => {
 
   const [show, setShow] = useState(false);
   const [Height, setHeight] = useState('72px');
@@ -50,15 +50,7 @@ const Guide = ({ title, icon, onClick }) => {
               <div className='detailFrame'>
 
                 { show && 
-                <>
                   <Content name1='Brief' name2='Requirements' name3='Milestones' icon={menuIcon} />
-                  <div className='addMoreBox'>
-                    <div className='addMoreComponent'>
-                      <img src={squareIcon} alt='' />
-                      <span className='addMoreText'>Add More</span>
-                    </div>
-                  </div> 
-                </>
                 }
                 
               </div>
@@ -67,4 +59,4 @@ const Guide = ({ title, icon, onClick }) => {
   )
 }
 
-export default Guide;
+export default BoxContainer;
