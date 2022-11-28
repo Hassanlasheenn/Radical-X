@@ -2,7 +2,9 @@ import React from 'react';
 
 import squareIcon from '../../../images/add-square-newInternship.svg';
 
+
 export const Content = ({ name1, name2, name3, icon }) => {
+
   return (
     <>
         <div className='box'>
@@ -18,12 +20,13 @@ export const Content = ({ name1, name2, name3, icon }) => {
             <span className='boxText'>{name2}</span>
           </div>
         </div>
-        <div className='box'>
+        { name3 ? <div className='box'>
           <div className='boxComponent'>
             { icon && <img src={icon} alt='' /> }
-            <span className='boxText'>{name3}</span>
+            <span className='boxText'> {name3}</span>
           </div>
-        </div>
+        </div> 
+        : null }
         
         <div className='addMoreBox'>
               <div className='addMoreComponent'>

@@ -28,7 +28,7 @@ const InternshipGuide = () => {
         <div className='guideOverview'>
           <BoxContainer title='Overview' icon={arrowIcon} onClick={() => click('overview')} name1='Brief' name2='Requirements' name3='Milestones' />
           <BoxContainer title='Schedule' icon={arrowIcon} onClick={() => click('schedule')} name1='Duration' name2='Timeline' name3='Deliverables' />
-          <BoxContainer title='Resources' icon={arrowIcon} onClick={() => click('resources')} />
+          <BoxContainer title='Resources' icon={arrowIcon} onClick={() => click('resources')} name1='Curated Resources' name2='Events' />
 
           <div className='chapterContainer'>
             <div className='addChapterCont'>

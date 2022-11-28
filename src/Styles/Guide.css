@@ -144,13 +144,9 @@
     height: 24px;
 }
 
-/* .menuBox {
-    background: url('../images/menu.png');
-    width: 20px;
-    height: 20px;
-} */
 
 .boxText {
+    display: inline-block;
     width: 37px;
     height: 24px;
     font-family: 'Space Grotesk';
@@ -161,6 +157,8 @@
     text-align: center;
     font-feature-settings: 'liga' off;
     color: #333333;
+    /* to make the text on one line */
+    white-space: nowrap;
 }
 
 
@@ -189,12 +187,6 @@
     height: 24px;
     margin: 0 auto;
 }
-
-/* .squareBox {
-    background: url('../images/add-square\ 2.png');
-    width: 20px;
-    height: 20px;
-} */
 
 .addMoreText {
     width: 74px;
@@ -231,12 +223,6 @@
     width: 24px;
     height: 44px;
 }
-
-/* .menuSchedule {
-    background: url('../images/menu.png');
-    width: 24px;
-    height: 24px;
-} */
 
 
 .scheduleDetail {
@@ -306,12 +292,6 @@
     color: #333333;
 }
 
-/* .scheduleArrow {
-    background: url('../images/arrow-right\ 2.png');
-    width: 24px;
-    height: 24px;
-    opacity: 0.5;
-} */
 
 .chapterContainer {
     display: flex;
@@ -338,11 +318,6 @@
     margin: 0 auto;
 }
 
-/* .addChapterLogo {
-    background: url('../images/additem.png');
-    width: 24px;
-    height: 24px;
-} */
 
 .chapterText {
     width: 97px;
