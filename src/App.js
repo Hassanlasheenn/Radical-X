@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+// pages & components imports
 import Home from './Pages/Home';
 import NewInternship from './Pages/NewInternship';
 import CategoryContent from './Components/InternshipDescription/Categories/CategoryContent';
@@ -16,12 +16,13 @@ import InternshipGuide from './Pages/InternshipGuide';
 import Surveys from './Pages/Surveys';
 import Settings from './Pages/Settings';
 import Done from './Pages/Done';
-import SettingForm from './Components/Settings/SettingsForm/SettingForm';
+import SettingForm from './Components/Settings/SettingForm';
 import SurveyContent from './Components/Surveys/SurveyQuestions/SurveyContent';
 import GuideContent from './Components/InternshipGuide/GuideContent';
 import Sidebar from './Components/Sidebar/Sidebar';
 
-// icon imports 
+// css & icon imports 
+import './App.css';
 import uploadLogo from './images/document-upload.svg';
 
 
@@ -58,8 +59,8 @@ const App = () => {
         </Route>
 
         <Route exact path='settings' element={<Settings />}>
-          <Route exact path='basic-settings' element={<SettingForm />} />
-          <Route exact path='hero-image' element={<SettingForm />} />
+          <Route exact path='basic-settings' element={<SettingForm name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
+          <Route exact path='hero-image' element={<SettingForm name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
         </Route>
 
         {/* submitted internship page */}

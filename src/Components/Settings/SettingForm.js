@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SettingForm = () => {
+const SettingForm = ({ name1, name2, name3 }) => {
   return (
     <>
       <div className='internshipUrlContainer'>
@@ -15,22 +15,25 @@ const SettingForm = () => {
 
         <div className='accessContainer'>
           <span className='accessText'>Access</span>
+
           <div className='chechboxContainer'>
             <div className='privateContainer'>
               <input
                 type='checkbox'
                 className='privateCheckbox'
               /> 
-              <span className='privateText'>Private Internship</span>
+              <span className='privateText'>{name1}</span>
             </div>
+
             <div className='hiddenContainer'>
               <input
                 type='checkbox'
                 className='hiddenCheckbox'
               /> 
-              <span className='hiddenText'>Hidden Internship</span>
+              <span className='hiddenText'>{name2}</span>
             </div>
           </div>
+
         </div>
 
         <div className='securityContainer'>
@@ -40,7 +43,7 @@ const SettingForm = () => {
               type='checkbox'
               className='disableCheckbox'
             />
-            <span className='disableText'>Disable Text Copying</span>
+            <span className='disableText'>{name3}</span>
           </div>
         </div>
       </div>
