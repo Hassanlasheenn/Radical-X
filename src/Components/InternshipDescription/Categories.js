@@ -24,7 +24,8 @@ const Categories = ({ name, onClick, icon, tick }) => {
         <div onClick={handleCategories} className='categoryBarContCategory'>
           <div className='textContCategory'>
             <span>{name}</span>
-            <span>{ active ?  <img src={tick} alt='' /> : !active }</span>
+            { active && 
+            <span>{ tick && <img src={tick} alt='' /> }</span> }
           </div>
           {icon && <img src={icon} alt='' />}
         </div>

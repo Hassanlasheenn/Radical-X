@@ -1,6 +1,6 @@
 import React from 'react';
 
-import squareIcon from '../../../images/add-square-newInternship.svg';
+import squareIcon from '../../images/add-square-newInternship.svg';
 
 
 export const Content = ({ name1, name2, name3, icon }) => {

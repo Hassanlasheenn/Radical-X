@@ -10,8 +10,8 @@ import {
 } from 'recharts';
 
 // css & icons imports
-import '../Styles/InternshipInsights.css';
-import calendarIcon from '../images/calendar.svg';
+import '../../Styles/InternshipInsights.css';
+import calendarIcon from '../../images/calendar.svg';
 
 
 function InternshipInsights() {

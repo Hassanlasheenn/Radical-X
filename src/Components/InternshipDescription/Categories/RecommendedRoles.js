@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 // css & icon imports
 import '../../../Styles/RecommendedRoles.css';
 import closeIcon from '../../../images/close.svg';
 import searchIcon from '../../../images/search-normal.svg';
+import { TickContext } from '../../../Context/useTickCircle';
 
 const RecommendedRoles = () => {
 
     const [searchRoles, setSearchRoles] = useState('');
     const [roles, setRoles] = useState([]);
+
+    const { setActive } = useContext(TickContext);
 
 
     const handleChange = (e) => {
@@ -24,6 +27,7 @@ const RecommendedRoles = () => {
             });
             setRoles(newRole);
             setSearchRoles('');
+            setActive(true);
         }
 
     }
@@ -31,12 +35,14 @@ const RecommendedRoles = () => {
     const handlePress = (e) => {
         if(e.key === 'Enter') {
             handleAdd();
+            setActive(true);
         }
     }
 
     const handleRemove = (name) => {
         const rolDelete = roles.filter((item) => item.name !== name);
         setRoles(rolDelete);
+        setActive(false)
     }
   return (
     <div className='rolesCont'>

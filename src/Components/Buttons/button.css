@@ -23,9 +23,11 @@
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
     font-feature-settings: 'liga' off;
     color: #FFFFFF;
+
+    white-space: nowrap;
 }
 
 /* button-2 */
@@ -64,12 +66,14 @@
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.4px;
     font-feature-settings: 'liga' off;
     color: #828282;
+    
+    white-space: nowrap;
 }
 
 /* back button */

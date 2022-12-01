@@ -13,16 +13,18 @@ import Links from './Components/InternshipDescription/Categories/NewWebLinks';
 import NotFound from './Pages/NotFound';
 import { TickProvider } from './Context/useTickCircle';
 import InternshipGuide from './Pages/InternshipGuide';
-import ResourcesContent from './Components/InternshipGuide/GuideContent/Resources/ResourcesContent';
 import Surveys from './Pages/Surveys';
 import Settings from './Pages/Settings';
 import Done from './Pages/Done';
 import SettingForm from './Components/Settings/SettingsForm/SettingForm';
 import SurveyContent from './Components/Surveys/SurveyQuestions/SurveyContent';
-import GuideContent from './Components/InternshipGuide/GuideContent/GuideContent';
+import GuideContent from './Components/InternshipGuide/GuideContent';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 // icon imports 
 import uploadLogo from './images/document-upload.svg';
+
+
 
 const App = () => {
   
@@ -30,7 +32,9 @@ const App = () => {
     <div className="App">
     <TickProvider>
       <Routes>
-        <Route exact path='/' element={<Home />}/>
+        <Route exact path='/' element={<Sidebar />}>
+          <Route exact path='home' element={<Home />} />
+        </Route>
         <Route exact path='internships' element={<NewInternship />}>
           <Route exact path='category' element={<CategoryContent />} />
           <Route exact path='description' element={<DescContent />} />
@@ -45,7 +49,7 @@ const App = () => {
         <Route exact path='internship-guide' element={<InternshipGuide />}>
           <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
           <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
-          <Route exact path='resources' element={<ResourcesContent title1='Curated Resources' title2='Events' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
+          <Route exact path='resources' element={<GuideContent title1='Curated Resources' title2='Events' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
         </Route>
 
         <Route exact path='surveys' element={<Surveys />}>

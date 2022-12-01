@@ -1,17 +1,14 @@
 
-.home-container {
-    display: flex;
-    flex-direction: row;
-    background: #F1F4F8;
-    width: 1512px;
-    height: 965px;
-    margin: 16px 0 0 16px;
-  }
-  
   .right--cont {
-    display: grid;
-    grid-template-rows: 10% 30% 60%;
-    margin: .5rem 0 0 6.6rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+    position: absolute;
+    width: 1135px;
+    height: 706px;
+    left: 311px;
+    top: 54px;
   }
   

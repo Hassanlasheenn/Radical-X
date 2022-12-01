@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from './Buttons/Button_1';
+import Button from '../Buttons/Button_1';
 import { useNavigate } from 'react-router-dom';
 
 // css & icons imports 
-import '../Styles/CreateInternship.css';
-import addIcon from '../images/add-square.svg';
+import '../../Styles/CreateInternship.css';
+import addIcon from '../../images/add-square.svg';
 
 function CreateIntership() {
   const navigate = useNavigate();

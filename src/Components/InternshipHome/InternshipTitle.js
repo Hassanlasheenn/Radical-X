@@ -1,11 +1,11 @@
 import React from 'react';
 
 // css & icons imports 
-import '../Styles/InternshipTitle.css';
-import profileIcon from '../images/profile-2user.svg';
-import chartIcon from '../images/chart.svg';
-import moreIcon from '../images/more-2.svg';
-import arrowSqrIcon from '../images/arrow-square-down.svg';
+import '../../Styles/InternshipTitle.css';
+import profileIcon from '../../images/profile-2user.svg';
+import chartIcon from '../../images/chart.svg';
+import moreIcon from '../../images/more-2.svg';
+import arrowSqrIcon from '../../images/arrow-square-down.svg';
 
 function InternshipTitle() {
   return (

@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 
 
+
+
 const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
 
     const inputRef = useRef(null);
@@ -53,7 +55,7 @@ const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
           </div>
         </div>
 
-        <div className='briefContainer'>
+        { title3 ? <div className='briefContainer'>
           <span className='briefText'>{title3}</span>
           <input
             className='briefField'
@@ -69,7 +71,8 @@ const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
           <div className='searchObjects'>
 
           </div>
-        </div>
+        </div> : null 
+        }
 
       </div>
     </>

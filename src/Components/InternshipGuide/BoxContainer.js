@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Content } from './GuideContent/Content';
+import { Content } from './Content';
 
 // css & icons imports
 import '../../Styles/Guide.css';

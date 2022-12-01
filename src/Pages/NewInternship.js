@@ -22,7 +22,7 @@ const NewInternship = () => {
   return (
     <>
         {/* passing props for the label of the button */}
-        <Navbar title="Continue to Next Step" link={'internship-guide'} back={'/'} />
+        <Navbar title="Continue to Next Step" link={'internship-guide'} back={'home'} />
 
 
         <div className='internshipBar'>
@@ -35,11 +35,11 @@ const NewInternship = () => {
         <div className='categoryContCategory'>
           <Categories name='Category' icon={arrowRightBtn} onClick={() => navigate('category')} tick={tickCatIcon} />
           <Categories name='Description' icon={arrowRightBtn} onClick={() => navigate('description')} />
-          <Categories name='Location' icon={arrowRightBtn} onClick={() => navigate('location')} tick={tickCatIcon} />
+          <Categories name='Location' icon={arrowRightBtn} onClick={() => navigate('location')}  />
           <Categories name='Benefits' icon={arrowRightBtn} onClick={() => navigate('benefits')} />
           <Categories name='Intro Video' icon={arrowRightBtn} onClick={() => navigate('intro-video')} />
           <Categories name='Mentor Details' icon={arrowRightBtn} onClick={() => navigate('mentor-details')} />
-          <Categories name='Recommended Roles' icon={arrowRightBtn} onClick={() => navigate('recommended-roles')} />
+          <Categories name='Recommended Roles' icon={arrowRightBtn} onClick={() => navigate('recommended-roles')} tick={tickCatIcon} />
           <Categories name='Web Links & Resources' icon={arrowRightBtn} onClick={() => navigate('links')} />
 
           {/* Add more bar */}

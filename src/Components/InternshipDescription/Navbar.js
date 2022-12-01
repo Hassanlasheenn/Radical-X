@@ -1,14 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../Styles/Navbar.css';
 
 // button imports 
 import BtnSec from '../Buttons/Button_2';
 import BackBtn from '../Buttons/Back-Button';
 
 // css & icons import 
+import '../../Styles/Navbar.css';
 import arrowRightIcon from '../../images/arrow-right.svg';
 import arrowLeftIcon from '../../images/arrow-left.svg';
+
+
 
 const Navbar = ({ title, link, back }) => {
     const navigate = useNavigate();

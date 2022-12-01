@@ -5,81 +5,40 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 229px;
-    height: 950px;
-    left: 16px;
-    top: 16px;
-    border-radius: 24px;
     padding: 34px 20px;
     gap: 34px;
-    background-color: #FFFFFF;
+    width: 229px;
+    height: 950px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 34px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+    margin: 16px 0 0 16px;
 }
 
 .sidebar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 0px;
     gap: 50px;
     width: 189px;
     height: 370px;
 }
 
-.sidebar__radical-logo {
-    width: 160px;
-    height: 32px;
-}
 
 .sidebar-categories {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 0px;
     gap: 12px;
     width: 189px;
     height: 288px;
 }
 
 
-/* categories bars styling */
-.categories-dashboard, .categories-apprentice, .categories-jobs, .categories-setting {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 10px;
-    width: 189px;
-    height: 48px;
-    border-radius: 16px;
-}
-
-.categories__dash-logo {
-    width: 24px;
-    height: 24px;
-}
-
-.categories__appren-logo {
-    width: 24px;
-    height: 24px;
-}
-
-.categories-internship {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 10px;
-    width: 189px;
-    height: 48px;
-    background: rgba(102, 95, 239, 0.2);
-    border: 1px solid #793EF5;
-    border-radius: 16px;
-    cursor: pointer;
-} 
-
 .category-text {
-    width: 67px;
+    width: 90px;
     height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -93,7 +52,7 @@
     color: #1E1E1E;
 }
 
-.internship-text {
+.active-text {
     width: 90px;
     height: 24px;
     font-family: 'Space Grotesk';
@@ -108,20 +67,7 @@
     color: #793EF5;
 }
 
-.categories__intern-logo{
-    width: 24px;
-    height: 24px;
-}
 
-.categories__jobs-logo {
-    width: 24px;
-    height: 24px;
-}
-
-.categories__settings-logo{
-    width: 24px;
-    height: 24px;
-}
 
 /* user style */
 
@@ -135,11 +81,6 @@
     height: 50px;
 }
 
-.rectangle-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 16px;
-}
 
 .sidebar-container_author--text {
     width: 92px;
@@ -156,3 +97,24 @@
     color: #1E1E1E;
 }
 
+
+/* active-link */
+
+.not-active, .active-btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    width: 189px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.active-btn{
+    background: rgba(102, 95, 239, 0.2);
+    border: 1px solid #793EF5;
+    border-radius: 16px;
+    color: #793EF5;
+}
