@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TickContext } from '../../Context/useTickCircle';
 
 // button imports 
 import BtnSec from '../Buttons/Button_2';
@@ -9,12 +10,15 @@ import BackBtn from '../Buttons/Back-Button';
 import '../../Styles/Navbar.css';
 import arrowRightIcon from '../../images/arrow-right.svg';
 import arrowLeftIcon from '../../images/arrow-left.svg';
+import whiteArrowIcon from '../../images/arrow-right-white.svg';
 
 
 
 const Navbar = ({ title, link, back }) => {
+
+    const { active } = useContext(TickContext);
+
     const navigate = useNavigate();
-    
 
   return (
     <div className='containerNavbar'>
@@ -29,9 +33,15 @@ const Navbar = ({ title, link, back }) => {
         </div>
         
         <div className='continueBtnContNavbar'>
+        {active[title] ?
+            <BtnSec icon={whiteArrowIcon} onClick={() => navigate(`/${link}`)}>
+                {title}
+            </BtnSec>
+            :
             <BtnSec icon={arrowRightIcon} onClick={() => navigate(`/${link}`)}>
                 {title}
             </BtnSec>
+        }
         </div>
 
         

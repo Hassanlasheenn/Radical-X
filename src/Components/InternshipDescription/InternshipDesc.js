@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TickContext } from '../../Context/useTickCircle';
 import '../../Styles/InternshipDesc.css';
+import unTickCircle from '../../images/untick-circle-newInternship.svg';
 
 const InternshipDesc = ({ icon, name, onClick }) => {
+
+  const { active } = useContext(TickContext);
 
   const handleDesc = () => {
     if(onClick) {
@@ -13,7 +17,7 @@ const InternshipDesc = ({ icon, name, onClick }) => {
     <>
       <div onClick={handleDesc}>
         <div className='internDesc'>
-          { icon && <img src={icon} alt='' /> }
+           { active[name] && icon ? <img src={icon} alt='' /> : <img src={unTickCircle} alt='' />} 
           <span className='descText'>{name}</span>
         </div>
       </div>

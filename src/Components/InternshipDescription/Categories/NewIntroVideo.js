@@ -1,15 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 
 // css & icons import 
 import '../../../Styles/NewIntroVideo.css';
 import uploadIcon from '../../../images/document-upload.svg';
+import { TickContext } from '../../../Context/useTickCircle';
 
 const NewIntroVideo = () => {
   
   const inputRef = useRef(null);
 
+  const { setTick } = useContext(TickContext);
+
   const handleLogoClick = () => {
     inputRef.current.click();
+    setTick("Intro Video", true);
+
   }
 
   const handleVideoFile = e => {

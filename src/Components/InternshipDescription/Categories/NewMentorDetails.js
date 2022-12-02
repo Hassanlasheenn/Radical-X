@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 
 // css & icon imports 
 import '../../../Styles/NewMentorDetails.css';
@@ -6,6 +6,7 @@ import picLogo from '../../../images/image.svg';
 import userIcon from '../../../images/profile.svg';
 import smsIcon from '../../../images/sms.svg';
 import linkFieldIcon from '../../../images/link.svg';
+import { TickContext } from '../../../Context/useTickCircle';
 // import linkIcon from '../../../images/link-internship.svg';
 
 const NewMentorDetails = () => {
@@ -16,6 +17,8 @@ const NewMentorDetails = () => {
 
     const [file, setFile] = useState(null);
     const inputRef = useRef(null);
+
+    const { setTick } = useContext(TickContext);
 
 
     const handleClick = () => {
@@ -38,6 +41,7 @@ const NewMentorDetails = () => {
     const handleEmail = (e) => {
         e.preventDefault();
         setEmail(e.target.value);
+        setTick("Mentor Details", true);
     }
 
     const handleOptional = (e) => {
@@ -71,7 +75,7 @@ const NewMentorDetails = () => {
                     <input 
                         className='emailFieldText'
                         placeholder='Email Adress'
-                        type="text"
+                        type="email"
                         onChange={handleEmail}
                         value={email}
                     />

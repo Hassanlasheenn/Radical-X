@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
 
@@ -6,26 +6,27 @@ import countryList from 'react-select-country-list';
 import '../../../Styles/LocationContent.css';
 import '../../../Styles/CategoryContent.css';
 import pinIcon from '../../../images/location.svg';
+import { TickContext } from '../../../Context/useTickCircle';
 
 const LocationContent = () => {
   
   const [countries, setCountries] = useState('');
   const [cntry, setCntry] = useState([]);
 
+  const { setTick } = useContext(TickContext);
+
 
   const options = useMemo(() => countryList().getData(), []);
 
   const handleChange = (e) => {
-    console.log('Country selected');
     setCountries(e?.label);
-    console.log(e.label)
     const handleAdd = (value) => {
       const newCuntry = cntry.concat({
         value:value,
         label: e.label,
       });
-      console.log(newCuntry);
       setCntry(newCuntry);
+      setTick("Location", true);
     }
     handleAdd();
   }

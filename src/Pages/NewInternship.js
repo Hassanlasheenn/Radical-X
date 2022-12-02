@@ -11,6 +11,7 @@ import arrowRightBtn from '../images/arrow-right-internships.svg';
 import addMoreSq from '../images/add-square-newInternship.svg';
 import unTickCircle from '../images/untick-circle-newInternship.svg';
 import tickCatIcon from '../images/tick-circle.svg';
+import tickIntern from '../images/tick-circle-internship-finish.svg';
 
 
 
@@ -26,7 +27,7 @@ const NewInternship = () => {
 
 
         <div className='internshipBar'>
-          <InternshipDesc name='Internship Description' icon={unTickCircle} />
+          <InternshipDesc name='Internship Description' icon={tickIntern} />
           <InternshipDesc name='Internship Guide' icon={unTickCircle} />
           <InternshipDesc name='Surveys' icon={unTickCircle} />
           <InternshipDesc name='Settings' icon={unTickCircle} />
