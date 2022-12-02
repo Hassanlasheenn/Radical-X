@@ -12,7 +12,7 @@ const CategoryContent = () => {
     const [searchInput, setSearchInput] = useState('');
     const [categories, setCategories] = useState([]);
 
-    const { setActive } = useContext(TickContext);
+    const { setTick } = useContext(TickContext);
 
     const handleAdd = () => {
         if(searchInput.length === 0) {return 'disabled'}
@@ -22,7 +22,7 @@ const CategoryContent = () => {
             });
             setCategories(newCategory);
             setSearchInput('');
-            setActive(true);
+            setTick("Category", true);
         }
     }
 
@@ -41,7 +41,7 @@ const CategoryContent = () => {
         const categRemove = categories.filter((item) => item.field !== field);
 
         setCategories(categRemove);
-        setActive(false);
+        setTick("Category", false);
     }
 
 

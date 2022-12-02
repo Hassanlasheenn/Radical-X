@@ -34,13 +34,13 @@ const NewInternship = () => {
 
         <div className='categoryContCategory'>
           <Categories name='Category' icon={arrowRightBtn} onClick={() => navigate('category')} tick={tickCatIcon} />
-          <Categories name='Description' icon={arrowRightBtn} onClick={() => navigate('description')} />
-          <Categories name='Location' icon={arrowRightBtn} onClick={() => navigate('location')}  />
-          <Categories name='Benefits' icon={arrowRightBtn} onClick={() => navigate('benefits')} />
-          <Categories name='Intro Video' icon={arrowRightBtn} onClick={() => navigate('intro-video')} />
-          <Categories name='Mentor Details' icon={arrowRightBtn} onClick={() => navigate('mentor-details')} />
-          <Categories name='Recommended Roles' icon={arrowRightBtn} onClick={() => navigate('recommended-roles')} tick={tickCatIcon} />
-          <Categories name='Web Links & Resources' icon={arrowRightBtn} onClick={() => navigate('links')} />
+          <Categories name='Description' icon={arrowRightBtn} onClick={() => navigate('description')} tick={tickCatIcon}/>
+          <Categories name='Location' icon={arrowRightBtn} onClick={() => navigate('location')}  tick={tickCatIcon}/>
+          <Categories name='Benefits' icon={arrowRightBtn} onClick={() => navigate('benefits')} tick={tickCatIcon}/>
+          <Categories name='Intro Video' icon={arrowRightBtn} onClick={() => navigate('intro-video')} tick={tickCatIcon}/>
+          <Categories name='Mentor Details' icon={arrowRightBtn} onClick={() => navigate('mentor-details')} tick={tickCatIcon}/>
+          <Categories name='Recommended Roles' icon={arrowRightBtn} onClick={() => navigate('recommended-roles')} tick={tickCatIcon}/>
+          <Categories name='Web Links & Resources' icon={arrowRightBtn} onClick={() => navigate('links')} tick={tickCatIcon} />
 
           {/* Add more bar */}
           <div className='assessmentBarCategory'>

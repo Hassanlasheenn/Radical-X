@@ -11,7 +11,7 @@ const RecommendedRoles = () => {
     const [searchRoles, setSearchRoles] = useState('');
     const [roles, setRoles] = useState([]);
 
-    const { setActive } = useContext(TickContext);
+    const { setTick } = useContext(TickContext);
 
 
     const handleChange = (e) => {
@@ -27,7 +27,7 @@ const RecommendedRoles = () => {
             });
             setRoles(newRole);
             setSearchRoles('');
-            setActive(true);
+            setTick('Recommended Roles', true);
         }
 
     }
@@ -35,14 +35,14 @@ const RecommendedRoles = () => {
     const handlePress = (e) => {
         if(e.key === 'Enter') {
             handleAdd();
-            setActive(true);
+            setTick('Recommended Roles', true);
         }
     }
 
     const handleRemove = (name) => {
         const rolDelete = roles.filter((item) => item.name !== name);
         setRoles(rolDelete);
-        setActive(false)
+        setTick('Recommended Roles', false)
     }
   return (
     <div className='rolesCont'>
