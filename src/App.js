@@ -64,12 +64,15 @@ const App = () => {
               <Route exact path='basic-settings' element={<SettingForm name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
               <Route exact path='hero-image' element={<SettingForm name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
             </Route>
-
+          
           {/* submitted internship page */}
-          <Route exact path='done' element={<Done />} /> 
+          <Route exact path='done' element={<Done />} />
 
           {/* 404 error page */}
           <Route path='*' element={<NotFound />} />
+
+          
+          
         </Routes>
       </TickProvider>
     </div>

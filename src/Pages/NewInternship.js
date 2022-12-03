@@ -23,7 +23,7 @@ const NewInternship = () => {
   return (
     <>
         {/* passing props for the label of the button */}
-        <Navbar title="Continue to Next Step" link={'internship-guide'} back={'home'} />
+        <Navbar title="Internship Guide" link={'internship-guide'} back={'home'} />
 
 
         <div className='internshipBar'>

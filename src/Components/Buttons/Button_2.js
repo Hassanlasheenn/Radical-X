@@ -5,7 +5,7 @@ import { TickContext } from '../../Context/useTickCircle';
 const Button_2 = ({
     icon,
     onClick,
-    children,
+    children
 }) => {
 
   const { active } = useContext(TickContext);

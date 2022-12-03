@@ -14,7 +14,7 @@ import whiteArrowIcon from '../../images/arrow-right-white.svg';
 
 
 
-const Navbar = ({ title, link, back }) => {
+const Navbar = ({ title, link, back, isActive }) => {
 
     const { active } = useContext(TickContext);
 
@@ -38,7 +38,7 @@ const Navbar = ({ title, link, back }) => {
                 {title}
             </BtnSec>
             :
-            <BtnSec icon={arrowRightIcon} onClick={() => navigate(`/${link}`)}>
+            <BtnSec icon={arrowRightIcon} className='continueBtnNavbar' onClick={() => navigate(`/${link}`)}>
                 {title}
             </BtnSec>
         }

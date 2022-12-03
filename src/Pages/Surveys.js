@@ -15,7 +15,7 @@ const Surveys = () => {
 
   return (
     <>
-        <Navbar title="Continue to Next Step" link={'settings'} back={'internship-guide'}/>
+        <Navbar title="Internship Settings" link={'settings'} back={'internship-guide'}/>
 
         <div className='internshipBar'>
           <InternshipDesc name='Internship Description' icon={tickIntern} />
