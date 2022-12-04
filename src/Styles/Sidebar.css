@@ -79,6 +79,7 @@
     gap: 10px;
     width: 152px;
     height: 50px;
+    transform: translateY(220px);
 }
 
 
@@ -117,4 +118,27 @@
     border: 1px solid #793EF5;
     border-radius: 16px;
     color: #793EF5;
+}
+
+.logout-container {
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.logout-button {
+    padding: 10px;
+    border: 1px solid #793EF5;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    width: 100%;
+    transition: all .3s;
+}
+
+.logout-button:hover {
+    border: 1px solid #793EF5;
+    background-color: #793EF5;
+    color: #FFFFFF;
+    cursor: pointer;
 }

@@ -27,6 +27,8 @@ import uploadLogo from './images/document-upload.svg';
 import Login from './Pages/Login';
 import { AuthProvider } from './Context/Auth';
 import Signup from './Pages/Signup';
+import PrivateRoute from './Components/PrivateRoute';
+import ForgotPass from './Components/ForgotPass';
 
 
 
@@ -39,8 +41,10 @@ const App = () => {
         <Routes>
             <Route exact path='/login' element={<Login />} />
             <Route exact path='/signup' element={<Signup />} />
+            <Route exact path='/forgot-password' element={<ForgotPass />} />
             
-            <Route exact path='/' element={<Sidebar />}>
+            <Route element={<PrivateRoute />}>
+              <Route exact path='/' element={<Sidebar />} />
               <Route exact path='home' element={<Home />} />
             </Route>
 

@@ -139,6 +139,7 @@
     outline: none;
     border: none;
     margin-top: 2em;
+    cursor: pointer;
   }
   
   ::placeholder {
@@ -160,6 +161,15 @@
   .red {
     color: brown;
     background-color: #f8d7d9;
+    width: 50%;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-top: 2em;
+  }
+  /* Success text */
+  .green {
+    color: #FFFFFF;
+    background-color: rgb(73, 137, 73);
     width: 50%;
     padding: 0.5em;
     border-radius: 1em;

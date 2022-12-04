@@ -30,7 +30,7 @@ export default function Signup() {
            console.log(emailRef.current.value);
         }
         catch {
-            setError('Failed to create an account');
+            setError('Creating Account Failed');
         }
 
         setLoading(false);
@@ -63,14 +63,6 @@ export default function Signup() {
               placeholder="Password"
               required
             />
-            {/* <button className="eye-button" onClick={togglePassword}> */}
-              {/* View Password btn */}
-              {/* {showPassword ? (
-                <img src={slashEye} alt="" />
-              ) : (
-                <img src={eye} alt="" />
-              )} */}
-            {/* </button> */}
           </div>
           <br/>
           <div className="password-container">
@@ -83,24 +75,11 @@ export default function Signup() {
               required
             />
           </div>
-          <br />
-          <div>
-            <label className="remember-me">
-              <input
-                type="checkbox"
-                id="remember"
-                name="remember"
-                value="remember"
-              />
-              Remember me
-            </label>
-            <a href="/some link ...." className="forget-password">
-              Forgot password?{" "}
-            </a>
-          </div>
-          <button disabled={loading} className="login-button">Sign up</button>
+          <button disabled={loading} className="login-button">Create Account</button>
+          <Link to='/login'>
+            <button className="login-button">Login</button>
+          </Link>
         </form>
-        Already a user ? <Link to='/login'>Login</Link>
 
         {loading && <h2>Created an account successfully</h2>}
       </div>

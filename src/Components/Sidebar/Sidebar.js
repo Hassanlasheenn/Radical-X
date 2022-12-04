@@ -12,11 +12,22 @@ import internIcon from '../../images/book.svg';
 import jobIcon from '../../images/briefcase.svg';
 import settingIcon from '../../images/setting-2.svg';
 import avatar from '../../images/Rectangle 18895.svg';
+import { Button } from 'react-bootstrap';
+import { useAuth } from '../../Context/Auth';
 
 
 const Sidebar = () => {
-
+  const { currentUser, logout } = useAuth();
   const click = useNavigate();
+
+  const handleLogout = async () => {
+    try{  
+      await logout()
+      click('/login')
+    } catch(error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -38,7 +49,10 @@ const Sidebar = () => {
           {/* user */}
           <div className='sidebar-container_author'>
               <img src={avatar} alt=''/>
-              <p className='sidebar-container_author--text'>Adam Scott</p>
+              <p className='sidebar-container_author--text'>{currentUser.email}</p>
+          </div>
+          <div className='logout-container'>
+            <Button className='logout-button' onClick={handleLogout} variant="link" style={{ transform: 'translateY(17px)' }}>Logout</Button>
           </div>
       </div>
 

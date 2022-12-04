@@ -61,13 +61,15 @@ export default function Login() {
               />
               Remember me
             </label>
-            <a href="/some link ...." className="forget-password">
+            <Link to={"/forgot-password"} className="forget-password">
               Forgot password?{" "}
-            </a>
+            </Link>
           </div>
           <button disabled={loading} className="login-button">Login</button>
         </form>
-        Need an account ? <Link to='/signup'>Signup</Link>
+        <Link to='/signup'>
+          <button className="login-button">Create Account</button>
+        </Link>
       </div>
     </div>
   )
