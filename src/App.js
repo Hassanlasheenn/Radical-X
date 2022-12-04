@@ -24,6 +24,9 @@ import Sidebar from './Components/Sidebar/Sidebar';
 // css & icon imports 
 import './App.css';
 import uploadLogo from './images/document-upload.svg';
+import Login from './Pages/Login';
+import { AuthProvider } from './Context/Auth';
+import Signup from './Pages/Signup';
 
 
 
@@ -31,9 +34,12 @@ const App = () => {
   
   return (
     <div className="App">
+    <AuthProvider>
       <TickProvider>
         <Routes>
-
+            <Route exact path='/login' element={<Login />} />
+            <Route exact path='/signup' element={<Signup />} />
+            
             <Route exact path='/' element={<Sidebar />}>
               <Route exact path='home' element={<Home />} />
             </Route>
@@ -70,11 +76,9 @@ const App = () => {
 
           {/* 404 error page */}
           <Route path='*' element={<NotFound />} />
-
-          
-          
         </Routes>
       </TickProvider>
+    </AuthProvider>
     </div>
   );
 }

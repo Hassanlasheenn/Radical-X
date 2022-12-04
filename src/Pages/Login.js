@@ -1,86 +1,74 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../Context/Auth';
+import radicalXLogo from "../images/RadicallX-Black-Logo 1.svg";
+import "../Styles/Login.css";
 
-// css & icons imports
-import '../Styles/Login.css';
-import RadicalXLogo from '../images/RadicallX-Black-Logo 1.svg';
-import smsIcon from '../images/sms.svg';
-import lockIcon from '../images/lock.svg';
-import eyeIcon from '../images/eye.svg';
-import tickAprrenIcon from '../images/tick-square-apprenticeflow.svg';
-import eyeSlashIcon from '../images/eye-slash.svg';
 
-const Login = () => {
+export default function Login() {
 
-    const [showPassword, setShowPassword] = useState(false);
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const { login } = useAuth();
+    const [error] = useState("");
+    const [loading] = useState(false);
 
-    const togglePassword = (e) => {
-        e.preventDefault();
-        console.log(`Show Password Clicked!`);
-        // toggle icon
-        if (showPassword) {
-          setShowPassword(false);
-        } else {
-          setShowPassword(true);
-        }
-        var x = document.getElementById("password");
-        if (x.type === "password") {
-          x.type = "text";
-        } else {
-          x.type = "password";
-        }
-      };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+        
+      login(emailRef.current.value, passwordRef.current.value);
+    };
 
-      
   return (
-    <div className='login-container'>
-        <div className='left-container'></div>
+    <div>
+      <div className="split left"></div>
 
-        <div className='right-container'>
-            <img src={RadicalXLogo} alt='RadicalX Logo' /> 
-            <form className='login-container--field'>
-                <h3 className='login-text'>Login</h3>
-                <input 
-                    type='email'
-                    name='email'
-                    placeholder='Email'
-                    required
-                />
-
-                <div className='password-container'>
-                    <input 
-                        type='password'
-                        placeholder='Password'
-                        name='password'
-                        required
-                    />
-                    <button className='button-eye' onClick={togglePassword}>
-                        {showPassword ? (
-                        <img src={eyeSlashIcon} alt='' />
-                        ) : (
-                        <img src={eyeIcon} alt='' />
-                        )}
-                    </button>
-                </div>
-                <div>
-                    <label className="remember-me">
-                    <input
-                        type="checkbox"
-                        id="remember"
-                        name="remember"
-                        value="remember"
-                    />
-                    Remember me
-                    </label>
-                    <a href="/some link ...." className="forget-password">
-                    Forgot password?{" "}
-                    </a>
-                </div>
-
-                <button className='button-text' type='button' >Login</button>
-            </form>
-        </div>
+      <div className="split right">
+        <img src={radicalXLogo} alt="RadicalX" className="radicalX-logo"></img>
+        {error && <h3 className="red">{error}</h3>}
+        <form className="input-fields" onSubmit={handleSubmit}>
+          <h1 className="title">Login</h1>
+          <input
+            type="email"
+            id="email"
+            ref={emailRef}
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <br />
+          <div className="password-container">
+            <input
+              type="password"
+              id="password"
+              ref={passwordRef}
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <button className="eye-button">
+            </button>
+          </div>
+          <br/>
+          <div>
+            <label className="remember-me">
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                value="remember"
+              />
+              Remember me
+            </label>
+            <a href="/some link ...." className="forget-password">
+              Forgot password?{" "}
+            </a>
+          </div>
+          <button disabled={loading} className="login-button">Login</button>
+        </form>
+        Need an account ? <Link to='/signup'>Signup</Link>
+      </div>
     </div>
   )
 }
-
-export default Login;

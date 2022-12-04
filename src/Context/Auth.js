@@ -1,42 +1,57 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { auth } from '../firebase';
+import { onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
-const AuthContext = React.createContext()
+
+const AuthContext = React.createContext();
 
 export const useAuth = () => {
     return useContext(AuthContext)
 }
 
-export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState()
-    const [loading, setLoading] = useState(true)
 
-    const signup = (email, password) => {
-        return auth.createUserWithEmailAndPassword(email, password)
+export const AuthProvider = ({ children }) => {
+
+    const [currentUser, setCurrentUser] = useState();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    const login = async (email, password) => {
+        try {
+            setError("");
+            setLoading(true);
+            await signInWithEmailAndPassword(auth, email, password);
+            navigate('/');
+        } catch {
+            setError("Failed to log in");
+        }
+        setLoading(false);
     }
 
-    const login = (email, password) => {
-        return auth.signInWithEmailAndPassword(email, password)
+    const signup = async (email, password) => {
+        await createUserWithEmailAndPassword(auth, email, password);
     }
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(user => {
-            setCurrentUser(user)
-            setLoading(false)
+        const unsubscribe = onAuthStateChanged(auth, user => {
+            setCurrentUser(user);
+            setLoading(false);
         })
 
         return unsubscribe
-    }, [])
+    }, []);
 
     const value = {
         currentUser,
+        signup,
         login,
-        signup
-    }
-    
+    };
+
   return (
     <AuthContext.Provider value={value}>
-        {!loading && children}
+        {!loading && !error && children}
     </AuthContext.Provider>
   )
 }
