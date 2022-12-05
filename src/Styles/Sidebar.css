@@ -37,21 +37,6 @@
 }
 
 
-.category-text {
-    width: 90px;
-    height: 24px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.3px;
-    font-feature-settings: 'liga' off;
-    color: #1E1E1E;
-}
-
 .active-text {
     width: 90px;
     height: 24px;
@@ -64,7 +49,6 @@
     align-items: center;
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
-    color: #793EF5;
 }
 
 
@@ -113,12 +97,19 @@
     cursor: pointer;
 }
 
-.active-btn{
+.active-btn:hover{
     background: rgba(102, 95, 239, 0.2);
     border: 1px solid #793EF5;
     border-radius: 16px;
     color: #793EF5;
 }
+
+.in-active-img {
+    filter: brightness(0);
+}
+
+
+/* logout button */
 
 .logout-container {
     margin: 0 auto;

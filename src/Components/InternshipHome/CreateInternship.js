@@ -13,7 +13,7 @@ function CreateIntership() {
     <div className='createContCreate'>
       <h4 className='internshipTitleCreate'>Internships</h4>
       
-      <Button icon={addIcon} onClick={() => navigate("/internships")}>
+      <Button icon={addIcon} onClick={() => navigate("/new-internships")}>
           Create New Internship
       </Button>
     </div>

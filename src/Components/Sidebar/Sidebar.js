@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBtns from './NavBtns';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { useAuth } from '../../Context/Auth';
 
 // css import
 import '../../Styles/Sidebar.css';
@@ -12,8 +14,6 @@ import internIcon from '../../images/book.svg';
 import jobIcon from '../../images/briefcase.svg';
 import settingIcon from '../../images/setting-2.svg';
 import avatar from '../../images/Rectangle 18895.svg';
-import { Button } from 'react-bootstrap';
-import { useAuth } from '../../Context/Auth';
 
 
 const Sidebar = () => {
@@ -38,11 +38,11 @@ const Sidebar = () => {
               
               {/* categories */}
               <div className='sidebar-categories'>
-                  <NavBtns name={'Dashboard'} icon={dashboardIcon} />
-                  <NavBtns name={'Apprenticeships'} icon={apprenticeIcon} />
-                  <NavBtns name={'Internships'} icon={internIcon} isActive onClick={() => click('home')}  />
-                  <NavBtns name={'Jobs'} icon={jobIcon} />
-                  <NavBtns name={'Settings'} icon={settingIcon} />
+                  <NavBtns name={'Dashboard'} icon={dashboardIcon} isActive/>
+                  <NavBtns name={'Apprenticeships'} icon={apprenticeIcon} isActive/>
+                  <NavBtns name={'Internships'} icon={internIcon} onClick={() => click('internships')} isActive />
+                  <NavBtns name={'Jobs'} icon={jobIcon} isActive/>
+                  <NavBtns name={'Settings'} icon={settingIcon} isActive/>
               </div> 
           </div>
           
