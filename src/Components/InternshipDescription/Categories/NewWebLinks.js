@@ -24,7 +24,7 @@ const NewWebLinks = () => {
     setUrl('');
     setTick("Web Links & Resources", true);
     setTick("Internship Description", true);
-    setTick("Continue to Next Step", true);
+    setTick("Internship Guide", true);
   }
 
   const handleChange = (e) => {
@@ -44,7 +44,7 @@ const NewWebLinks = () => {
     setLinks(linkRemove);
     setTick("Web Links & Resources", false);
     setTick("Internship Description", false);
-    setTick("Continue to Next Step", false);
+    setTick("Internship Guide", false);
     
   }
 
@@ -57,7 +57,7 @@ const NewWebLinks = () => {
                 <input 
                   className='placeholderUrl'
                   placeholder='Add URL'
-                  type="email"
+                  type="url"
                   onKeyDown={handlePress}
                   onChange={handleChange}
                   value={url}

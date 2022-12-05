@@ -49,17 +49,20 @@ const CategoryContent = () => {
     <div className='contentContCateg'>
         <span className='categoryTitleTextCateg'>Category</span>
         <div className='categoryFormCateg'>
-            <div className='formContCateg'>
+            <form className='formContCateg'>
                 <input
-                    type='text'
+                    type='category'
+                    id='category'
+                    name='category'
                     placeholder='Search Category'
                     onKeyDown={handleKeyPress}
                     onChange={handleChange}
                     value={searchInput}
                     className='placeholderCateg'
+                    required
                 />
                 <img src={searchIcon} alt='' type='button' onClick={handleAdd} />
-            </div>
+            </form>
             <div className='searchResultContCateg'>
             {categories.map((category) => {
                 return (

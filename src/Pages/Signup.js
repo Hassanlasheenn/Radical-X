@@ -38,13 +38,14 @@ export default function Signup() {
 
   return (
     <div>
-      <div className="split left"></div>
+      <div className="page left-page"></div>
 
-      <div className="split right">
+      <div className="page right-page">
         <img src={radicalXLogo} alt="RadicalX" className="radicalX-logo"></img>
         {error && <h3 className="red">{error}</h3>}
+        {loading && <h3 className='green'>Created an account successfully</h3>}
         <form className="input-fields" onSubmit={handleSubmit}>
-          <h1 className="title">Sign up</h1>
+          <h1 className="title">Create Account</h1>
           <input
             type="email"
             id="email"
@@ -54,34 +55,29 @@ export default function Signup() {
             required
           />
           <br />
-          <div className="password-container">
-            <input
-              type="password"
-              id="password"
-              ref={passwordRef}
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </div>
+          <input
+            type="password"
+            id="password"
+            ref={passwordRef}
+            name="password"
+            placeholder="Password"
+            required
+          />
           <br/>
-          <div className="password-container">
-            <input
-              type="password"
-              id="password"
-              ref={passwordConfirmRef}
-              name="passwordConfirm"
-              placeholder="Confirm Password"
-              required
-            />
-          </div>
-          <button disabled={loading} className="login-button">Create Account</button>
+          <input
+            type="password"
+            id="password"
+            ref={passwordConfirmRef}
+            name="passwordConfirm"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <button disabled={loading} className="login-button">Signup</button>
           <Link to='/login'>
             <button className="login-button">Login</button>
           </Link>
         </form>
-
-        {loading && <h2>Created an account successfully</h2>}
       </div>
     </div>
   )

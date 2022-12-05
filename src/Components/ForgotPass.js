@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../Context/Auth';
 import radicalXLogo from "../images/RadicallX-Black-Logo 1.svg";
@@ -32,12 +31,12 @@ export default function ForgotPass() {
 
   return (
     <div>
-      <div className="split left"></div>
+      <div className="page left-page"></div>
 
-      <div className="split right">
+      <div className="page right-page">
         <img src={radicalXLogo} alt="RadicalX" className="radicalX-logo"></img>
-        {error && <Alert variant="success">{error}</Alert>}
-        {message && <Alert variant='success'>{message}</Alert>}
+        {error && <h3 className='red'>{error}</h3>}
+        {message && <h3 className='green'>{message}</h3>}
         <form className="input-fields" onSubmit={handleSubmit}>
           <h1 className="title">Password Reset</h1>
           <input

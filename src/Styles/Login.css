@@ -1,4 +1,4 @@
-.split {
+.page {
     height: 100%;
     width: 50%;
     position: fixed;
@@ -6,14 +6,14 @@
     padding-top: 20px;
   }
   
-  /* Control the left side */
-  .left {
+  /* left page */
+  .left-page {
     left: 0;
     background-color: #793EF5;
   }
   
-  /* Control the right side */
-  .right {
+  /* right page */
+  .right-page {
     right: 0;
     background-color: #FFFFFF;
     display: flex;
@@ -21,6 +21,7 @@
     align-items: center;
     text-align: center;
   }
+
   
   .input-fields {
     padding-top: 25%;
@@ -30,12 +31,23 @@
     align-items: flex-start;
     justify-self: center;
   }
+
+  .title {
+    width: 66px;
+    padding-bottom: 1em;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1e1e1e;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
   
   #password,
   #email {
     background-repeat: no-repeat;
     background-position: left;
-    padding-left: 2.5em;
+    padding-left: 45px;
   }
   
   input[type="email"]:focus,
@@ -50,16 +62,16 @@
     color: grey;
   }
   
-  /* #email {
-    background-image: URL("../../assets/email.JPG");
+  #email {
+    background-image: URL("../images/email.svg");
     background-position: 4% 50%;
   }
   
   #password {
-    background-image: URL("../../assets/lock.JPG");
+    background-image: URL("../images/lock.svg");
     background-position: 4% 50%;
-    flex: 2;
-  } */
+  }
+
   
   input:hover {
     border-color: #793EF5;
@@ -69,15 +81,7 @@
     display: flex;
     flex-direction: row;
   }
-  
-  input[type="password"],
-  .eye-button,
-  input[type="text"] {
-    outline: none;
-    border: none;
-    border-radius: 16px;
-    background-color: inherit;
-  }
+
   
   input[type="email"],
   .password-container {
@@ -92,13 +96,18 @@
     letter-spacing: 0.3px;
     background-color: #f5f5f7;
   }
-  
-  .eye-button {
-    margin-right: 1em;
-  }
-  
-  .eye-button:hover {
-    cursor: pointer;
+
+  input[type="password"] {
+    width: 360px;
+    height: 48px;
+    border: 1px solid #cecece;
+    border-radius: 16px;
+    padding: 10px, 16px, 10px, 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    background-color: #f5f5f7;
   }
   
   .radicalX-logo {
@@ -116,10 +125,11 @@
     color: #793EF5;
     transition: 0.2s ease-in;
   }
+  
   .forget-password:hover {
     text-decoration: underline;
-    font-weight: bold;
   }
+
   .remember-me {
     margin-left: 0.5em;
     color: rgba(47, 48, 49, 0.54);
@@ -146,26 +156,18 @@
     color: rgba(47, 48, 49, 0.54);
   }
   
-  .title {
-    width: 66px;
-    padding-bottom: 1em;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    color: #1e1e1e;
-    letter-spacing: 0.4px;
-    white-space: nowrap;
-  }
+
   
   /* Error Text */
   .red {
-    color: brown;
+    color: red;
     background-color: #f8d7d9;
     width: 50%;
     padding: 0.5em;
     border-radius: 1em;
     margin-top: 2em;
   }
+
   /* Success text */
   .green {
     color: #FFFFFF;
@@ -174,14 +176,5 @@
     padding: 0.5em;
     border-radius: 1em;
     margin-top: 2em;
-  }
-  
-  @media screen and (max-width: 880px) {
-    .left {
-      display: none;
-    }
-    .split {
-      width: 100%;
-    }
   }
   
