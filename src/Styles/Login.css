@@ -134,7 +134,7 @@
     background-image: url('../images/tick-square-login.svg');
     width: 20px;
     height: 20px;
-    border-radius: 5px;
+    border: 0;
     transform: translateY(5px);
     background-position: center;
     background-size: 100%;
