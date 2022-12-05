@@ -27,7 +27,7 @@
   }
 
   .input-fields {
-    padding-top: 25%;
+    padding-top: 290px;
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -37,7 +37,7 @@
 
   .title {
     width: 66px;
-    padding-bottom: 1em;
+    padding-bottom: 16px;
     font-weight: 500;
     font-size: 24px;
     line-height: 24px;
@@ -63,12 +63,12 @@
   
   #email {
     background-image: URL("../images/email.svg");
-    background-position: 4% 50%;
+    background-position: 12px 13px;
   }
   
   #password {
     background-image: URL("../images/lock.svg");
-    background-position: 4% 50%;
+    background-position: 13px 13px;
   }
 
   
@@ -110,7 +110,7 @@
   }
   
   .remember-me {
-    margin-left: 0.5em;
+    margin-left: 8px;
     color: rgba(47, 48, 49, 0.54);
   }
 
@@ -141,7 +141,7 @@
   }
 
   .forget-password {
-    padding-left: 5em;
+    padding-left: 80px;
     text-decoration: none;
     color: #793EF5;
     transition: 0.2s ease-in;
@@ -165,7 +165,7 @@
     letter-spacing: 0.4px;
     outline: none;
     border: none;
-    margin-top: 2em;
+    margin-top: 32px;
     cursor: pointer;
   }
   
@@ -180,9 +180,9 @@
     color: red;
     background-color: #f8d7d9;
     width: 50%;
-    padding: 0.5em;
-    border-radius: 1em;
-    margin-top: 2em;
+    padding: 8px;
+    border-radius: 16px;
+    margin-top: 32px;
   }
 
   /* Success text */
@@ -190,8 +190,8 @@
     color: #FFFFFF;
     background-color: rgb(73, 137, 73);
     width: 50%;
-    padding: 0.5em;
-    border-radius: 1em;
-    margin-top: 2em;
+    padding: 8px;
+    border-radius: 16px;
+    margin-top: 32px;
   }
   
