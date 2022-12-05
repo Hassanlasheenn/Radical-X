@@ -19,7 +19,7 @@ export default function ForgotPass() {
         
       try {
         setMessage('')
-        setError("")
+        setError('')
         setLoading(true)
         await resetPass(emailRef.current.value)
         setMessage('Check your inbox for further instructions ')
@@ -31,32 +31,32 @@ export default function ForgotPass() {
 
   return (
     <div>
-      <div className="page left-page"></div>
+      <div className='page left-page'></div>
 
-      <div className="page right-page">
-        <img src={radicalXLogo} alt="RadicalX" className="radicalX-logo"></img>
-        {error && <h3 className='red'>{error}</h3>}
+      <div className='page right-page'>
+        <img src={radicalXLogo} alt='RadicalX' className='radicalX-logo'></img>
+        {error && <h3 className='error'>{error}</h3>}
         {message && <h3 className='green'>{message}</h3>}
-        <form className="input-fields" onSubmit={handleSubmit}>
-          <h1 className="title">Password Reset</h1>
+        <form className='input-fields' onSubmit={handleSubmit}>
+          <h1 className='title'>Password Reset</h1>
           <input
-            type="email"
-            id="email"
+            type='email'
+            id='email'
             ref={emailRef}
-            name="email"
-            placeholder="Email"
+            name='email'
+            placeholder='Email'
             required
           />
           <br/>
-            <button disabled={loading} className="login-button">Reset Password</button>
+            <button disabled={loading} className='login-button'>Reset Password</button>
             <Link to={'/login'}>
-                <button className="login-button">
+                <button className='login-button'>
                     Login
                 </button>
             </Link>
         </form>
         <Link to='/signup'>
-          <button className="login-button">Create Account</button>
+          <button className='login-button'>Create Account</button>
         </Link>
       </div>
     </div>
