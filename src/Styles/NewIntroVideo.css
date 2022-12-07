@@ -16,6 +16,7 @@
     border-radius: 20px;
 }
 
+
 .introVideoTitle {
     width: 127px;
     height: 18px;
@@ -53,4 +54,16 @@
     letter-spacing: 0.4px;
     font-feature-settings: 'liga' off;
     color: #778188;
+}
+
+
+/* file result name */
+.file-name {
+    width: 789px;
+    height: 80px;
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }

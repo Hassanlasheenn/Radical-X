@@ -5,7 +5,6 @@ import { TickContext } from '../../../Context/useTickCircle';
 import '../../../Styles/LocationContent.css';
 import '../../../Styles/CategoryContent.css';
 import arrowIcon from '../../../images/arrow-down.svg';
-// import pinIcon from '../../../images/location.svg';
 
 
 let autoComplete;
@@ -56,7 +55,7 @@ const LocationContent = () => {
 
  useEffect(() => {
   loadScript(
-    `https://maps.googleapis.com/maps/api/js?key=AIzaSyAK7jAjKIGkUicCC6yNzw8Qnel7EtbhGpM&libraries=places`,
+    `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_PLACES_API_KEY}&libraries=places`,
     () => handleScriptLoad(setQuery, autoCompleteRef)
   );
 }, []);
