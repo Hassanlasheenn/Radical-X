@@ -121,6 +121,8 @@
 
 }
 
+/* guide navigations */
+
 .box {
     box-sizing: border-box;
     display: flex;
@@ -132,6 +134,12 @@
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 12px;
+    transition: all .3s;
+}
+
+.box:hover {
+    border: 1px solid #793EF5;
+    transform: scale(1.01);
 }
 
 .boxComponent {
@@ -147,7 +155,7 @@
 
 .boxText {
     display: inline-block;
-    width: 37px;
+    width: 127px;
     height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -175,6 +183,11 @@
     background: #FFFFFF;
     border: 1px dashed #793EF5;
     border-radius: 12px;
+}
+
+.addMoreBox:hover {
+    transform: scale(1.03);
+    border: 1px solid #793EF5;
 }
 
 .addMoreComponent {
@@ -395,6 +408,12 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
+    transition: all .3s;
+}
+
+.briefField:focus {
+    outline-color: #793EF5;
+    transform: scale(1.01);
 }
 
 .briefVideoCont {
@@ -546,6 +565,10 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
+}
+
+.questionContainer:focus {
+    outline-color: #793EF5;
 }
 
 .questionAddCont {

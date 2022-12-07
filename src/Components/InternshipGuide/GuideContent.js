@@ -1,11 +1,16 @@
-import React, { useRef } from 'react';
-
-
+import React, { useContext, useRef, useState } from 'react';
+import { TickContext } from '../../Context/useTickCircle';
 
 
 const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
 
     const inputRef = useRef(null);
+    const [brief, setBrief] = useState('');
+    const [req, setReq] = useState('');
+    const [mile, setMile] = useState('');
+    
+    const { setTick } = useContext(TickContext);
+
     const handleLogoClick = () => {
       inputRef.current.click();
     }
@@ -16,6 +21,40 @@ const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
         return;
       }
     }
+
+    const handleBrief = (e) => {
+      e.preventDefault();
+      setBrief(e.target.value);
+
+      if(brief.length >= 0) {
+        setTick("Brief", true);
+      } else {
+        setTick("Brief", false);
+      }
+    }
+
+    const handleRequire = (e) => {
+      e.preventDefault();
+      setReq(e.target.value);
+
+      if(req.length >= 0) {
+        setTick("Requirements", true);
+      } else {
+        setTick("Requirements", false);
+      }
+    }
+
+    const handleMileStone = (e) => {
+      e.preventDefault();
+      setMile(e.target.value);
+
+      if(mile.length >= 0) {
+        setTick("Milestones", true);
+      } else {
+        setTick("Milestones", false);
+      }
+    }
+
   return (
     <>
               <div className='contentDetails'>
@@ -25,6 +64,8 @@ const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
             className='briefField'
             placeholder='Description'
             type='text'
+            onChange={handleBrief}
+            value={brief}
           />
           <div className='briefVideoCont'>
                 <label className='briefDropText'>{fieldText}</label>
@@ -43,6 +84,9 @@ const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
             className='briefField'
             placeholder='Description'
             type='text'
+            onChange={handleRequire}
+            value={req}
+
           />
           <div className='briefVideoCont'>
                 <label className='briefDropText'>{fieldText}</label>
@@ -61,6 +105,8 @@ const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
             className='briefField'
             placeholder='Description'
             type='text'
+            onChange={handleMileStone}
+            value={mile}
           />
           <div className='briefVideoCont'>
                 <label className='briefDropText'>{fieldText}</label>

@@ -15,7 +15,7 @@ import MentorDetails from './Components/InternshipDescription/Categories/NewMent
 import RecommendedRoles from './Components/InternshipDescription/Categories/RecommendedRoles';
 import Links from './Components/InternshipDescription/Categories/NewWebLinks';
 import SettingForm from './Components/Settings/SettingForm';
-import SurveyContent from './Components/Surveys/SurveyQuestions/SurveyContent';
+import SurveyQuestion from './Components/Surveys/SurveyQuestion';
 import GuideContent from './Components/InternshipGuide/GuideContent';
 import Sidebar from './Components/Sidebar/Sidebar';
 // Context files imports
@@ -29,6 +29,7 @@ import ForgotPass from './Components/ForgotPass';
 // css & icon imports 
 import './App.css';
 import uploadLogo from './images/document-upload.svg';
+import tickCatIcon from './images/tick-circle.svg';
 // Error Page import
 import NotFound from './Pages/NotFound';
 // Finish page import
@@ -71,8 +72,8 @@ const App = () => {
               </Route>
 
               <Route exact path='surveys' element={<Surveys />}>
-                <Route exact path='1' element={<SurveyContent title='Survey 1' />} />
-                <Route exact path='2' element={<SurveyContent title='Survey 2' />} />
+                <Route exact path='1' element={<SurveyQuestion title='Survey 1' tick={tickCatIcon}/>} />
+                <Route exact path='2' element={<SurveyQuestion title='Survey 2' />} />
               </Route>
 
               <Route exact path='settings' element={<Settings />}>

@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Content } from './Content';
+import { TickContext } from '../../Context/useTickCircle';
 
 // css & icons imports
 import '../../Styles/Guide.css';
 import menuIcon from '../../images/menu.svg';
+import tickCatIcon from '../../images/tick-circle.svg';
 
 
 
-const BoxContainer = ({ title, icon, onClick, name1, name2, name3 }) => {
+
+const BoxContainer = ({ title, icon, onClick, name1, name2, name3, tick }) => {
 
   const [show, setShow] = useState(false);
   const [Height, setHeight] = useState('72px');
+
+  const { active } = useContext(TickContext);
 
 
   const handleClickMenu = () => { 
@@ -31,7 +36,6 @@ const BoxContainer = ({ title, icon, onClick, name1, name2, name3 }) => {
   }
 
   return (
-
         <div className='overviewCont' style={{ height: Height }}>
           <div className='overviewLogoCont'>
             <img src={menuIcon} alt='' />
@@ -42,6 +46,8 @@ const BoxContainer = ({ title, icon, onClick, name1, name2, name3 }) => {
                 <div className='overviewFrameText'>
                   <div className='headingCont'>
                     <span className='overviewText'>{title}</span>
+                    {active[title] && 
+                    <span>{ tick && <img src={tick} alt='' />}</span> }
                   </div>
                 </div>
                {icon &&  <img src={icon} alt='' /> }
@@ -50,7 +56,7 @@ const BoxContainer = ({ title, icon, onClick, name1, name2, name3 }) => {
               <div className='detailFrame'>
 
                 { show && 
-                  <Content name1={name1} name2={name2} name3={name3} icon={menuIcon} />
+                  <Content name1={name1} name2={name2} name3={name3} icon={menuIcon} tick={tickCatIcon} />
                 }
                 
               </div>

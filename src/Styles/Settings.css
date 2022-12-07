@@ -107,12 +107,6 @@
     color: #333333;
 }
 
-/* .basicArrowRight {
-    background: url('../images/arrow-right\ 2.png');
-    width: 24px;
-    height: 24px;
-    opacity: 0.5;
-} */
 
 
 /* settings bar content */
@@ -176,6 +170,10 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: #333333;
+}
+
+.textFieldUrl:focus {
+    outline-color: #793EF5;
 }
 
 /* access container */

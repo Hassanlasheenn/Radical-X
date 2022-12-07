@@ -8,6 +8,7 @@ import BoxContainer from '../Components/InternshipGuide/BoxContainer';
 import unTickCircle from '../images/untick-circle-newInternship.svg';
 import arrowIcon from '../images/arrow-right-internships.svg';
 import addChapIcon from '../images/additem.svg';
+import tickCatIcon from '../images/tick-circle.svg';
 
 const InternshipGuide = () => {
 
@@ -25,9 +26,32 @@ const InternshipGuide = () => {
         </div>
 
         <div className='guideOverview'>
-          <BoxContainer title='Overview' icon={arrowIcon} onClick={() => click('overview')} name1='Brief' name2='Requirements' name3='Milestones' />
-          <BoxContainer title='Schedule' icon={arrowIcon} onClick={() => click('schedule')} name1='Duration' name2='Timeline' name3='Deliverables' />
-          <BoxContainer title='Resources' icon={arrowIcon} onClick={() => click('resources')} name1='Curated Resources' name2='Events' />
+          <BoxContainer 
+            title='Overview' 
+            icon={arrowIcon} 
+            onClick={() => click('overview')} 
+            name1='Brief' 
+            name2='Requirements' 
+            name3='Milestones' 
+            tick={tickCatIcon}
+          />
+          <BoxContainer 
+            title='Schedule' 
+            icon={arrowIcon} 
+            onClick={() => click('schedule')} 
+            name1='Duration' 
+            name2='Timeline' 
+            name3='Deliverables'
+            tick={tickCatIcon}
+          />
+          <BoxContainer 
+            title='Resources' 
+            icon={arrowIcon} 
+            onClick={() => click('resources')} 
+            name1='Curated Resources' 
+            name2='Events' 
+            tick={tickCatIcon}
+          />
 
           <div className='chapterContainer'>
             <div className='addChapterCont'>

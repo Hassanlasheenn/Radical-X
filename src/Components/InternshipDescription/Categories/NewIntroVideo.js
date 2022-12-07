@@ -2,35 +2,33 @@ import React, { useContext, useRef, useState } from 'react';
 
 // css & icons import 
 import '../../../Styles/NewIntroVideo.css';
+import '../../../Styles/CategoryContent.css';
 import uploadIcon from '../../../images/document-upload.svg';
-import closeIcon from '../../../images/close.svg';
-import { TickContext } from '../../../Context/useTickCircle';
+// import closeIcon from '../../../images/close.svg';
+// import { TickContext } from '../../../Context/useTickCircle';
 
 const NewIntroVideo = () => {
 
-  const [files, setFiles] = useState([]);
   const inputRef = useRef(null);
 
-  const { setTick } = useContext(TickContext);
+  // const { setTick } = useContext(TickContext);
 
   const handleLogoClick = () => {
     inputRef.current.click();
-    setTick("Intro Video", true);
+    // setTick("Intro Video", true);
   }
 
   const handleVideoFile = e => {
-    const fileObj = e.target.files && e.target.files[0];
-    if(!fileObj) {
-      return;
-    }
+    // const fileObj = e.target.files && e.target.files[0];
+    console.log(e.target.files)
   }
 
-  const handleRemove = (name) => {
-    const fileRemove = files.filter((item) => item.name !== name);
+  // const handleRemove = (name) => {
+  //   const fileRemove = files.filter((item) => item.name !== name);
 
-    setFiles(fileRemove);
-    setTick("Intro Video", false);
-  }
+  //   setFiles(fileRemove);
+  //   setTick("Intro Video", false);
+  // }
 
   return (
     <>
@@ -43,16 +41,16 @@ const NewIntroVideo = () => {
         </div>
     </div>
 
-    <div className='file-name'>
+    {/* <div className='file-name'>
       {files.map((file) => {
         return (
-          <div className='file-cont' key={file.id}>
-            {/* <span className='file-name'></span> */}
+          <div className='resultContCateg' key={file.id}>
+            <span className='resultTextCateg'>{file.name}</span>
             <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(file.name)} style={{cursor: 'pointer'}} />
           </div>
         )
       })}
-    </div>
+    </div> */}
     </>
   )
 }

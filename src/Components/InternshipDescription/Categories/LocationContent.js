@@ -31,7 +31,7 @@ const loadScript = (url, callback) => {
 const handleScriptLoad = (updateQuery, autoCompleteRef) => {
   autoComplete = new window.google.maps.places.Autocomplete(
     autoCompleteRef.current,
-    { types: ["(cities)"], componentRestrictions: { country: "us" } }
+    { types: ["(regions)"], componentRestrictions: { 'country': ["eg", ["us", "gb"], ["fr", "ae"], ["de", "br"]] } }
   );
   autoComplete.setFields(["address_components", "formatted_address"]);
   autoComplete.addListener("place_changed", () => 
@@ -55,7 +55,7 @@ const LocationContent = () => {
 
  useEffect(() => {
   loadScript(
-    `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_PLACES_API_KEY}&libraries=places`,
+    `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_PLACES_API_KEY}&libraries=places&v=3`,
     () => handleScriptLoad(setQuery, autoCompleteRef)
   );
 }, []);
