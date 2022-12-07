@@ -31,7 +31,6 @@ const Navbar = ({ title, link, back, isActive }) => {
         <div className='titleContNavbar'>
             <span className='titleTextNavbar'>Add New Internship</span>
         </div>
-        
         <div className='continueBtnContNavbar'>
         {active[title] ?
             <BtnSec icon={whiteArrowIcon} onClick={() => navigate(`/${link}`)}>

@@ -4,7 +4,6 @@ import { TickContext } from '../../Context/useTickCircle';
 // css & icon imports 
 import '../../Styles/Categories.css';
 import menuIcon from '../../images/menu.svg';
-// import tickCatIcon from '../../images/tick-circle.svg';
 
 
 const Categories = ({ name, onClick, icon, tick }) => {

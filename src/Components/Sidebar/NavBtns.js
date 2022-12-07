@@ -9,8 +9,8 @@ const NavBtns = ({ icon, name, isActive, onClick }) => {
     }
   }
   return (
-        <div className={ isActive ? "active-btn" : "not-active" } onClick={handleNavBtns}>
-            <img className='in-active-img' src={icon} alt='Navigation Icon' />
+        <div className={ isActive ? 'active-btn' : 'not-active' } onClick={handleNavBtns}>
+            <img src={icon} alt='Navigation Icon' />
             <p className={ isActive ? 'active-text' : 'not-active' }>{name}</p>
         </div>
   )

@@ -1,29 +1,74 @@
-import React, { useContext, useMemo, useState } from 'react';
-import Select from 'react-select';
-import countryList from 'react-select-country-list';
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import { TickContext } from '../../../Context/useTickCircle';
 
 // css & icons imports
 import '../../../Styles/LocationContent.css';
 import '../../../Styles/CategoryContent.css';
-import pinIcon from '../../../images/location.svg';
-import { TickContext } from '../../../Context/useTickCircle';
+import arrowIcon from '../../../images/arrow-down.svg';
+// import pinIcon from '../../../images/location.svg';
+
+
+let autoComplete;
+
+const loadScript = (url, callback) => {
+  let script = document.createElement("script");
+  script.type = "text/javascript";
+
+  if(script.readyState) {
+    script.onreadystatechange = () => {
+      if(script.readyState === "loaded" || script.readyState === "complete") {
+        script.onreadystatechange = null;
+        callback()
+      } 
+    };
+  } else {
+    script.onload = () => callback();
+  }
+
+  script.src = url;
+  document.getElementsByTagName("head")[0].appendChild(script);
+};
+
+const handleScriptLoad = (updateQuery, autoCompleteRef) => {
+  autoComplete = new window.google.maps.places.Autocomplete(
+    autoCompleteRef.current,
+    { types: ["(cities)"], componentRestrictions: { country: "us" } }
+  );
+  autoComplete.setFields(["address_components", "formatted_address"]);
+  autoComplete.addListener("place_changed", () => 
+  handlePlaceSelect(updateQuery)
+  );
+}
+
+const handlePlaceSelect = async (updateQuery) => {
+const addressObject = autoComplete.getPlace();
+const query = addressObject.formatted_address;
+updateQuery(query);
+console.log(addressObject);
+}
 
 const LocationContent = () => {
-  
-  const [countries, setCountries] = useState('');
-  const [cntry, setCntry] = useState([]);
 
+  const [query, setQuery] = useState("");
+  const [cntry, setCntry] = useState([]);
+  const autoCompleteRef = useRef(null);
   const { setTick } = useContext(TickContext);
 
+ useEffect(() => {
+  loadScript(
+    `https://maps.googleapis.com/maps/api/js?key=AIzaSyAK7jAjKIGkUicCC6yNzw8Qnel7EtbhGpM&libraries=places`,
+    () => handleScriptLoad(setQuery, autoCompleteRef)
+  );
+}, []);
 
-  const options = useMemo(() => countryList().getData(), []);
+  
 
   const handleChange = (e) => {
-    setCountries(e?.label);
+    setQuery(e?.label);
     const handleAdd = (value) => {
       const newCuntry = cntry.concat({
         value:value,
-        label: e.label,
+        label: e.target.value,
       });
       setCntry(newCuntry);
       setTick("Location", true);
@@ -35,23 +80,29 @@ const LocationContent = () => {
     <>
     <div className='locationCont'>
         <span className='locationTitle'>Location</span>
-        <div className='locationField'>
-            <img src={pinIcon} alt='' />
-
-              <Select 
-                options={options}
-                className='locFieldText'
-                value={countries}
-                onChange={handleChange}
-              />
-        </div>
+          <div className='location-container'>
+            <input 
+              className='locFieldText'
+              id='countries'
+              type='countries'
+              placeholder='Select Location'
+              ref={autoCompleteRef}
+              onChange={e => setQuery(e.target.value) & handleChange}
+              value={query}
+              required
+            />
+            <button onClick={handleChange} className='arrow-down'>
+              <img src={arrowIcon} alt='' />
+            </button>
+          </div>
     </div>
+
     <div className='countryField'>
     {cntry.map((c) => {
       return (
         <>
           <div className='resultContCateg' key={c.id}>
-            <span className='resultTextCateg'>{c.label}</span>
+            <span className='resultTextCateg'>{c.formatted_address}</span>
           </div>
         </>
         )

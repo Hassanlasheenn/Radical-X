@@ -6,7 +6,6 @@ import SettingsContent from '../Components/Settings/SettingsContent';
 
 // css & icons imports
 import unTickCircle from '../images/untick-circle-newInternship.svg';
-import tickIntern from '../images/tick-circle-internship-finish.svg';
 
 const Settings = () => {
 
@@ -17,9 +16,9 @@ const Settings = () => {
         <Navbar title="Publish Internship" link={'done'} back={'surveys'}/>
 
         <div className='internshipBar'>
-          <InternshipDesc name='Internship Description' icon={tickIntern} />
-          <InternshipDesc name='Internship Guide' icon={tickIntern} />
-          <InternshipDesc name='Surveys' icon={tickIntern} />
+          <InternshipDesc name='Internship Description' icon={unTickCircle} />
+          <InternshipDesc name='Internship Guide' icon={unTickCircle} />
+          <InternshipDesc name='Surveys' icon={unTickCircle} />
           <InternshipDesc name='Settings' icon={unTickCircle} />
         </div>
 

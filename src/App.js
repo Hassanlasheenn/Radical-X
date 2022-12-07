@@ -50,8 +50,9 @@ const App = () => {
             <Route exact path='/forgot-password' element={<ForgotPass />} />
             
             <Route element={<PrivateRoute />}>
-              <Route exact path='/' element={<Sidebar />} />
+              <Route exact path='/' element={<Sidebar />}>
               <Route exact path='internships' element={<Home />} />
+              </Route>
               <Route exact path='new-internships' element={<NewInternship />}>
                 <Route exact path='category' element={<CategoryContent />} />
                 <Route exact path='description' element={<DescContent />} />

@@ -22,15 +22,13 @@ const BenefitsContent = () => {
 
   return (
     <div className='benefitsContent'>
-        <span className='benefitsTitle'>Benefits</span>
-        <div className='benefitsField'>
+        <p className='benefitsTitle'>Benefits</p>
             <textarea 
               className='benefitsTextField'
               placeholder='Description'
               onChange={handleChange}
               value={benefits}
             />
-        </div>
     </div>
   )
 }

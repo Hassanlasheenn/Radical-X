@@ -8,12 +8,15 @@ import addIcon from '../../images/add-square.svg';
 
 function CreateIntership() {
   const navigate = useNavigate();
+
+  const handleNewInternship = () => {
+    navigate("/new-internships")
+  }
   
   return (
     <div className='createContCreate'>
       <h4 className='internshipTitleCreate'>Internships</h4>
-      
-      <Button icon={addIcon} onClick={() => navigate("/new-internships")}>
+      <Button icon={addIcon} onClick={handleNewInternship}>
           Create New Internship
       </Button>
     </div>

@@ -6,7 +6,6 @@ import SurveysContent from '../Components/Surveys/SurveysContent';
 
 // css & icons imports
 import unTickCircle from '../images/untick-circle-newInternship.svg';
-import tickIntern from '../images/tick-circle-internship-finish.svg';
 import addChapIcon from '../images/additem.svg';
 
 const Surveys = () => {
@@ -15,11 +14,11 @@ const Surveys = () => {
 
   return (
     <>
-        <Navbar title="Internship Settings" link={'settings'} back={'internship-guide'}/>
+        <Navbar title="Continue to Settings" link={'settings'} back={'internship-guide'}/>
 
         <div className='internshipBar'>
-          <InternshipDesc name='Internship Description' icon={tickIntern} />
-          <InternshipDesc name='Internship Guide' icon={tickIntern} />
+          <InternshipDesc name='Internship Description' icon={unTickCircle} />
+          <InternshipDesc name='Internship Guide' icon={unTickCircle} />
           <InternshipDesc name='Surveys' icon={unTickCircle} />
           <InternshipDesc name='Settings' icon={unTickCircle} />
         </div>

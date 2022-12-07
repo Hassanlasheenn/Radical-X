@@ -30,7 +30,7 @@ const NewIntroVideo = () => {
         <div className='form-group files'>
             <label className='dragDropText'>Drag n drop to upload your video</label>
             <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
-            <img src={uploadIcon} alt='' onClick={handleLogoClick} />
+            <img src={uploadIcon} alt='' onClick={handleLogoClick} style={{ cursor: 'pointer' }} />
         </div>
     </div>
   )

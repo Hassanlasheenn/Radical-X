@@ -8,7 +8,6 @@ import BoxContainer from '../Components/InternshipGuide/BoxContainer';
 import unTickCircle from '../images/untick-circle-newInternship.svg';
 import arrowIcon from '../images/arrow-right-internships.svg';
 import addChapIcon from '../images/additem.svg';
-import tickIntern from '../images/tick-circle-internship-finish.svg';
 
 const InternshipGuide = () => {
 
@@ -16,10 +15,10 @@ const InternshipGuide = () => {
 
   return (
     <>
-        <Navbar title="Internship Surveys" link={'surveys'} back={'new-internships'} />
+        <Navbar title="Continue to Surveys" link={'surveys'} back={'new-internships'} />
 
         <div className='internshipBar'>
-          <InternshipDesc name='Internship Description' icon={tickIntern} />
+          <InternshipDesc name='Internship Description' icon={unTickCircle} />
           <InternshipDesc name='Internship Guide' icon={unTickCircle} />
           <InternshipDesc name='Surveys' icon={unTickCircle} />
           <InternshipDesc name='Settings' icon={unTickCircle} />

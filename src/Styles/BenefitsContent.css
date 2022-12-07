@@ -28,7 +28,8 @@
     color: #333333;
 }
 
-.benefitsField {
+
+.benefitsTextField {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -40,21 +41,20 @@
     background: #F1F4F8;
     border: 1px solid #CECECE;
     border-radius: 16px;
-}
-
-.benefitsTextField {
-    width: 709px;
-    height: 28px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
-    border: 0;
     background: #F1F4F8;
+    padding: 10px 16px;
+    transition: transform .4s;
+}
+
+.benefitsTextField:focus {
+    outline-color: #793EF5;
+    transform: scale(1.01);
 }

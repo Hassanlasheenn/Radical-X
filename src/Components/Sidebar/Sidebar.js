@@ -10,7 +10,7 @@ import '../../Styles/Sidebar.css';
 import radicalLogo from '../../images/RadicallX-Black-Logo 1.svg';
 import dashboardIcon from '../../images/dashboard-3.svg';
 import apprenticeIcon from '../../images/medal-star.svg';
-import internIcon from '../../images/book.svg';
+import internIcon from '../../images/book-disabled.svg';
 import jobIcon from '../../images/briefcase.svg';
 import settingIcon from '../../images/setting-2.svg';
 import avatar from '../../images/Rectangle 18895.svg';

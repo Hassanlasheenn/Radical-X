@@ -58,13 +58,6 @@
     gap: 8px;
     width: 514px;
     height: 24px;
-}
-
-.categoryTextCategory {
-    position: absolute;
-    width: 214px;
-    height: 18px;
-    font-size: 18px;
     font-family: 'Space Grotesk';
     font-weight: 500;
     font-style: normal;
@@ -72,9 +65,9 @@
     font-feature-settings: 'liga' off;
     color: #333333;
     text-align: left;
+    font-size: 18px;
+    height: 18px;
 }
-
-
 
 .assessmentBarCategory {
     display: flex;

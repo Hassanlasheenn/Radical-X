@@ -26,8 +26,24 @@
     font-feature-settings: 'liga' off;
     color: #333333;
 }
+#countries {
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 44px;
+}
 
-.locationField {
+#countries {
+    background-image: url('../images/location.svg');
+    background-position: 16px 13px;
+}
+
+.location-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+input[type="countries"]{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -39,17 +55,26 @@
     background: #F1F4F8;
     border: 1px solid #CECECE;
     border-radius: 16px;
-}
-
-
-.locFieldText {
-    width: 740px;
-    height: 45px;
-    display: grid;
-    border: 0;
     background-color: #F1F4F8;
     font-family: 'Space Grotesk';
     font-size: 16px;
+}
+
+input[type="countries"]:focus {
+    outline-color: #793EF5;
+}
+
+.arrow-down {
+    border: none;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    background: #F1F4F8;
+    transform: translate(-34px, 14px);
+}
+
+.arrow-down:hover {
+    cursor: pointer;
 }
 
 

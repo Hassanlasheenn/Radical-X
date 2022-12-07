@@ -45,113 +45,96 @@
     height: 48px;
 }
 
-.nameField, .emailField {
+
+input[type="name"] {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 12px 12px 12px 16px;
+    padding: 12px 12px 12px 45px;
     gap: 10px;
     width: 358.5px;
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #CECECE;
     border-radius: 12px;
-}
-
-
-.namePlaceholder {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 11px;
-    width: 296.5px;
-    height: 24px;
-}
-
-.nameFieldText {
-    width: 280px;
-    height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
     opacity: 0.5;
-    border: 0;
     background: #FFFFFF;
-    padding: 0 5px;
 }
 
-
-
-.emailPlaceholder {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 11px;
-    width: 296.5px;
-    height: 24px;
+#name {
+    background-image: url('../images/profile.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 12px;
+    opacity: 1;
 }
 
-.emailFieldText {
-    width: 280px;
-    height: 24px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.3px;
-    font-feature-settings: 'liga' off;
-    color: #1E1E1E;
-    opacity: 0.5;
-    border: 0;
-    background: #FFFFFF;
-    padding: 0 5px;
-}
-
-.linkedinUrlForm {
+input[type="email-mentor"] {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 12px 12px 12px 16px;
+    padding: 12px 12px 12px 50px;
+    gap: 10px;
+    width: 358.5px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    border-radius: 12px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    font-feature-settings: 'liga' off;
+    color: #1E1E1E;
+    opacity: 0.5;
+    background: #FFFFFF;
+}
+
+#email-mentor {
+    background-image: url('../images/sms.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 12px;
+    opacity: 1;
+}
+
+input[type="name"]:focus, 
+input[type="email-mentor"]:focus,
+input[type="linkedin"]:focus {
+    outline-color: #793EF5;
+}
+
+/* linkedin form */
+
+#linkedin {
+    background-image: url('../images/link.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 12px;
+    opacity: 1;
+}
+
+input[type="linkedin"] {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 12px 12px 50px;
     gap: 10px;
     width: 741px;
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #CECECE;
     border-radius: 12px;
-}
-
-
-
-.formText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 11px;
-    width: 679px;
-    height: 24px;
-}
-
-.linkedinText {
-    width: 650px;
-    height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
@@ -162,10 +145,7 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
-    opacity: 0.5;
-    border: 0;
     background: #FFFFFF;
-    padding: 0 5px;
 }
 
 .pictureLogo {

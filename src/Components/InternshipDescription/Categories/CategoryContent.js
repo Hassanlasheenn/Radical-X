@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 
 // css & icons import 
 import '../../../Styles/CategoryContent.css';
-import searchIcon from '../../../images/search-normal.svg';
 import closeIcon from '../../../images/close.svg';
 import { TickContext } from '../../../Context/useTickCircle';
 
@@ -14,9 +13,9 @@ const CategoryContent = () => {
 
     const { setTick } = useContext(TickContext);
 
-    const handleAdd = () => {
+    const handleAdd = (e) => {
         if(searchInput.length === 0) {return 'disabled'}
-        else {
+        else if (e.key === 'Enter') {
             const newCategory = categories.concat({
                 field: searchInput,
             });
@@ -31,12 +30,6 @@ const CategoryContent = () => {
         setSearchInput(e.target.value);
     }
 
-    const handleKeyPress = (e) => {
-        if(e.key === 'Enter') {
-            handleAdd();
-        }
-    }
-
     const handleRemove = (field) => {
         const categRemove = categories.filter((item) => item.field !== field);
 
@@ -49,31 +42,24 @@ const CategoryContent = () => {
     <div className='contentContCateg'>
         <span className='categoryTitleTextCateg'>Category</span>
         <div className='categoryFormCateg'>
-            <form className='formContCateg'>
-                <input
-                    type='category'
-                    id='category'
-                    name='category'
-                    placeholder='Search Category'
-                    onKeyDown={handleKeyPress}
-                    onChange={handleChange}
-                    value={searchInput}
-                    className='placeholderCateg'
-                    required
-                />
-                <img src={searchIcon} alt='' type='button' onClick={handleAdd} />
-            </form>
+            <input
+                type='category'
+                id='category'
+                name='category'
+                placeholder='Search Category'
+                onKeyDown={handleAdd}
+                onChange={handleChange}
+                value={searchInput}
+                required
+            />
             <div className='searchResultContCateg'>
-            {categories.map((category) => {
-                return (
-                    <>
+                {categories.map((category) => {
+                    return (
                         <div className='resultContCateg' key={category.id}> 
                             <span className='resultTextCateg'>{category.field}</span>
                             <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(category.field)} style={{ cursor: 'pointer' }} />
                         </div>
-                    </>
-                )
-
+                    )
             })}
             </div>
         </div>

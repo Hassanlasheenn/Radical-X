@@ -3,9 +3,6 @@ import React, { useContext, useRef, useState } from 'react';
 // css & icon imports 
 import '../../../Styles/NewMentorDetails.css';
 import picLogo from '../../../images/image.svg';
-import userIcon from '../../../images/profile.svg';
-import smsIcon from '../../../images/sms.svg';
-import linkFieldIcon from '../../../images/link.svg';
 import { TickContext } from '../../../Context/useTickCircle';
 // import linkIcon from '../../../images/link-internship.svg';
 
@@ -56,47 +53,35 @@ const NewMentorDetails = () => {
         <span className='mentorDetailsTitle'>Mentor Details</span>
         <img className='rectanglePhoto' src={file} alt='' style={{ width: '80px', height: '80px', borderRadius: '10px'}} />
         <div className='formInfos'>
-            <div className='nameField'>
-                <img src={userIcon} alt='' />
-                <div className='namePlaceholder'>
-                    <input 
-                        className='nameFieldText'
-                        placeholder='Name'
-                        type="text"
-                        onChange={handleName}
-                        value={name}
+            <input 
+                className='nameFieldText'
+                placeholder='Name'
+                type="name"
+                id='name'
+                onChange={handleName}
+                value={name}
 
-                    />
-                </div>
-            </div>
-            <div className='emailField'>
-                <img src={smsIcon} alt='' />
-                <div className='emailPlaceholder'>
-                    <input 
-                        className='emailFieldText'
-                        placeholder='Email Adress'
-                        type="email"
-                        onChange={handleEmail}
-                        value={email}
-                    />
-                </div>
-            </div>
+            />
+            <input 
+                placeholder='Email Adress'
+                type="email-mentor"
+                id='email-mentor'
+                onChange={handleEmail}
+                value={email}
+            />
         </div>
-        <div className='linkedinUrlForm'>
-            <img src={linkFieldIcon} alt='' />
-            <div className='formText'>
-                <input 
-                    className='linkedinText'
-                    placeholder='LinkedIn URL (optional)'
-                    type="text"
-                    onChange={handleOptional}
-                    value={optional}
-                />
-            </div>
-        </div>
+
+        <input 
+            placeholder='LinkedIn URL (optional)'
+            type="linkedin"
+            id='linkedin'
+            onChange={handleOptional}
+            value={optional}
+        />
+
         <div className='pictureLogo'>
             <input style={{ display: 'none' }} ref={inputRef} type='file' onChange={handleFileChange} />
-            <img src={picLogo} alt='' onClick={handleClick} />
+            <img src={picLogo} alt='' onClick={handleClick} style={{ cursor: 'pointer'}} />
         </div>
     </div>
   )

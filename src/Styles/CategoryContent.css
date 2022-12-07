@@ -38,43 +38,48 @@
     height: 110px;
 }
 
-.formContCateg {
+/* category input field */
+
+input[type="category"]{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px 16px;
     gap: 8px;
-    width: 681px;
+    width: 741px;
     height: 48px;
     background: #F1F4F8;
     border: 1px solid #CECECE;
     border-radius: 16px;
-}
-
-.placeholderCateg {
-    width: 681px;
-    height: 28px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.3px;
-    font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
-    border: 0;
     background: #F1F4F8;
-    padding: 0 10px;
+    padding: 0 20px;
+    transition: transform .2s ease-in;
 }
 
+#category {
+    background-image: url('../images/search-normal.svg');
+    background-position: 705px 12px;
+    background-repeat: no-repeat;
+}
+
+input[type="category"]:focus {
+  outline-color: #793EF5;
+  transform: scale(1.01);
+}
+
+/* search items results */
 .searchResultContCateg {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
     gap: 10px;
     width: 303px;
     height: 46px;
@@ -87,8 +92,8 @@
     justify-content: center;
     align-items: center;
     padding: 12px 12px 12px 16px;
-    gap: 6px;
-    width: 191px;
+    gap: 30px;
+    width: 291px;
     height: 46px;
     background: rgba(102, 95, 239, 0.2);
     border: 1px solid #793EF5;
@@ -105,4 +110,6 @@
     font-size: 15px;
     line-height: 22px;
     color: #793EF5;
+
+    white-space: nowrap;
 }

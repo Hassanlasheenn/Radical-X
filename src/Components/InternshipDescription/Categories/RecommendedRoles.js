@@ -3,7 +3,6 @@ import React, { useContext, useState } from 'react';
 // css & icon imports
 import '../../../Styles/RecommendedRoles.css';
 import closeIcon from '../../../images/close.svg';
-import searchIcon from '../../../images/search-normal.svg';
 import { TickContext } from '../../../Context/useTickCircle';
 
 const RecommendedRoles = () => {
@@ -48,16 +47,18 @@ const RecommendedRoles = () => {
     <div className='rolesCont'>
         <span className='rolesTitleText'>Recommended Roles</span>
         <div className='rolesFormCateg'>
-            <div className='roleFormCont'>
+            {/* <div className='roleFormCont'> */}
                 <input 
-                    className='placeholderRoles'
+                    type='role'
+                    id='role'
                     placeholder='Search Roles'
                     onChange={handleChange}
                     value={searchRoles}
                     onKeyDown={handlePress}
+                    required
                 />
-                <img src={searchIcon} alt='' type='button' onClick={handleAdd} className='searchIconRoles' />
-            </div>
+                {/* <img src={searchIcon} alt='' type='button' onClick={handleAdd} className='searchIconRoles' /> */}
+            {/* </div> */}
             <div className='searchResultContRoles'>
             {roles.map((role) => {
                 return (

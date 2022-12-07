@@ -38,24 +38,25 @@
     height: 102px;
 }
 
-.textFieldWeb {
+#url {
+    background-image: url('../images/link-internship.svg');
+    background-repeat: no-repeat;
+    background-position: 14px 14px;
+}
+
+input[type="url"] {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px 16px;
+    padding-left: 45px;
     gap: 8px;
     width: 741px;
     height: 48px;
     background: #F1F4F8;
     border: 1px solid #CECECE;
     border-radius: 16px;
-}
-
-
-.placeholderUrl {
-    width: 681px;
-    height: 28px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
@@ -66,10 +67,16 @@
     letter-spacing: 0.3px;
     font-feature-settings: 'liga' off;
     color: rgba(47, 48, 49, 0.54);
-    border: 0;
     background: #F1F4F8;
-    padding: 10px;
+    transition: transform .2s ease-in;
 }
+
+input[type="url"]:focus {
+    outline-color: #793EF5;
+    transform: scale(1.01);
+}
+
+
 
 .linksPaste {
     box-sizing: border-box;
@@ -145,6 +152,8 @@
     font-size: 15px;
     line-height: 22px;
     color: #793EF5;
+
+    white-space: nowrap;
 }
 
 .closeBtnCateg {

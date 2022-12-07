@@ -23,15 +23,13 @@ const DescContent = () => {
   return (
     <>
     <div className='descContent'>
-        <span className='descriptionTitle'>Description</span>
-        <div className='descField'>
-            <textarea rows= "4" cols= "3" 
-            className='descriptionTextField' 
-            placeholder='Description'
-            onChange={handleChange}
-            value={desc}
-            />
-        </div>
+        <p className='descriptionTitle'>Description</p>
+          <textarea rows= "4" cols= "3" 
+          className='descriptionTextField' 
+          placeholder='Description'
+          onChange={handleChange}
+          value={desc}
+          />
     </div>
     </>
   )
