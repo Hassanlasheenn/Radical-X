@@ -40,6 +40,10 @@ import Done from './Pages/Done';
 
 
 const App = () => {
+
+  const onFileChange = (files) => {
+    console.log(files);
+  }
   
   return (
     <div className="App">
@@ -59,7 +63,7 @@ const App = () => {
                 <Route exact path='description' element={<DescContent />} />
                 <Route exact path='location' element={<LocationContent />} />
                 <Route exact path='benefits' element={<BenefitsContent />} />
-                <Route exact path='intro-video' element={<NewIntroVideo />} />
+                <Route exact path='intro-video' element={<NewIntroVideo onFileChange={(files) => onFileChange(files)} />} />
                 <Route exact path='mentor-details' element={<MentorDetails />} />
                 <Route exact path='recommended-roles' element={<RecommendedRoles />} />
                 <Route exact path='links' element={<Links />} />
