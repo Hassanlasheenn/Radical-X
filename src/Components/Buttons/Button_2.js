@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-globals */
 import React, { useContext } from 'react';
 import { TickContext } from '../../Context/useTickCircle';
 
@@ -23,7 +22,7 @@ const Button_2 = ({
             { icon && <img src={icon} alt=''/> }
         </button>
         :
-        <button onClick={handleClick} className="continueBtnNavbar">
+        <button onClick={handleClick} className="continueBtnNavbar" disabled>
             <span className='continueTextNavbar'>{children}</span>
             { icon && <img src={icon} alt=''/> }
         </button>

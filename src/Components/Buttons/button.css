@@ -61,6 +61,10 @@
     cursor: pointer;
 }
 
+.continueBtnNavbar[disabled] {
+    cursor: not-allowed;
+}
+
 .continueTextNavbar {
     width: 169px;
     height: 20px;

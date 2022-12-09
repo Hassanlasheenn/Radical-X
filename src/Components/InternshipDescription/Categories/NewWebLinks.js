@@ -59,6 +59,7 @@ const NewWebLinks = () => {
               onKeyDown={handlePress}
               onChange={handleChange}
               value={url}
+              required
             />
             <div className='linksPaste'>
               <div className='addUrlCont'>

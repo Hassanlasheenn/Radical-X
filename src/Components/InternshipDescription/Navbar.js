@@ -37,7 +37,7 @@ const Navbar = ({ title, link, back, isActive }) => {
                 {title}
             </BtnSec>
             :
-            <BtnSec icon={arrowRightIcon} className='continueBtnNavbar' onClick={() => navigate(`/${link}`)}>
+            <BtnSec icon={arrowRightIcon} className='continueBtnNavbar' onClick={() => navigate(`/${link}`)} disabled>
                 {title}
             </BtnSec>
         }

@@ -26,6 +26,7 @@ const NewIntroVideo = (props) => {
     if (newFile) {
       const updatedList = [...fileList, newFile];
       setFileList(updatedList);
+      setTick("Intro Video", true);
       props.onFileChange(updatedList);
     }
   }
@@ -34,18 +35,9 @@ const NewIntroVideo = (props) => {
     const updatedList = [...fileList];
     updatedList.splice(fileList.indexOf(file), 1);
     setFileList(updatedList);
+    setTick("Intro Video", false);
     props.onFileChange(updatedList);
   }
-
-  // const handleLogoClick = () => {
-  //   inputRef.current.click();
-  //   setTick("Intro Video", true);
-  // }
-
-  // const handleVideoFile = e => {
-  //   // const fileObj = e.target.files && e.target.files[0];
-  //   console.log(e.target.files)
-  // }
 
   return (
     <>
@@ -74,16 +66,16 @@ const NewIntroVideo = (props) => {
             fileList.map((item, index) => (
               <div key={index} className="drop-file-preview__item">
                 <img src={ImageUpload[item.type.split('/')[1]] || ImageUpload['default']} alt='' />
-                <div className='drop-file-preview__item__info'>
+                <ul className='drop-file-preview__item__info'>
                   <p>{item.name}</p>
                   <img  
                     src={closeIcon} 
                     alt='' 
                     type='button' 
                     onClick={() => fileRemove(item)}
-                    style={{ cursor: 'pointer' }}
+                    className='close-btn'
                   />
-                </div>
+                </ul>
               </div>
             ))
           }

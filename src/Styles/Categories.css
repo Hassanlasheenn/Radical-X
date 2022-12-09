@@ -38,6 +38,7 @@
     border: 1px solid #E0E0E0;
     border-radius: 16px;
     text-decoration: none;
+    transition: all .3s;
 }
 
 
@@ -68,18 +69,7 @@
     font-size: 18px;
     height: 18px;
 }
-
-.assessmentBarCategory {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4px;
-    width: 606px;
-    height: 56px;
-    border: 1px dashed #793EF5;
-    border-radius: 12px;
-}
+/* add more bar */
 
 .assessmentBarContCategory {
     display: flex;
@@ -90,12 +80,6 @@
     gap: 12px;
     width: 606px;
     height: 24px;
-}
-
-
-.addTextCategory {
-    width: 74px;
-    height: 24px;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
@@ -104,4 +88,20 @@
     text-align: center;
     font-feature-settings: 'liga' off;
     color: #793EF5;
+    width: 606px;
+    height: 56px;
+    border: 1px dashed #793EF5;
+    border-radius: 12px;
+    transition: all .6s;
+    backface-visibility: hidden;
+    cursor: pointer;
 }
+
+.assessmentBarContCategory:hover{
+    transform: scale(1.03);
+    border: 1px solid #793EF5;
+}
+
+
+
+

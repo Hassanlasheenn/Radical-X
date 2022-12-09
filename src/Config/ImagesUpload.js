@@ -1,11 +1,13 @@
-import fileDefault from '../images/file-blank-solid-240.png';
-import filePdf from '../images/file-pdf-solid-240.png';
-import filePng from '../images/file-png-solid-240.png';
-import fileJpg from '../images/jpeg.png';
+import fileDefault from '../images/blank-document.svg';
+import filePdf from '../images/pdf.svg';
+import filePng from '../images/png.svg';
+import fileJpg from '../images/jpg.svg';
+import fileMp4 from '../images/mp4-svgrepo-com.svg';
 
 export const ImageUpload = {
     default: fileDefault,
     pdf: filePdf,
     png: filePng,
-    jpg: fileJpg
+    jpeg: fileJpg,
+    mp4: fileMp4
 }
