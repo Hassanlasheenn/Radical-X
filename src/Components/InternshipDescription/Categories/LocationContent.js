@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef, useContext} from 'react';
 import { TickContext } from '../../../Context/useTickCircle';
 
 // css & icons imports
@@ -7,73 +7,85 @@ import '../../../Styles/CategoryContent.css';
 import arrowIcon from '../../../images/arrow-down.svg';
 
 
-let autoComplete;
 
-const loadScript = (url, callback) => {
-  let script = document.createElement("script");
-  script.type = "text/javascript";
+const apiKey = process.env.REACT_APP_GOOGLE_PLACES_API_KEY;
+const mapsApiJs = 'https://maps.googleapis.com/maps/api/js';
 
-  if(script.readyState) {
-    script.onreadystatechange = () => {
-      if(script.readyState === "loaded" || script.readyState === "complete") {
-        script.onreadystatechange = null;
-        callback()
-      } 
-    };
-  } else {
-    script.onload = () => callback();
+function loadAsyncScript(src) {
+  return new Promise(res => {
+    const script = document.createElement("script");
+    Object.assign(script, {
+      type: 'text/javascript',
+      async: true,
+      src
+    })
+    script.addEventListener('load', () => res(script));
+    document.head.appendChild(script);
+  })
+}
+
+
+const extractAddress = (place) => {
+
+  const address = {
+  country: ""
+  }
+  
+  if(!Array.isArray(place?.address_components)) {
+    return address;
   }
 
-  script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
-};
+  place.address_components.forEach(component => {
+    const types = component.types;
+    const value = component.long_name;
 
-const handleScriptLoad = (updateQuery, autoCompleteRef) => {
-  autoComplete = new window.google.maps.places.Autocomplete(
-    autoCompleteRef.current,
-    { types: ["(regions)"], componentRestrictions: { 'country': ["eg", ["us", "gb"], ["fr", "ae"], ["de", "br"]] } }
-  );
-  autoComplete.setFields(["address_components", "formatted_address"]);
-  autoComplete.addListener("place_changed", () => 
-  handlePlaceSelect(updateQuery)
-  );
+    if(types.includes("locality")) {
+      address.city = value;
+    }
+
+    if (types.includes("country")) {
+      address.country = value;
+    }
+});
+  return address;
 }
 
-const handlePlaceSelect = async (updateQuery) => {
-const addressObject = autoComplete.getPlace();
-const query = addressObject.formatted_address;
-updateQuery(query);
-console.log(addressObject);
-}
 
 const LocationContent = () => {
 
-  const [query, setQuery] = useState("");
-  const [cntry, setCntry] = useState([]);
   const autoCompleteRef = useRef(null);
+  const [search, setSearch] = useState({});
   const { setTick } = useContext(TickContext);
 
- useEffect(() => {
-  loadScript(
-    `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_PLACES_API_KEY}&libraries=places&v=3`,
-    () => handleScriptLoad(setQuery, autoCompleteRef)
-  );
-}, []);
-
-  
-
-  const handleChange = (e) => {
-    setQuery(e?.label);
-    const handleAdd = (value) => {
-      const newCuntry = cntry.concat({
-        value:value,
-        label: e.target.value,
-      });
-      setCntry(newCuntry);
-      setTick("Location", true);
-    }
-    handleAdd();
+  // init map script
+  const initMapScript = () => {
+    // if(window.google) {
+    //   // return Promise.res;
+    // }
+    const src = `${mapsApiJs}?key=${apiKey}&libraries=places&v=weekly`;
+    return loadAsyncScript(src);
   }
+
+  const onChangeAddress = (autocomplete) => {
+    const place = autocomplete.getPlace();
+    setSearch(extractAddress(place));
+    setTick("Location", true);
+  }
+
+  // init autocomplete
+  const initAutoComplete = () => {
+    if(!autoCompleteRef.current) return;
+
+    const autocomplete = new window.google.maps.places.Autocomplete(autoCompleteRef.current);
+    autocomplete.setFields(["address_component", "geometry"]);
+    autocomplete.addListener('place_changed', () => onChangeAddress(autocomplete));
+  }
+
+  // load map script after mounted
+  useEffect(() => {
+    initMapScript().then(() => initAutoComplete())
+  }, []);
+
 
   return (
     <>
@@ -86,26 +98,17 @@ const LocationContent = () => {
               type='countries'
               placeholder='Select Location'
               ref={autoCompleteRef}
-              onChange={e => setQuery(e.target.value) & handleChange}
-              value={query}
-              required
             />
-            <button onClick={handleChange} className='arrow-down'>
+            <button className='arrow-down'>
               <img src={arrowIcon} alt='' />
             </button>
           </div>
     </div>
 
     <div className='countryField'>
-    {cntry.map((c) => {
-      return (
-        <>
-          <div className='resultContCateg' key={c.id}>
-            <span className='resultTextCateg'>{c.formatted_address}</span>
-          </div>
-        </>
-        )
-        })}
+      {/* <ul className='countries-container'> */}
+        <li className='country-name'>{search.country}</li>
+      {/* </ul> */}
     </div>
 
     </>
@@ -113,3 +116,4 @@ const LocationContent = () => {
 }
 
 export default LocationContent;
+

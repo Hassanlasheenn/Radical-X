@@ -42,6 +42,12 @@
     border-radius: 8px;
 }
 
+.files:hover,
+.files.dragover {
+    border: 2px dashed #793ef5;
+    opacity: 0.6;
+}
+
 .dragDropText {
     width: 240px;
     height: 20px;

@@ -38,11 +38,11 @@ const Sidebar = () => {
               
               {/* categories */}
               <div className='sidebar-categories'>
-                  <NavBtns name={'Dashboard'} icon={dashboardIcon} isActive/>
-                  <NavBtns name={'Apprenticeships'} icon={apprenticeIcon} isActive/>
+                  <NavBtns name={'Dashboard'} icon={dashboardIcon} onClick={() => click('/*')} isActive/>
+                  <NavBtns name={'Apprenticeships'} icon={apprenticeIcon} onClick={() => click('/*')} isActive/>
                   <NavBtns name={'Internships'} icon={internIcon} onClick={() => click('internships')} isActive />
-                  <NavBtns name={'Jobs'} icon={jobIcon} isActive/>
-                  <NavBtns name={'Settings'} icon={settingIcon} isActive/>
+                  <NavBtns name={'Jobs'} icon={jobIcon} onClick={() => click('/*')} isActive/>
+                  <NavBtns name={'Settings'} icon={settingIcon} onClick={() => click('/*')} isActive/>
               </div> 
           </div>
           

@@ -25,31 +25,3 @@
     font-feature-settings: "liga" off;
     color: #1E1E1E;
 }
-
-.createInternshipContCreate {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 8px;
-    width: 217px;
-    height: 44px;
-    background: #793EF5;
-    border-radius: 12px;
-    border: 0;
-}
-
-.btnTextCreate {
-    width: 157px;
-    height: 20px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    font-feature-settings: "liga" off;
-    color: #FFFFFF;
-    text-decoration: none;
-}

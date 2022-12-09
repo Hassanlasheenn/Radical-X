@@ -57,16 +57,16 @@ function InternshipInsights() {
           <div className='datesContInsights'>
             <div className='weekMonthBtnsInsights'>
               <button className='weekBtnInsights'>
-                <span className='weekTextInsights'>This week</span>
+                This week
               </button>
               <button className='monthBtnInsights'>
-              <span className='monthTextInsights'>This month</span>
+                This month
               </button>
             </div>
-            <div className='dateBtnInsights'>
+            <button className='dateBtnInsights'>
                 <img src={calendarIcon} alt='' className='scheduleBtnInsights'/>
-                <span className='textDateInsights'>Select dates</span>
-            </div>
+                Select dates
+            </button>
           </div>
         </div>
           <div className='graphContainerInsights'>

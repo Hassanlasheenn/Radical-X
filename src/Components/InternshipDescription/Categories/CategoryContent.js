@@ -32,7 +32,6 @@ const CategoryContent = () => {
 
     const handleRemove = (field) => {
         const categRemove = categories.filter((item) => item.field !== field);
-
         setCategories(categRemove);
         setTick("Category", false);
     }

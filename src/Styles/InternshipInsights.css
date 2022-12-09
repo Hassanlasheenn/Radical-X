@@ -113,14 +113,10 @@
     gap: 8px;
     width: 91px;
     height: 32px;
-    background: #793EF5;
+    background: #FFFFFF;
     border-radius: 8px;
     border: 0;
-}
-
-.weekTextInsights {
-    width: 67px;
-    height: 20px;
+    cursor: pointer;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
@@ -128,8 +124,15 @@
     line-height: 20px;
     text-align: center;
     font-feature-settings: 'liga' off;
-    color: #FFFFFF;
+    color: #000;
+    transition: all .3s;
 }
+
+.weekBtnInsights:hover, .monthBtnInsights:hover {
+    background-color: #793ef5;
+    color: #FFFFFF;
+} 
+
 
 .monthBtnInsights {
     display: flex;
@@ -142,11 +145,7 @@
     background: #FFFFFF;
     border-radius: 8px;
     border: 0;
-}
-
-.monthTextInsights {
-    width: 76px;
-    height: 20px;
+    cursor: pointer;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
@@ -155,7 +154,9 @@
     text-align: center;
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
+    transition: all .3s;
 }
+
 
 .dateBtnInsights {
     display: flex;
@@ -169,16 +170,7 @@
     background: #FFFFFF;
     border-radius: 8px;
     border: 0;
-}
-
-.scheduleBtnInsights {
-    width: 20px;
-    height: 20px;
-}
-
-.textDateInsights {
-    width: 85px;
-    height: 20px;
+    cursor: pointer;
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
@@ -187,6 +179,11 @@
     text-align: center;
     font-feature-settings: 'liga' off;
     color: #1E1E1E;
+}
+
+.scheduleBtnInsights {
+    width: 20px;
+    height: 20px;
 }
 
 
