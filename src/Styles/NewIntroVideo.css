@@ -103,13 +103,11 @@
     top: 355px;
     left: 724px;
     width: 741px;
-    height: 68px;
+    height: 40px;
     border-radius: 8px;
+    background: #EDEAFF;
 }
 
-.drop-file-preview__item img {
-    width: 30px;
-}
 
 .drop-file-preview__item__info {
     display: flex;
@@ -121,13 +119,12 @@
     height: auto;
     gap: 24px;
     height: auto;
-    background: #EDEAFF;
+    
     border-radius: 12px;
 }
 
 .close-btn {
     text-align: right;
-    transform: translateX(450px);
+    transform: translateX(470px);
     cursor: pointer;
-
 }

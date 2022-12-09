@@ -16,9 +16,7 @@ const NewIntroVideo = (props) => {
   const { setTick } = useContext(TickContext);
 
   const onDragEnter = () => inputRef.current.classList.add('dragover');
-
   const onDragLeave = () => inputRef.current.classList.remove('dragover');
-
   const onDrop = () => inputRef.current.classList.remove('dragover');
 
   const onFileDrop = (e) => {
@@ -66,7 +64,7 @@ const NewIntroVideo = (props) => {
             fileList.map((item, index) => (
               <div key={index} className="drop-file-preview__item">
                 <img src={ImageUpload[item.type.split('/')[1]] || ImageUpload['default']} alt='' />
-                <ul className='drop-file-preview__item__info'>
+                <div className='drop-file-preview__item__info'>
                   <p>{item.name}</p>
                   <img  
                     src={closeIcon} 
@@ -75,7 +73,7 @@ const NewIntroVideo = (props) => {
                     onClick={() => fileRemove(item)}
                     className='close-btn'
                   />
-                </ul>
+                </div>
               </div>
             ))
           }

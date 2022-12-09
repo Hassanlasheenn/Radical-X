@@ -5,6 +5,7 @@ import '../../../Styles/WebLinks.css';
 import '../../../Styles/CategoryContent.css';
 import closeIcon from '../../../images/close.svg';
 import addLinkIcon from '../../../images/add-square-newInternship.svg';
+import greenTick from '../../../images/icons8-ok.svg';
 // import linkWeb from '../../../images/link-internship.svg';
 import { TickContext } from '../../../Context/useTickCircle';
 
@@ -12,8 +13,13 @@ const NewWebLinks = () => {
 
   const [url, setUrl] = useState('');
   const [links, setLinks] = useState([]);
+  const [error, setError] = useState(null);
 
   const { setTick } = useContext(TickContext);
+
+  const isValidEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  }
 
   const handleAdd = () => {
     if(url.length === 0) return 'disabled'
@@ -29,6 +35,11 @@ const NewWebLinks = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
+    if(!isValidEmail(e.target.value)) {
+      setError("Invalid Email");
+    } else {
+      setError(null);
+    }
     setUrl(e.target.value);
   }
 
@@ -40,6 +51,7 @@ const NewWebLinks = () => {
 
   const handleRemove = (name) => {
     const linkRemove = links.filter((i) => i.name !== name);
+    setError(null);
 
     setLinks(linkRemove);
     setTick("Web Links & Resources", false);
@@ -61,8 +73,13 @@ const NewWebLinks = () => {
               value={url}
               required
             />
+        {error ? 
+          <span className='invalid-email'>{error}</span> 
+          : 
+          <img className='green-tick' src={greenTick} alt ='' /> 
+        }
             <div className='linksPaste'>
-              <div className='addUrlCont'>
+              <div disabled className='addUrlCont'>
                   <img src={addLinkIcon} alt='' />
                   <button type='button' onClick={handleAdd} className='AddUrlText'>Add URL</button>
               </div>

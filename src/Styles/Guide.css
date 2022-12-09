@@ -318,6 +318,13 @@
     background: rgba(102, 95, 239, 0.2);
     border: 1px solid #793EF5;
     border-radius: 12px;
+    transition: all .5s;
+}
+
+.chapterContainer:hover {
+    transform: scale(1.02);
+    background: rgba(40, 30, 217, 0.2);
+    cursor: pointer;
 }
 
 .addChapterCont {
@@ -429,6 +436,23 @@
     border-radius: 12px;
 }
 
+.briefVideoCont:hover,
+.briefVideoCont.dragover {
+    opacity: 0.6;
+    border: 2px dashed #793ef5;
+    cursor: pointer;
+}
+
+.briefVideoCont input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 .briefDropText {
     width: 240px;
     height: 20px;
@@ -443,14 +467,26 @@
     color: #778188;
 }
 
-.searchObjects {
+.searchObjects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 20px;
+    gap: 8px;
+    width: 741px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.results-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px 16px;
     gap: 24px;
-    width: 190px;
-    height: 40px;
+    width: 100%;
+    height: auto;
     background: #EDEAFF;
     border-radius: 12px;
 }

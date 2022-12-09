@@ -2,40 +2,64 @@ import React, { useContext, useRef, useState } from 'react';
 import { TickContext } from '../../Context/useTickCircle';
 
 
-const GuideContent = ({ props, title1, title2, title3, fieldText, icon }) => {
+const GuideContent = ({ title1, title2, title3, fieldText, icon }) => {
 
-  const inputRef = useRef(null);
-  const [fileList, setFileList] = useState([]);
+    const guideRef = useRef(null);
+    const [brief, setBrief] = useState('');
+    const [req, setReq] = useState('');
+    const [mile, setMile] = useState('');
+    
+    const { setTick } = useContext(TickContext);
 
-  const { setTick } = useContext(TickContext);
-
-  const onDragEnter = () => inputRef.current.classList.add('dragover');
-
-  const onDragLeave = () => inputRef.current.classList.remove('dragover');
-
-  const onDrop = () => inputRef.current.classList.remove('dragover');
-
-  const onFileDrop = (e) => {
-    const newFile = e.target.files[0];
-    if (newFile) {
-      const updatedList = [...fileList, newFile];
-      setFileList(updatedList);
-      setTick("Intro Video", true);
-      props.onFileChange(updatedList);
+    const handleLogoClick = () => {
+      guideRef.current.click();
     }
-  }
+  
+    const handleVideoFile = e => {
+      const fileObj = e.target.files && e.target.files[0];
+      if(!fileObj) {
+        return;
+      }
+    }
 
-  const fileRemove = (file) => {
-    const updatedList = [...fileList];
-    updatedList.splice(fileList.indexOf(file), 1);
-    setFileList(updatedList);
-    setTick("Intro Video", false);
-    props.onFileChange(updatedList);
-  }
+    const handleBrief = (e) => {
+      e.preventDefault();
+      setBrief(e.target.value);
+
+      if(brief.length >= 0) {
+        setTick("Brief", true);
+      } else {
+        setTick("Brief", false);
+      }
+    }
+
+    const handleTitle2 = (e) => {
+      e.preventDefault();
+      setReq(e.target.value);
+
+      if(req.length >= 0) {
+        setTick("Requirements", true);
+        setTick("Internship Guide", true);
+        setTick("Continue to Surveys", true);
+      } else {
+        setTick("Requirements", false);
+      }
+    }
+
+    const handleTitle3 = (e) => {
+      e.preventDefault();
+      setMile(e.target.value);
+
+      if(mile.length >= 0) {
+        setTick("Milestones", true);
+      } else {
+        setTick("Milestones", false);
+      }
+    }
 
   return (
     <>
-              <div className='contentDetails'>
+      <div className='contentDetails'>
         <div className='briefContainer'>
           <span className='briefText'>{title1}</span>
           <input
@@ -43,10 +67,11 @@ const GuideContent = ({ props, title1, title2, title3, fieldText, icon }) => {
             placeholder='Description'
             type='text'
             onChange={handleBrief}
+            value={brief}
           />
           <div className='briefVideoCont'>
                 <label className='briefDropText'>{fieldText}</label>
-                <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
+                <input style={{ display: 'none' }} ref={guideRef} type='file'  onChange={handleVideoFile} />
                 {icon && <img src={icon} alt='' onClick={handleLogoClick}/>}
           </div>
 
@@ -61,13 +86,13 @@ const GuideContent = ({ props, title1, title2, title3, fieldText, icon }) => {
             className='briefField'
             placeholder='Description'
             type='text'
-            onChange={handleRequire}
+            onChange={handleTitle2}
             value={req}
 
           />
           <div className='briefVideoCont'>
                 <label className='briefDropText'>{fieldText}</label>
-                <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
+                <input style={{ display: 'none' }} ref={guideRef} type='file'  onChange={handleVideoFile} />
                 {icon && <img src={icon} alt='' onClick={handleLogoClick} />}
           </div>
 
@@ -82,12 +107,12 @@ const GuideContent = ({ props, title1, title2, title3, fieldText, icon }) => {
             className='briefField'
             placeholder='Description'
             type='text'
-            onChange={handleMileStone}
+            onChange={handleTitle3}
             value={mile}
           />
           <div className='briefVideoCont'>
                 <label className='briefDropText'>{fieldText}</label>
-                <input style={{ display: 'none' }} ref={inputRef} type='file'  onChange={handleVideoFile} />
+                <input style={{ display: 'none' }} ref={guideRef} type='file'  onChange={handleVideoFile} />
                 {icon && <img src={icon} alt='' onClick={handleLogoClick} />}
           </div>
 

@@ -70,9 +70,9 @@ const App = () => {
               </Route>
 
               <Route exact path='internship-guide' element={<InternshipGuide />}>
-                <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
-                <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
-                <Route exact path='resources' element={<GuideContent title1='Curated Resources' title2='Events' fieldText='Drag n drop to upload your video' icon={uploadLogo} /> } />
+                <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' fieldText='Drag n drop to upload your video' icon={uploadLogo} onFileChange={(files) => onFileChange(files)} /> } />
+                <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' fieldText='Drag n drop to upload your video' icon={uploadLogo} onFileChange={(files) => onFileChange(files)} /> } />
+                <Route exact path='resources' element={<GuideContent title1='Curated Resources' title2='Events' fieldText='Drag n drop to upload your video' icon={uploadLogo} onFileChange={(files) => onFileChange(files)} /> } />
               </Route>
 
               <Route exact path='surveys' element={<Surveys />}>
