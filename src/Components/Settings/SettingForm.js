@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { TickContext } from '../../Context/useTickCircle';
 
 const SettingForm = ({ name1, name2, name3 }) => {
+
+  const [setting, setSettings] =  useState('');
+
+  const { setTick } = useContext(TickContext);
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSettings(e.target.value);
+
+    if(setting.trim().length !== 0) {
+      setTick("Basic Settings", true);
+      setTick("Hero Image", true);
+      setTick("Settings", true);
+      setTick("Publish Internship", true);
+    }
+  }
   return (
-    <>
       <div className='internshipUrlContainer'>
         <div className='urlInternField'>
           <span className='urlTitle'>Internship URL</span>
@@ -10,6 +26,8 @@ const SettingForm = ({ name1, name2, name3 }) => {
             placeholder='radical-x-internship-url'
             type='text'
             className='textFieldUrl'
+            value={setting}
+            onChange={handleChange}
           />
         </div>
 
@@ -47,7 +65,6 @@ const SettingForm = ({ name1, name2, name3 }) => {
           </div>
         </div>
       </div>
-    </>
   )
 }
 

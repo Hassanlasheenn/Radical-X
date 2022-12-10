@@ -93,6 +93,7 @@
     line-height: 18px;
     font-feature-settings: 'liga' off;
     color: #333333;
+    white-space: nowrap;
 }
 
 .heroText {

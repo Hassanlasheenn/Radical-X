@@ -6,6 +6,7 @@ import SettingsContent from '../Components/Settings/SettingsContent';
 
 // css & icons imports
 import unTickCircle from '../images/untick-circle-newInternship.svg';
+import tickCatIcon from '../images/tick-circle.svg';
 
 const Settings = () => {
 
@@ -23,8 +24,8 @@ const Settings = () => {
         </div>
 
         <div className='settingsContainer'>
-          <SettingsContent title='Basic Settings' onClick={() => click('basic-settings')} /> 
-          <SettingsContent title='Hero Image' onClick={() => click('hero-image')} /> 
+          <SettingsContent title='Basic Settings' onClick={() => click('basic-settings')} tick={tickCatIcon} /> 
+          <SettingsContent title='Hero Image' onClick={() => click('hero-image')} tick={tickCatIcon}/> 
         </div>
 
         <Outlet />
