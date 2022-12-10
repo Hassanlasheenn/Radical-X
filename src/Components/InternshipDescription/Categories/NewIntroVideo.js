@@ -15,6 +15,10 @@ const NewIntroVideo = (props) => {
 
   const { setTick } = useContext(TickContext);
 
+  const onFileChange = (files) => {
+    console.log(files);
+  }
+
   const onDragEnter = () => inputRef.current.classList.add('dragover');
   const onDragLeave = () => inputRef.current.classList.remove('dragover');
   const onDrop = () => inputRef.current.classList.remove('dragover');
@@ -25,7 +29,7 @@ const NewIntroVideo = (props) => {
       const updatedList = [...fileList, newFile];
       setFileList(updatedList);
       setTick("Intro Video", true);
-      props.onFileChange(updatedList);
+      onFileChange(updatedList);
     }
   }
 
@@ -34,7 +38,7 @@ const NewIntroVideo = (props) => {
     updatedList.splice(fileList.indexOf(file), 1);
     setFileList(updatedList);
     setTick("Intro Video", false);
-    props.onFileChange(updatedList);
+    onFileChange(updatedList);
   }
 
   return (
@@ -55,7 +59,8 @@ const NewIntroVideo = (props) => {
             />
             <img src={uploadIcon} alt='' />
         </div>
-    </div>
+        </div>
+   
 
     {
       fileList.length > 0 ? (
@@ -80,7 +85,6 @@ const NewIntroVideo = (props) => {
         </div>
       ) : null
     }
-
     </>
   )
 }

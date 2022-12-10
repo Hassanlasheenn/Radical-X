@@ -25,7 +25,8 @@ export default function Login() {
         setLoading(true);
         await login(emailRef.current.value, passwordRef.current.value, isChecked);
       } catch {
-        setError("Invalid Login");
+        console.error(error);
+        setError('Invalid Login');
       }
       setLoading(false);
     };
@@ -45,6 +46,7 @@ export default function Login() {
             id='email'
             ref={emailRef}
             placeholder='Email'
+            autoComplete='on'
             required
           />
           <br />
@@ -53,6 +55,7 @@ export default function Login() {
             id='password'
             ref={passwordRef}
             placeholder='Password'
+            autoComplete='on'
             required
           />
           <br/>

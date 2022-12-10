@@ -101,7 +101,6 @@ input[type="url"]:focus {
     background: #FFFFFF;
     border: 1px dashed #793EF5;
     border-radius: 12px;
-    transform: translateY(-10px);
 }
 
 
@@ -129,6 +128,7 @@ input[type="url"]:focus {
     padding: 0 10px;
 }
 
+
 .linkContWeb {
     box-sizing: border-box;
     display: flex;
@@ -136,13 +136,11 @@ input[type="url"]:focus {
     justify-content: center;
     align-items: center;
     padding: 12px 12px 12px 16px;
-    gap: 30px;
-    width: 220px;
+    width: 180px;
     height: 40px;
     background: rgba(102, 95, 239, 0.2);
     border: 1px solid #793EF5;
     border-radius: 32px;
-    transform: translateY(-10px);
 }
 
 .linkText {
@@ -154,7 +152,6 @@ input[type="url"]:focus {
     font-size: 15px;
     line-height: 22px;
     color: #793EF5;
-
     white-space: nowrap;
 }
 
@@ -164,12 +161,14 @@ input[type="url"]:focus {
 
 
 .green-tick {
-    transform: translate(690px, -50px);
-    width: 24px;
+    transform: translate(560px, -58px);
+    width: 22px;
 }
 
-.invalid-email {
-    color: red;
+.invalid-url {
+    color: #F61C04;
     font-size: 12px;
-    transform: translate(10px, -10px);
+    white-space: nowrap;
+    transform: translate(540px, -20px);
 }
+

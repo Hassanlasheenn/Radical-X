@@ -1,35 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
-
-
-.introVideoCont {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 24px;
-    position: absolute;
-    width: 789px;
-    height: 222px;
-    left: 700px;
-    top: 212px;
-    background: #FFFFFF;
-    border-radius: 20px;
-}
-
-
-.introVideoTitle {
-    width: 127px;
-    height: 18px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 18px;
-    font-feature-settings: 'liga' off;
-    color: #333333;
-}
-
-
 
 .drop-file-input {
     display: flex;
@@ -63,15 +31,6 @@
     color: #778188;
 }
 
-.drop-file-input input {
-    opacity: 0;
-    position: absolute;
-    top: 66px;
-    left: 24px;
-    width: 741px;
-    height: 68px;
-    cursor: pointer;
-}
 
 /* output drop */
 
@@ -91,22 +50,6 @@
     white-space: nowrap;
 }
 
-
-.drop-file-preview__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 24px 20px;
-    gap: 8px;
-    position: absolute;
-    top: 355px;
-    left: 724px;
-    width: 741px;
-    height: 40px;
-    border-radius: 8px;
-    background: #EDEAFF;
-}
 
 
 .drop-file-preview__item__info {

@@ -101,13 +101,6 @@
     color: #333333;
 }
 
-/* .overviewArrow {
-    background: url('../images/arrow-right\ 2.png');
-    width: 24px;
-    height: 24px;
-    opacity: 0.5;
-} */
-
 /* overview content */
 
 .detailFrame {
@@ -390,13 +383,12 @@
     line-height: 18px;
     font-feature-settings: 'liga' off;
     color: #333333;
-
     /* whitespace */
     white-space: nowrap;
 }
 
 
-.briefField {
+input[type="brief"] {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -418,78 +410,13 @@
     transition: all .3s;
 }
 
-.briefField:focus {
+input[type="brief"]:focus {
     outline-color: #793EF5;
     transform: scale(1.01);
 }
 
-.briefVideoCont {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 20px;
-    gap: 8px;
-    width: 741px;
-    height: 68px;
-    border: 1px dashed #B2B6BC;
-    border-radius: 12px;
-}
 
-.briefVideoCont:hover,
-.briefVideoCont.dragover {
-    opacity: 0.6;
-    border: 2px dashed #793ef5;
-    cursor: pointer;
-}
 
-.briefVideoCont input {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.briefDropText {
-    width: 240px;
-    height: 20px;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.4px;
-    font-feature-settings: 'liga' off;
-    color: #778188;
-}
-
-.searchObjects-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 24px 20px;
-    gap: 8px;
-    width: 741px;
-    height: 40px;
-    border-radius: 8px;
-}
-
-.results-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 16px;
-    gap: 24px;
-    width: 100%;
-    height: auto;
-    background: #EDEAFF;
-    border-radius: 12px;
-}
 
 /* requirements */
 

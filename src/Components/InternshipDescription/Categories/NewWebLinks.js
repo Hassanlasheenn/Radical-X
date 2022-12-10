@@ -13,12 +13,20 @@ const NewWebLinks = () => {
 
   const [url, setUrl] = useState('');
   const [links, setLinks] = useState([]);
-  const [error, setError] = useState(null);
+  const [isTrueVal, setIsTrueVal] = useState(false);
 
   const { setTick } = useContext(TickContext);
 
-  const isValidEmail = (email) => {
-    return /\S+@\S+\.\S+/.test(email);
+  const urlPatternValidation = url => {
+    const regex = new RegExp('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?');    
+    return regex.test(url);
+  };
+
+  const changeUrl = (e) => {
+    const {value} = e.target;
+    const isTrueVal = !value || urlPatternValidation(value);
+    setUrl(value);
+    setIsTrueVal(isTrueVal)
   }
 
   const handleAdd = () => {
@@ -33,25 +41,8 @@ const NewWebLinks = () => {
     setTick("Continue to Guide", true);
   }
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    if(!isValidEmail(e.target.value)) {
-      setError("Invalid Email");
-    } else {
-      setError(null);
-    }
-    setUrl(e.target.value);
-  }
-
-  const handlePress = (e) => {
-    if(e.key === 'Enter') {
-      handleAdd();
-    }
-  }
-
   const handleRemove = (name) => {
     const linkRemove = links.filter((i) => i.name !== name);
-    setError(null);
 
     setLinks(linkRemove);
     setTick("Web Links & Resources", false);
@@ -68,21 +59,23 @@ const NewWebLinks = () => {
               placeholder='Add URL'
               type="url"
               id='url'
-              onKeyDown={handlePress}
-              onChange={handleChange}
+              onChange={changeUrl}
               value={url}
               required
+              
             />
-        {error ? 
-          <span className='invalid-email'>{error}</span> 
-          : 
-          <img className='green-tick' src={greenTick} alt ='' /> 
-        }
             <div className='linksPaste'>
-              <div disabled className='addUrlCont'>
+              <div className='addUrlCont'>
                   <img src={addLinkIcon} alt='' />
-                  <button type='button' onClick={handleAdd} className='AddUrlText'>Add URL</button>
+                  <button disabled={!isTrueVal} type='button' onClick={handleAdd} className='AddUrlText'>Add URL</button>
               </div>
+
+              { !isTrueVal ? (
+              <span className='invalid-url'>Invalid URL</span>) 
+              :
+              <img className='green-tick' src={greenTick} alt ='' /> 
+              }
+              
               <div className='linksCont'>
                   {links.map((link) => {
                     return (

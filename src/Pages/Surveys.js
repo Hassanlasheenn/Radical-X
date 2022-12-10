@@ -7,6 +7,7 @@ import SurveysContent from '../Components/Surveys/SurveysContent';
 // css & icons imports
 import unTickCircle from '../images/untick-circle-newInternship.svg';
 import addChapIcon from '../images/additem.svg';
+import tickCatIcon from '../images/tick-circle.svg';
 
 const Surveys = () => {
 
@@ -24,8 +25,8 @@ const Surveys = () => {
         </div>
 
         <div className='surveysContainer'>
-          <SurveysContent title='Survey 1' onClick={() => click('1')} />
-          <SurveysContent title='Survey 2' onClick={() => click('2')} />
+          <SurveysContent title='Survey 1' onClick={() => click('1')} tick={tickCatIcon} />
+          <SurveysContent title='Survey 2' onClick={() => click('2')} tick={tickCatIcon} />
 
           <div className='assessmentContainer'>
                 <div className='textContainerAssess'>

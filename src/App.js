@@ -28,8 +28,6 @@ import PrivateRoute from './Components/PrivateRoute';
 import ForgotPass from './Components/ForgotPass';
 // css & icon imports 
 import './App.css';
-import uploadLogo from './images/document-upload.svg';
-import tickCatIcon from './images/tick-circle.svg';
 // Error Page import
 import NotFound from './Pages/NotFound';
 // Finish page import
@@ -37,13 +35,7 @@ import Done from './Pages/Done';
 
 
 
-
-
 const App = () => {
-
-  const onFileChange = (files) => {
-    console.log(files);
-  }
   
   return (
     <div className="App">
@@ -63,21 +55,21 @@ const App = () => {
                 <Route exact path='description' element={<DescContent />} />
                 <Route exact path='location' element={<LocationContent />} />
                 <Route exact path='benefits' element={<BenefitsContent />} />
-                <Route exact path='intro-video' element={<NewIntroVideo onFileChange={(files) => onFileChange(files)} />} />
+                <Route exact path='intro-video' element={<NewIntroVideo />} />
                 <Route exact path='mentor-details' element={<MentorDetails />} />
                 <Route exact path='recommended-roles' element={<RecommendedRoles />} />
                 <Route exact path='links' element={<Links />} />
               </Route>
 
               <Route exact path='internship-guide' element={<InternshipGuide />}>
-                <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' fieldText='Drag n drop to upload your video' icon={uploadLogo} onFileChange={(files) => onFileChange(files)} /> } />
-                <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' fieldText='Drag n drop to upload your video' icon={uploadLogo} onFileChange={(files) => onFileChange(files)} /> } />
-                <Route exact path='resources' element={<GuideContent title1='Curated Resources' title2='Events' fieldText='Drag n drop to upload your video' icon={uploadLogo} onFileChange={(files) => onFileChange(files)} /> } />
+                <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' /> } />
+                <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' /> } />
+                <Route exact path='resources' element={<GuideContent title1='Curated Resources' title2='Events' /> } />
               </Route>
 
               <Route exact path='surveys' element={<Surveys />}>
-                <Route exact path='1' element={<SurveyQuestion title='Survey 1' tick={tickCatIcon}/>} />
-                <Route exact path='2' element={<SurveyQuestion title='Survey 2' />} />
+                <Route exact path='1' element={<SurveyQuestion title='Survey 1' />} />
+                <Route exact path='2' element={<SurveyQuestion title='Survey 2' />}  />
               </Route>
 
               <Route exact path='settings' element={<Settings />}>

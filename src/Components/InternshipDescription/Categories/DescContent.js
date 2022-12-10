@@ -15,9 +15,7 @@ const DescContent = () => {
     if(desc.length > 0) {
       setTick("Description", true);
     }
-    else {
-      setTick("Description", false);
-    }
+    return;
   }
 
   return (
