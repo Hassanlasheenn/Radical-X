@@ -163,6 +163,19 @@ input[type="linkedin"] {
     border-radius: 10px;
 }
 
+.green-email-tick {
+    transform: translate(340px, 12px);
+    width: 22px;
+}
+
+.invalid-email {
+    color: #F61C04;
+    font-size: 12px;
+    white-space: nowrap;
+    transform: translate(325px, -20px);
+}
+
+
 
 
 

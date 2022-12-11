@@ -4,19 +4,26 @@ import React, { useContext, useRef, useState } from 'react';
 import '../../../Styles/NewMentorDetails.css';
 import picLogo from '../../../images/image.svg';
 import { TickContext } from '../../../Context/useTickCircle';
-// import linkIcon from '../../../images/link-internship.svg';
+import greenTick from '../../../images/icons8-ok.svg';
+
+const inputs = {
+    name: "",
+    email: "",
+    optional: ""
+}
 
 const NewMentorDetails = () => {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [optional, setOptional] = useState('');
-
+    const [field, setField] = useState(inputs);
+    const [error, setError] = useState(false);
     const [file, setFile] = useState(null);
     const inputRef = useRef(null);
 
     const { setTick } = useContext(TickContext);
 
+    const isValidEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email);
+    }
 
     const handleClick = () => {
         inputRef.current.click();
@@ -29,21 +36,19 @@ const NewMentorDetails = () => {
         }
     }
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        
+        setField({ ...field, [name]: value });
 
-    const handleName = (e) => {
-        e.preventDefault();
-        setName(e.target.value);
-    }
-
-    const handleEmail = (e) => {
-        e.preventDefault();
-        setEmail(e.target.value);
-        setTick("Mentor Details", true);
-    }
-
-    const handleOptional = (e) => {
-        e.preventDefault();
-        setOptional(e.target.value)
+        if(field["email"].length === 0) {
+            setTick("Mentor Details", true);
+        } else if(!isValidEmail(e.target.value)) {
+            setError('Email is invalid');
+        } else {
+          setError(false);
+        }
+        setField(value);
     }
 
 
@@ -58,16 +63,22 @@ const NewMentorDetails = () => {
                 placeholder='Name'
                 type="name"
                 id='name'
-                onChange={handleName}
-                value={name}
+                onChange={handleChange}
+                name="name"
 
             />
+            { !error ?
+              <img className='green-email-tick' src={greenTick} alt ='' />
+              :
+              <span className='invalid-email'>Invalid Email</span> 
+            }
+
             <input 
                 placeholder='Email Adress'
                 type="email-mentor"
                 id='email-mentor'
-                onChange={handleEmail}
-                value={email}
+                onChange={handleChange}
+                name="email"
             />
         </div>
 
@@ -75,8 +86,9 @@ const NewMentorDetails = () => {
             placeholder='LinkedIn URL (optional)'
             type="linkedin"
             id='linkedin'
-            onChange={handleOptional}
-            value={optional}
+            onChange={handleChange}
+            value={field.optional}
+            name="optional"
         />
 
         <div className='pictureLogo'>
