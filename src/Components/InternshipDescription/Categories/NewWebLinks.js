@@ -81,7 +81,7 @@ const NewWebLinks = () => {
                     return (
                       <div className='linkContWeb' key={link.id}>
                         <span className='linkText'>{link.name}</span>
-                        <img src={closeIcon} alt='' type='button' onClick={() => handleRemove(link.name)} style={{ cursor: 'pointer' }} />
+                        <img id='closeTag' src={closeIcon} alt='' type='button' onClick={() => handleRemove(link.name)} style={{ cursor: 'pointer' }} />
                       </div>
                     )
                   })

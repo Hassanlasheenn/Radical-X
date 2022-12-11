@@ -1,58 +1,27 @@
 import React, { useContext, useState } from 'react';
-import { TickContext } from '../../Context/useTickCircle';
-import DragNdrop from '../DragNDrop/DragNdrop';
+import { TickContext } from '../../../Context/useTickCircle';
+import DragNdrop from '../../DragNDrop/DragNdrop';
 
+const inputs = {
+    curatedResources: "",
+    events: ""
+}
 
-const GuideContent = ({ title1, title2, title3 }) => {
+const ResourcesContent = ({ title1, title2, title3 }) => {
 
-    const [brief, setBrief] = useState('');
-    const [req, setReq] = useState('');
-    const [mile, setMile] = useState('');
+    const [user, setUser] = useState(inputs);
+
     const { setTick } = useContext(TickContext);
-
-
-    const handleTitle1 = (e) => {
-      e.preventDefault();
-      setBrief(e.target.value);
-
-      if(brief.trim().length !== 0) {
-        setTick("Brief", true);
-        setTick("Duration", true);
-        setTick("Curated Resources", true);
-      } else if(brief.trim().length < 0) {
-        setTick("Brief", false);
-      }
-    }
-
-    const handleTitle2 = (e) => {
-      e.preventDefault();
-      setReq(e.target.value);
-
-      if(req.trim().length !== 0) {
-        setTick("Requirements", true);
-        setTick("Timeline", true);
-        setTick("Events", true);
-      } else {
-        setTick("Requirements", false);
-      }
-    }
-
-    const handleTitle3 = (e) => {
-      e.preventDefault();
-      setMile(e.target.value);
-
-      if(mile.trim().length !== 0) {
-        setTick("Milestones", true);
-        setTick("Overview", true);
-        setTick("Schedule", true);
-        setTick("Continue to Surveys", true);
-        setTick("Internship Guide", true);
-      } else {
-        setTick("Milestones", false);
-      }
-    }
-
     
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+
+      setUser({...user, [name]: value});
+      setTick("Resources", true);
+      setTick("Internship Guide", true);
+      setTick("Continue to Surveys", true);
+    }
+
   return (
     <>
       <div className='contentDetails'>
@@ -61,8 +30,9 @@ const GuideContent = ({ title1, title2, title3 }) => {
           <input
             placeholder='Description'
             type='brief'
-            onChange={handleTitle1}
-            value={brief}
+            onChange={handleChange}
+            value={user.curatedResources}
+            name="curatedResources"
           />
           <DragNdrop 
             style={{
@@ -96,8 +66,9 @@ const GuideContent = ({ title1, title2, title3 }) => {
           <input
             placeholder='Description'
             type='brief'
-            onChange={handleTitle2}
-            value={req}
+            onChange={handleChange}
+            value={user.events}
+            name="events"
           />
           <DragNdrop 
              style={{
@@ -131,8 +102,8 @@ const GuideContent = ({ title1, title2, title3 }) => {
           <input
             placeholder='Description'
             type='brief'
-            onChange={handleTitle3}
-            value={mile}
+            onChange={handleChange}
+            name=""
           />
           <DragNdrop 
              style={{
@@ -166,4 +137,4 @@ const GuideContent = ({ title1, title2, title3 }) => {
   )
 }
 
-export default GuideContent;
+export default ResourcesContent;

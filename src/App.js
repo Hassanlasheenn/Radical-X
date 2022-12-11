@@ -14,9 +14,6 @@ import NewIntroVideo from './Components/InternshipDescription/Categories/NewIntr
 import MentorDetails from './Components/InternshipDescription/Categories/NewMentorDetails';
 import RecommendedRoles from './Components/InternshipDescription/Categories/RecommendedRoles';
 import Links from './Components/InternshipDescription/Categories/NewWebLinks';
-import SettingForm from './Components/Settings/SettingForm';
-import SurveyQuestion from './Components/Surveys/SurveyQuestion';
-import GuideContent from './Components/InternshipGuide/GuideContent';
 import Sidebar from './Components/Sidebar/Sidebar';
 // Context files imports
 import { TickProvider } from './Context/useTickCircle';
@@ -32,6 +29,13 @@ import './App.css';
 import NotFound from './Pages/NotFound';
 // Finish page import
 import Done from './Pages/Done';
+import OverviewContent from './Components/InternshipGuide/GuideInputs/OverviewContent';
+import ScheduleContent from './Components/InternshipGuide/GuideInputs/ScheduleContent';
+import ResourcesContent from './Components/InternshipGuide/GuideInputs/ResourcesContent';
+import Question1 from './Components/Surveys/Question1';
+import Question2 from './Components/Surveys/Question2';
+import BasicSettings from './Components/Settings/BasicSettings';
+import HeroImage from './Components/Settings/HeroImage';
 
 
 
@@ -62,19 +66,19 @@ const App = () => {
               </Route>
 
               <Route exact path='internship-guide' element={<InternshipGuide />}>
-                <Route exact path='overview' element={<GuideContent title1='Brief' title2='Requirements' title3='Milestones' /> } />
-                <Route exact path='schedule' element={<GuideContent title1='Duration' title2='Timeline' title3='Deliverables' /> } />
-                <Route exact path='resources' element={<GuideContent title1='Curated Resources' title2='Events' /> } />
+                <Route exact path='overview' element={<OverviewContent title1='Brief' title2='Requirements' title3='Milestones' /> } />
+                <Route exact path='schedule' element={<ScheduleContent title1='Duration' title2='Timeline' title3='Deliverables' /> } />
+                <Route exact path='resources' element={<ResourcesContent title1='Curated Resources' title2='Events' /> } />
               </Route>
 
               <Route exact path='surveys' element={<Surveys />}>
-                <Route exact path='1' element={<SurveyQuestion title='Survey 1' />} />
-                <Route exact path='2' element={<SurveyQuestion title='Survey 2' />}  />
+                <Route exact path='1' element={<Question1 title='Survey 1' />} />
+                <Route exact path='2' element={<Question2 title='Survey 2' />}  />
               </Route>
 
               <Route exact path='settings' element={<Settings />}>
-                <Route exact path='basic-settings' element={<SettingForm name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
-                <Route exact path='hero-image' element={<SettingForm name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
+                <Route exact path='basic-settings' element={<BasicSettings name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
+                <Route exact path='hero-image' element={<HeroImage name1={'Private Internship'} name2={'Hidden Internship'} name3={'Disable Text Copying'} />} />
               </Route>
             
               {/* submitted internship page */}

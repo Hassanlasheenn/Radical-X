@@ -41,7 +41,7 @@ const BoxContainer = ({ title, icon, onClick, name1, name2, name3, tick }) => {
             <img src={menuIcon} alt='' />
           </div>
 
-          <div onClick={handleGuides} className='overviewDetail' style={{ height: Height }}>
+          <div className='overviewDetail' style={{ height: Height }}>
               <button onClick={handleClickMenu} className='overviewTextCont'>
                 <div className='overviewFrameText'>
                   <div className='headingCont'>
@@ -50,12 +50,12 @@ const BoxContainer = ({ title, icon, onClick, name1, name2, name3, tick }) => {
                     <span>{ tick && <img src={tick} alt='' />}</span> }
                   </div>
                 </div>
-               {icon &&  <img src={icon} alt='' /> }
+               {icon &&  <img onClick={handleGuides} src={icon} alt='' /> }
               </button>
 
               <div className='detailFrame'>
 
-                { show && 
+                { show &&
                   <Content name1={name1} name2={name2} name3={name3} icon={menuIcon} tick={tickCatIcon} />
                 }
                 

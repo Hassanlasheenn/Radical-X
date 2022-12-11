@@ -5,25 +5,21 @@ import { TickContext } from '../../Context/useTickCircle';
 
 import addLogo from '../../images/add-square copy.svg';
 
+const Question1 = ({ title }) => {
 
-const SurveyQuestion = ({ title }) => {
+    const[question, setQuestion] = useState('');
 
-  const[question, setQuestion] = useState('');
-
-  const { setTick } = useContext(TickContext);
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    setQuestion(e.target.value);
-    
-    if(question.trim().length !== 0 ) {
-      setTick("Survey 1", true);  
-      setTick("Survey 2", true);
-      setTick("Surveys", true);
-      setTick("Continue to Settings", true);
+    const { setTick } = useContext(TickContext);
+  
+    const handleChange = (e) => {
+      e.preventDefault();
+      setQuestion(e.target.value);
+      
+      if(question.trim().length === 0 ) {
+        setTick("Survey 1", true);  
+      }
+      return;
     }
-    return;
-  }
 
   return (
     <>
@@ -45,10 +41,8 @@ const SurveyQuestion = ({ title }) => {
           </div>
         </div>
       </div>
-
-
     </>
   )
 }
 
-export default SurveyQuestion;
+export default Question1;
